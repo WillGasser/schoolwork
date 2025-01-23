@@ -1,0 +1,33 @@
+identifier x
+whitespace  
+= =
+whitespace  
+integer 3
+whitespace 
+identifier y
+whitespace  
+= =
+whitespace  
+integer 5
+whitespace 
+identifier z
+whitespace  
+= =
+whitespace  
+( (
+identifier x
+whitespace  
++ +
+whitespace  
+identifier y
+) )
+whitespace  
+/ /
+whitespace  
+integer 3
+whitespace 
+print print
+whitespace  
+identifier z
+whitespace 
+eof eof

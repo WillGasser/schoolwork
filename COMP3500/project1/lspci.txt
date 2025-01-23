@@ -1,0 +1,3 @@
+40d4:00:00.0 3D controller: Microsoft Corporation Device 008e
+76cf:00:00.0 System peripheral: Red Hat, Inc. Virtio file system (rev 01)
+b0d7:00:00.0 SCSI storage controller: Red Hat, Inc. Virtio console (rev 01)
