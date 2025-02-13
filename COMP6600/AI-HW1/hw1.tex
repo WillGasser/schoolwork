@@ -1,0 +1,142 @@
+%%% Please replace what is within each curly bracket with the correct information below. %%%
+%%% The first field is already filled in for you.  %%%
+
+\def\ClassName {COMP6600} % Your course 
+
+
+%\solution{
+% \fbox{\begin{minipage}[t][5cm][t]{13cm} \Answer \end{minipage}} 
+% }
+%%%%% FILL IN YOUR ANSWERS TO EACH QUESTION BY REPLACE WHAT IS IN THE CURLY BRACKETS.
+\def\Answer{\textbf{Put your answer here:}}
+\def\AnswerNoPrompt{}
+
+%%COMMENT OUT TO PRODUCE BLANK DOCUMENT
+\def \showSolutions{}
+
+\documentclass[twoside]{article}
+\usepackage{placeins}
+\usepackage{class}
+\usepackage{graphicx}
+\graphicspath{{./figs/}}
+\usepackage{amsmath, amsthm, amssymb}
+\usepackage{url} 
+\usepackage{enumerate}
+\usepackage{wrapfig}
+\usepackage{enumitem}
+\usepackage{color}
+\usepackage{pifont}
+\usepackage{mdwlist}
+\usepackage[lofdepth,lotdepth]{subfig}
+\usepackage{mdwlist}
+\usepackage[ampersand]{easylist}
+\usepackage{wasysym}
+\usepackage{tikz}
+
+\usetikzlibrary{shapes.geometric}
+\usetikzlibrary{positioning}
+
+\ListProperties(Hide=100, Hang=true, Progressive=3ex, Style*=-- ,
+Style2*=$\bullet$ ,Style3*=$\circ$ ,Style4*=\tiny$\blacksquare$ )
+\title{HW1}
+\usepackage{multirow}
+
+\pagestyle{myheadings}
+
+\renewcommand{\P}{\mathbf{P}}
+\newcommand{\eat}[1]{\ignorespaces}
+\newcommand{\todo}[1]{ {\color{blue} TODO: #1} }
+\newcommand{\X}{\ding{110}}
+\newcommand{\F}{$\bullet$}
+\newcommand{\Pac}{$<$}
+\newcommand{\bigCI}{\mathrel{\text{\scalebox{1.07}{$\perp\mkern-10mu\perp$}}}}
+\def\truefalse{\vspace{0.3in} \item (\emph{true} or \emph{false}) }
+\def\indep{\perp\!\!\!\perp}
+\def\sgn{\mathop{\mathrm{sign}}}
+\newcommand{\solutionspace}[4]{\fbox{\begin{minipage}[t][#1][t]{#2} \textbf{#3} 
+
+\solution{}{#4} \end{minipage}}}
+
+% Bubbles for multiple choice questions
+\newcommand{\emptycircle}{$\Large\bigcirc$}
+\newcommand{\filledcircle}{$\Large\newmoon$}
+\newcommand{\mcqb}{$\bigcirc$\ \ }
+\newcommand{\mcqs}{\solution{\mcqb}{$\Large\newmoon$\ \ }}
+\newcommand{\emptysquare}{{\Large $\square$}\ \ }
+\newcommand{\filledsquare}{{\Large $\boxtimes$}\ \ }
+\newcommand{\squaresolution}{\solution{\emptysquare}{\filledsquare}}
+
+
+\begin{document}
+\thispagestyle{empty}
+
+\input{yoursolution}
+
+\maketitle 
+\smallskip
+\smallskip
+\textbf{INSTRUCTIONS}
+
+\begin{itemize}
+\item \textbf{Due:} \textbf{Wednesday, 12 February 2025 at 11:59 PM CST.} 
+\item \textbf{Format:} Write your answers in the \texttt{yoursolution.tex} file and latex a pdf (preferred) or you can type directly on the blank pdf. Make sure that your answers are within the dedicated regions for each question/part. If you do not follow this format, we may deduct points. 
+% You may use digital tools (e.g., an iPad) to handwrite your solutions, but make sure they are legible.
+% We reserve the right to take points off if we can't read your solution. 
+\item \textbf{Images:} To insert pictures, we recommend drawing it on PowerPoint or Google Drawings, saving it as an image and including it in your latex source.
+\item \textbf{How to submit:} Submit a pdf with your answers on Canvas. Log in and click on our class 5600/6600 and click on the submission titled Homework 1 and upload your pdf containing your answers. 
+\item \textbf{Policy:} See the course website for homework policies and Academic Integrity.
+
+\end{itemize}
+
+\begin{center}
+\begin{tabular}{|r|c|}
+\hline
+\begin{minipage}{3cm}~\\Name~\\~\\\end{minipage} & \begin{minipage}[c][1cm][c]{8cm} ~ \Name \end{minipage}  \\
+\hline
+\begin{minipage}{3cm}~\\Auburn ID~\\~\\\end{minipage} & \AuburnID \\
+\hline
+\begin{minipage}{3cm}~\\Hours to complete? ~\\\end{minipage} & \solution{\emptycircle}{\TwoHours} (0, 2] hours \hspace{0.5cm} \solution{\emptycircle}{\FourHours} (2, 4] hours \hspace{0.5cm}
+\solution{\emptycircle}{\SixHours} (4, 6] hours \hspace{0.5cm} \\
+&
+\solution{\emptycircle}{\EightHours} (6, 8] hours \hspace{0.5cm}
+\solution{\emptycircle}{\MoreThanEightHours} $>$ 8 hours \\
+\hline
+
+\end{tabular}
+\end{center}
+
+
+
+\vfill
+
+\smallskip
+\smallskip
+\smallskip
+\smallskip
+\smallskip
+
+\begin{center}
+{\bf For TA use only}\\
+\begin{Large}
+\begin{tabular}{|r|r|r|r|r|r|r|r|}
+\hline
+Q1 & Q2 & Q3 & Q4 & Q5 & Total \\
+\hline
+\quad/23 &\quad/10 & \quad/25 & \quad/17 &\quad/25 & \quad/100 \\
+\hline
+\end{tabular}\end{Large}
+\end{center}
+
+\newpage
+\input{q1}
+\newpage
+\input{q2}
+\newpage
+\input{q3}
+\newpage
+\input{q4}
+\newpage
+\input{q5}
+% \newpage
+% \input{q6}
+\end{document}

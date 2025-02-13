@@ -1,0 +1,100 @@
+\newcommand{\inlineq}[1]{$\displaystyle{#1}$}
+
+\begin{problem}{All Searches Lead to the Same Destination}
+
+{\bf For all the questions below assume :}
+\begin{itemize}
+\item All search algorithms are \emph{graph} search (as opposed to
+  tree search).
+\item $c_{ij} > 0$ is the cost to go from node $i$ to node $j$.
+\item There is only one goal node (as opposed to a set of goal nodes).
+\item All ties are broken alphabetically.
+\item Assume heuristics are consistent.
+\end{itemize}
+
+
+{\bf Definition:} Two search algorithms are defined to be {\bf\emph{equivalent}} if and only if they expand the same nodes in the same order and return the same path.
+
+In this question we study what happens if we run uniform cost
+search with action costs $d_{ij}$ that are potentially different from the search problem's actual action costs $c_{ij}$.   Concretely, we will study how this might, or might
+not, result in running uniform cost search (with these new
+choices of action costs) being equivalent to another search
+algorithm. 
+
+\begin{question}[2]
+Mark \emph{all} choices for costs $d_{ij}$ that make running {\bf
+  Uniform Cost Search} algorithm with these costs $d_{ij}$ 
+\emph{equivalent} to running {\bf Breadth-First Search}.  
+	\begin{itemize}	
+	\item[] \solution{\emptycircle}{\Twoai}  \inlineq{d_{ij} = 0}
+	\item[] \solution{\emptycircle}{\Twoaii}  \inlineq{d_{ij} = \alpha}, ${\alpha > 0}$
+	\item[]\solution{\emptycircle}{\Twoaiii}  \inlineq{d_{ij} = \alpha}, ${\alpha < 0}$
+	\item[]\solution{\emptycircle}{\Twoaiv}  \inlineq{d_{ij} = 1}
+	\item[]\solution{\emptycircle}{\Twoav}  \inlineq{d_{ij} = -1}
+	\item[]\solution{\emptycircle}{\Twoavi} None of the above
+	\end{itemize}\solution{\vspace{1cm}}{}\end{question}
+\begin{question}[2]
+Mark \emph{all} choices for costs $d_{ij}$ that make running {\bf
+  Uniform Cost Search} algorithm with these costs $d_{ij}$ 
+\emph{equivalent} to running {\bf Depth-First Search}.
+	\begin{itemize}	
+	\item[] \solution{\emptycircle}{\Twobi}  \inlineq{d_{ij} = 0}
+	\item[] \solution{\emptycircle}{\Twobii}  \inlineq{d_{ij} = \alpha}, ${\alpha > 0}$
+	\item[]\solution{\emptycircle}{\Twobiii}  \inlineq{d_{ij} = \alpha}, ${\alpha < 0}$
+	\item[]\solution{\emptycircle}{\Twobiv}  \inlineq{d_{ij} = 1}
+	\item[]\solution{\emptycircle}{\Twobv}  \inlineq{d_{ij} = -1}
+	\item[]\solution{\emptycircle}{\Twobvi} None of the above
+	\end{itemize}\solution{\vspace{1cm}}{}\end{question}
+\newpage
+\begin{question}[2]
+Mark \emph{all} choices for costs $d_{ij}$  that make running {\bf
+  Uniform Cost Search} algorithm with these costs $d_{ij}$ 
+\emph{equivalent} to running {\bf Uniform Cost Search} with the
+original costs $c_{ij}$.
+	\begin{itemize}
+	\item[]\solution{\emptycircle}{\Twoci} $d_{ij} = c_{ij}^2$
+	\item[]\solution{\emptycircle}{\Twocii} $d_{ij} = 1/c_{ij}$
+	\item[]\solution{\emptycircle}{\Twociii}  $d_{ij} = \alpha\ c_{ij}, \ \ \ \ \ \ \ \alpha > 0$
+	\item[]\solution{\emptycircle}{\Twociv} $d_{ij} = c_{ij} + \alpha, \ \ \ \ \ \alpha > 0$
+	\item[]\solution{\emptycircle}{\Twocv}  $d_{ij} = \alpha \ c_{ij} + \beta, \ \ \alpha > 0,\ \beta > 0$
+	\item[]\solution{\emptycircle}{\Twocvi} None of the above
+	\end{itemize} \solution{\vspace{1cm}}{}\end{question}
+\begin{question}
+Let $h(n)$ be the value of the heuristic function at node $n$.
+\begin{subquestion}[2]
+Mark \emph{all} choices for costs $d_{ij}$  that make running {\bf
+  Uniform Cost Search} algorithm with these costs $d_{ij}$ 
+\emph{equivalent} to running {\bf Greedy Search} with the
+original costs $c_{ij}$ and heuristic function $h$.
+	\begin{itemize}
+	\item[]\solution{\emptycircle}{\Twodia}  \inlineq{d_{ij} = h(i) - h(j)}
+	\item[]\solution{\emptycircle}{\Twodib}  \inlineq{d_{ij} = h(j) - h(i)}
+	\item[]\solution{\emptycircle}{\Twodic}  \inlineq{d_{ij} = \alpha \ h(i), \ \ \ \ \alpha > 0}
+	\item[]\solution{\emptycircle}{\Twodid}  \inlineq{d_{ij} = \alpha \ h(j), \ \ \ \ \alpha > 0}
+	\item[]\solution{\emptycircle}{\Twodie}  \inlineq{d_{ij} = c_{ij} + h(j) + h(i)}
+	\item[]\solution{\emptycircle}{\Twodif} None of the above
+	\end{itemize} 
+  \solution{\vspace{1cm}}{
+    }
+\end{subquestion}
+\vspace{1cm}
+\begin{subquestion}[2]
+Mark \emph{all} choices for costs $d_{ij}$  that make running {\bf
+  Uniform Cost Search} algorithm with these costs $d_{ij}$ 
+\emph{equivalent} to running {\bf A* Search} with the
+original costs $c_{ij}$ and heuristic function $h$.
+	\begin{itemize}
+	\item[]\solution{\emptycircle}{\Twodiia} \inlineq{d_{ij} = \alpha \ h(i), \ \ \ \alpha > 0}
+	\item[]\solution{\emptycircle}{\Twodiib}  \inlineq{d_{ij} = \alpha \ h(j), \ \ \ \alpha > 0}
+	\item[]\solution{\emptycircle}{\Twodiic}  \inlineq{d_{ij} = c_{ij} + h(i)}
+	\item[]\solution{\emptycircle}{\Twodiid}  \inlineq{d_{ij} = c_{ij} + h(j)}
+	\item[]\solution{\emptycircle}{\Twodiie}  \inlineq{d_{ij} = c_{ij} + h(i) - h(j)}
+	\item[]\solution{\emptycircle}{\Twodiif}  \inlineq{d_{ij} = c_{ij} + h(j) - h(i)}
+	\item[]\solution{\emptycircle}{\Twodiig} None of the above
+	\end{itemize} 
+  \solution{\vspace{1cm}}{
+    
+  }
+\end{subquestion}
+\end{question}
+\end{problem}
