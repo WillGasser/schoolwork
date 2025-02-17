@@ -1,0 +1,1 @@
+This is the location for projects and project diagrams.
