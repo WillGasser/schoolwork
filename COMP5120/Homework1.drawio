@@ -2,8 +2,11 @@
   <diagram name="Page-1" id="1guRK6Z7g-ppSAmPGCe-">
     <mxGraphModel dx="2415" dy="2103" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
+        <!-- Root cells -->
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
+
+        <!-- ENTITIES (unchanged) -->
         <mxCell id="2" value="Project (ProjectID, Title, Start Date, End Date, Creation Date)" style="shape=rectangle;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="670" y="-300" width="180" height="60" as="geometry" />
         </mxCell>
@@ -72,42 +75,46 @@
         <mxCell id="22" value="Funding (Amount, Start Date, End Date)" style="shape=rectangle;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="670" y="-430" width="180" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="23" value="contains" style="edgeStyle=orthogonalEdgeStyle;rounded=0;endArrow=block;html=1;" parent="1" source="2" target="3" edge="1">
+
+        <!-- RELATIONSHIPS (added cardinalities) -->
+        <mxCell id="23" value="contains [1:N]" style="edgeStyle=orthogonalEdgeStyle;rounded=0;endArrow=block;html=1;" parent="1" source="2" target="3" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="24" value="covers" style="edgeStyle=orthogonalEdgeStyle;rounded=0;endArrow=block;html=1;" parent="1" source="3" target="4" edge="1">
+        <mxCell id="24" value="covers [M:N]" style="edgeStyle=orthogonalEdgeStyle;rounded=0;endArrow=block;html=1;" parent="1" source="3" target="4" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="25" value="conducted by" style="edgeStyle=orthogonalEdgeStyle;rounded=0;endArrow=block;html=1;" parent="1" source="3" target="5" edge="1">
+        <mxCell id="25" value="conducted by [N:1]" style="edgeStyle=orthogonalEdgeStyle;rounded=0;endArrow=block;html=1;" parent="1" source="3" target="5" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="26" value="participates" style="edgeStyle=orthogonalEdgeStyle;rounded=0;endArrow=block;html=1;" parent="1" source="2" target="6" edge="1">
+        <mxCell id="26" value="participates [M:N]" style="edgeStyle=orthogonalEdgeStyle;rounded=0;endArrow=block;html=1;" parent="1" source="2" target="6" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="27" value="includes" style="edgeStyle=orthogonalEdgeStyle;rounded=0;endArrow=block;html=1;" parent="1" source="3" target="10" edge="1">
+        <mxCell id="27" value="includes [1:N]" style="edgeStyle=orthogonalEdgeStyle;rounded=0;endArrow=block;html=1;" parent="1" source="3" target="10" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="28" value="assigned to" style="edgeStyle=orthogonalEdgeStyle;rounded=0;endArrow=block;html=1;" parent="1" source="10" target="11" edge="1">
+        <mxCell id="28" value="assigned to [M:N]" style="edgeStyle=orthogonalEdgeStyle;rounded=0;endArrow=block;html=1;" parent="1" source="10" target="11" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="29" value="uses" style="edgeStyle=orthogonalEdgeStyle;rounded=0;endArrow=block;html=1;" parent="1" source="10" target="17" edge="1">
+        <mxCell id="29" value="uses [M:N]" style="edgeStyle=orthogonalEdgeStyle;rounded=0;endArrow=block;html=1;" parent="1" source="10" target="17" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="30" value="drills" style="edgeStyle=orthogonalEdgeStyle;rounded=0;endArrow=block;html=1;" parent="1" source="10" target="18" edge="1">
+        <mxCell id="30" value="drills [1:N]" style="edgeStyle=orthogonalEdgeStyle;rounded=0;endArrow=block;html=1;" parent="1" source="10" target="18" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="31" value="has" style="edgeStyle=orthogonalEdgeStyle;rounded=0;endArrow=block;html=1;" parent="1" source="18" target="19" edge="1">
+        <mxCell id="31" value="has [1:N]" style="edgeStyle=orthogonalEdgeStyle;rounded=0;endArrow=block;html=1;" parent="1" source="18" target="19" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="32" value="owns" style="edgeStyle=orthogonalEdgeStyle;rounded=0;endArrow=block;html=1;" parent="1" source="6" target="21" edge="1">
+        <mxCell id="32" value="owns [1:N]" style="edgeStyle=orthogonalEdgeStyle;rounded=0;endArrow=block;html=1;" parent="1" source="6" target="21" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="33" value="receives funding" style="edgeStyle=orthogonalEdgeStyle;rounded=0;endArrow=block;html=1;" parent="1" source="2" target="22" edge="1">
+        <mxCell id="33" value="receives funding [1:N]" style="edgeStyle=orthogonalEdgeStyle;rounded=0;endArrow=block;html=1;" parent="1" source="2" target="22" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="34" value="provided by" style="edgeStyle=orthogonalEdgeStyle;rounded=0;endArrow=block;html=1;" parent="1" source="22" target="20" edge="1">
+        <mxCell id="34" value="provided by [N:1]" style="edgeStyle=orthogonalEdgeStyle;rounded=0;endArrow=block;html=1;" parent="1" source="22" target="20" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
+
+        <!-- ISA edges (unchanged) -->
         <mxCell id="35" value="ISA" style="edgeStyle=elbowEdgeStyle;dashed=1;endArrow=none;html=1;" parent="1" source="6" target="7" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
