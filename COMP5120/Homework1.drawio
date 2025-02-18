@@ -1,725 +1,601 @@
-<mxfile host="app.diagrams.net" agent="Mozilla/5.0" version="26.0.14">
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:135.0) Gecko/20100101 Firefox/135.0" version="26.0.14">
   <diagram name="ALDOT Classic ER" id="ALDOT_ER_Classic">
-    <mxGraphModel dx="1600" dy="1200" grid="1" gridSize="10" guides="1" tooltips="1" connect="1"
-                  arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169"
-                  math="0" shadow="0">
+    <mxGraphModel dx="2812" dy="2337" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
-        <!-- Root Layer -->
-        <mxCell id="0"/>
-        <mxCell id="1" parent="0"/>
-
-        <!-- =========================
-             E1: PROJECT
-             ========================= -->
-        <mxCell id="E_Project" value="Project" style="shape=rectangle;whiteSpace=wrap;html=1;fontStyle=1;" vertex="1" parent="1">
-          <mxGeometry x="100" y="20" width="100" height="40" as="geometry"/>
-        </mxCell>
-        <!-- Project Attributes -->
-        <mxCell id="A_ProjectID" value="ProjectID (PK)" style="shape=ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="40" y="-10" width="100" height="30" as="geometry"/>
-        </mxCell>
-        <mxCell id="A_PTitle" value="Title" style="shape=ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="20" y="80" width="70" height="30" as="geometry"/>
-        </mxCell>
-        <mxCell id="A_PStart" value="Start Date" style="shape=ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="140" y="-10" width="80" height="30" as="geometry"/>
-        </mxCell>
-        <mxCell id="A_PEnd" value="End Date" style="shape=ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="140" y="40" width="80" height="30" as="geometry"/>
-        </mxCell>
-        <mxCell id="A_PCreation" value="Creation Date" style="shape=ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="20" y="130" width="100" height="30" as="geometry"/>
-        </mxCell>
-        <!-- Connect Project to its attributes -->
-        <mxCell id="EA_P1" edge="1" parent="1" source="E_Project" target="A_ProjectID" style="endArrow=none;startArrow=none;">
-          <mxGeometry relative="1" as="geometry"/>
-        </mxCell>
-        <mxCell id="EA_P2" edge="1" parent="1" source="E_Project" target="A_PTitle" style="endArrow=none;startArrow=none;">
-          <mxGeometry relative="1" as="geometry"/>
-        </mxCell>
-        <mxCell id="EA_P3" edge="1" parent="1" source="E_Project" target="A_PStart" style="endArrow=none;startArrow=none;">
-          <mxGeometry relative="1" as="geometry"/>
-        </mxCell>
-        <mxCell id="EA_P4" edge="1" parent="1" source="E_Project" target="A_PEnd" style="endArrow=none;startArrow=none;">
-          <mxGeometry relative="1" as="geometry"/>
-        </mxCell>
-        <mxCell id="EA_P5" edge="1" parent="1" source="E_Project" target="A_PCreation" style="endArrow=none;startArrow=none;">
-          <mxGeometry relative="1" as="geometry"/>
-        </mxCell>
-
-        <!-- =========================
-             E2: EXPERIMENT
-             ========================= -->
-        <mxCell id="E_Experiment" value="Experiment" style="shape=rectangle;whiteSpace=wrap;html=1;fontStyle=1;" vertex="1" parent="1">
-          <mxGeometry x="400" y="20" width="120" height="40" as="geometry"/>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="E_Project" value="Project" style="shape=rectangle;whiteSpace=wrap;html=1;fontStyle=1;" parent="1" vertex="1">
+          <mxGeometry x="100" y="20" width="100" height="40" as="geometry" />
         </mxCell>
-        <!-- Experiment Attributes -->
-        <mxCell id="A_ExpID" value="ExperimentID (PK)" style="shape=ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="380" y="-20" width="120" height="30" as="geometry"/>
+        <mxCell id="A_ProjectID" value="ProjectID (PK)" style="shape=ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="10" y="-30" width="100" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="A_ExpTitle" value="Title" style="shape=ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="540" y="-10" width="70" height="30" as="geometry"/>
+        <mxCell id="A_PTitle" value="Title" style="shape=ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="20" y="80" width="70" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="A_ExpStart" value="Start Date" style="shape=ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="380" y="70" width="80" height="30" as="geometry"/>
+        <mxCell id="A_PStart" value="Start Date" style="shape=ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="15" y="30" width="80" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="A_ExpEnd" value="End Date" style="shape=ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="470" y="70" width="80" height="30" as="geometry"/>
+        <mxCell id="A_PEnd" value="End Date" style="shape=ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="30" y="-80" width="80" height="30" as="geometry" />
         </mxCell>
-        <!-- Connect Experiment to attributes -->
-        <mxCell id="EA_Exp1" edge="1" parent="1" source="E_Experiment" target="A_ExpID" style="endArrow=none;startArrow=none;">
-          <mxGeometry relative="1" as="geometry"/>
+        <mxCell id="A_PCreation" value="Creation Date" style="shape=ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry y="130" width="100" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="EA_Exp2" edge="1" parent="1" source="E_Experiment" target="A_ExpTitle" style="endArrow=none;startArrow=none;">
-          <mxGeometry relative="1" as="geometry"/>
+        <mxCell id="EA_P1" style="endArrow=none;startArrow=none;" parent="1" source="E_Project" target="A_ProjectID" edge="1">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="EA_Exp3" edge="1" parent="1" source="E_Experiment" target="A_ExpStart" style="endArrow=none;startArrow=none;">
-          <mxGeometry relative="1" as="geometry"/>
+        <mxCell id="EA_P2" style="endArrow=none;startArrow=none;" parent="1" source="E_Project" target="A_PTitle" edge="1">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="EA_Exp4" edge="1" parent="1" source="E_Experiment" target="A_ExpEnd" style="endArrow=none;startArrow=none;">
-          <mxGeometry relative="1" as="geometry"/>
+        <mxCell id="EA_P3" style="endArrow=none;startArrow=none;" parent="1" source="E_Project" target="A_PStart" edge="1">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
-
-        <!-- =========================
-             RELATION: contains [1:N]
-             (Project - Experiment)
-             ========================= -->
-        <mxCell id="R_contains" value="contains [1:N]" style="shape=rhombus;whiteSpace=wrap;html=1;fontStyle=1;" vertex="1" parent="1">
-          <mxGeometry x="250" y="30" width="90" height="50" as="geometry"/>
+        <mxCell id="EA_P4" style="endArrow=none;startArrow=none;" parent="1" source="E_Project" target="A_PEnd" edge="1">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="ER_contains_Proj" edge="1" parent="1" source="R_contains" target="E_Project" style="endArrow=none;startArrow=none;">
-          <mxGeometry relative="1" as="geometry"/>
-        </mxCell>
-        <mxCell id="ER_contains_Exp" edge="1" parent="1" source="R_contains" target="E_Experiment" style="endArrow=none;startArrow=none;">
-          <mxGeometry relative="1" as="geometry"/>
+        <mxCell id="EA_P5" style="endArrow=none;startArrow=none;" parent="1" source="E_Project" target="A_PCreation" edge="1">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
-
-        <!-- =========================
-             E3: ZIPCODEREGION
-             ========================= -->
-        <mxCell id="E_ZipCode" value="ZipCodeRegion" style="shape=rectangle;whiteSpace=wrap;html=1;fontStyle=1;" vertex="1" parent="1">
-          <mxGeometry x="620" y="140" width="130" height="40" as="geometry"/>
+        <mxCell id="E_Experiment" value="Experiment" style="shape=rectangle;whiteSpace=wrap;html=1;fontStyle=1;" parent="1" vertex="1">
+          <mxGeometry x="420" y="-40" width="120" height="40" as="geometry" />
         </mxCell>
-        <!-- ZipCodeRegion Attributes -->
-        <mxCell id="A_Zip" value="ZipCode (PK)" style="shape=ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="610" y="90" width="110" height="30" as="geometry"/>
+        <mxCell id="A_ExpID" value="ExperimentID (PK)" style="shape=ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="430" y="-90" width="120" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="A_Polygon" value="Polygon" style="shape=ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="760" y="90" width="80" height="30" as="geometry"/>
+        <mxCell id="A_ExpTitle" value="Title" style="shape=ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="595" y="-100" width="70" height="30" as="geometry" />
         </mxCell>
-        <!-- Connect ZipCodeRegion to attributes -->
-        <mxCell id="EA_Zip1" edge="1" parent="1" source="E_ZipCode" target="A_Zip" style="endArrow=none;startArrow=none;">
-          <mxGeometry relative="1" as="geometry"/>
+        <mxCell id="A_ExpStart" value="Start Date" style="shape=ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="320" y="-80" width="80" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="EA_Zip2" edge="1" parent="1" source="E_ZipCode" target="A_Polygon" style="endArrow=none;startArrow=none;">
-          <mxGeometry relative="1" as="geometry"/>
+        <mxCell id="A_ExpEnd" value="End Date" style="shape=ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="360" y="-110" width="80" height="30" as="geometry" />
         </mxCell>
-
-        <!-- RELATION: covers [M:N]
-             (Experiment - ZipCodeRegion)
-        -->
-        <mxCell id="R_covers" value="covers [M:N]" style="shape=rhombus;whiteSpace=wrap;html=1;fontStyle=1;" vertex="1" parent="1">
-          <mxGeometry x="520" y="100" width="90" height="50" as="geometry"/>
+        <mxCell id="EA_Exp1" style="endArrow=none;startArrow=none;" parent="1" source="E_Experiment" target="A_ExpID" edge="1">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="ER_covers_Exp" edge="1" parent="1" source="R_covers" target="E_Experiment" style="endArrow=none;startArrow=none;">
-          <mxGeometry relative="1" as="geometry"/>
+        <mxCell id="EA_Exp2" style="endArrow=none;startArrow=none;" parent="1" source="E_Experiment" target="A_ExpTitle" edge="1">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="ER_covers_Zip" edge="1" parent="1" source="R_covers" target="E_ZipCode" style="endArrow=none;startArrow=none;">
-          <mxGeometry relative="1" as="geometry"/>
+        <mxCell id="EA_Exp3" style="endArrow=none;startArrow=none;" parent="1" source="E_Experiment" target="A_ExpStart" edge="1">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
-
-        <!-- =========================
-             E4: ORGANIZATION
-             ========================= -->
-        <mxCell id="E_Org" value="Organization" style="shape=rectangle;whiteSpace=wrap;html=1;fontStyle=1;" vertex="1" parent="1">
-          <mxGeometry x="400" y="220" width="120" height="40" as="geometry"/>
+        <mxCell id="EA_Exp4" style="endArrow=none;startArrow=none;" parent="1" source="E_Experiment" target="A_ExpEnd" edge="1">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <!-- Org Attributes -->
-        <mxCell id="A_OrgName" value="Name (PK)" style="shape=ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="380" y="170" width="80" height="30" as="geometry"/>
+        <mxCell id="R_contains" value="contains [1:N]" style="shape=rhombus;whiteSpace=wrap;html=1;fontStyle=1;" parent="1" vertex="1">
+          <mxGeometry x="270" y="5" width="90" height="50" as="geometry" />
         </mxCell>
-        <mxCell id="A_OrgStreet" value="Street" style="shape=ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="480" y="170" width="70" height="30" as="geometry"/>
+        <mxCell id="ER_contains_Proj" style="endArrow=none;startArrow=none;" parent="1" source="R_contains" target="E_Project" edge="1">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="A_OrgCity" value="City" style="shape=ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="370" y="280" width="60" height="30" as="geometry"/>
+        <mxCell id="ER_contains_Exp" style="endArrow=none;startArrow=none;" parent="1" source="R_contains" target="E_Experiment" edge="1">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="A_OrgState" value="State" style="shape=ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="450" y="280" width="60" height="30" as="geometry"/>
+        <mxCell id="E_ZipCode" value="ZipCodeRegion" style="shape=rectangle;whiteSpace=wrap;html=1;fontStyle=1;" parent="1" vertex="1">
+          <mxGeometry x="430" y="150" width="130" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="A_OrgZip" value="ZipCode" style="shape=ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="520" y="230" width="70" height="30" as="geometry"/>
+        <mxCell id="A_Zip" value="ZipCode (PK)" style="shape=ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="590" y="155" width="110" height="30" as="geometry" />
         </mxCell>
-        <!-- Connect Organization to attributes -->
-        <mxCell id="EA_Org1" edge="1" parent="1" source="E_Org" target="A_OrgName" style="endArrow=none;startArrow=none;">
-          <mxGeometry relative="1" as="geometry"/>
+        <mxCell id="A_Polygon" value="Polygon" style="shape=ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="455" y="90" width="80" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="EA_Org2" edge="1" parent="1" source="E_Org" target="A_OrgStreet" style="endArrow=none;startArrow=none;">
-          <mxGeometry relative="1" as="geometry"/>
+        <mxCell id="EA_Zip1" style="endArrow=none;startArrow=none;" parent="1" source="E_ZipCode" target="A_Zip" edge="1">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="EA_Org3" edge="1" parent="1" source="E_Org" target="A_OrgCity" style="endArrow=none;startArrow=none;">
-          <mxGeometry relative="1" as="geometry"/>
+        <mxCell id="EA_Zip2" style="endArrow=none;startArrow=none;" parent="1" source="E_ZipCode" target="A_Polygon" edge="1">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="EA_Org4" edge="1" parent="1" source="E_Org" target="A_OrgState" style="endArrow=none;startArrow=none;">
-          <mxGeometry relative="1" as="geometry"/>
+        <mxCell id="R_covers" value="covers [M:N]" style="shape=rhombus;whiteSpace=wrap;html=1;fontStyle=1;" parent="1" vertex="1">
+          <mxGeometry x="310" y="80" width="90" height="50" as="geometry" />
         </mxCell>
-        <mxCell id="EA_Org5" edge="1" parent="1" source="E_Org" target="A_OrgZip" style="endArrow=none;startArrow=none;">
-          <mxGeometry relative="1" as="geometry"/>
+        <mxCell id="ER_covers_Exp" style="endArrow=none;startArrow=none;" parent="1" source="R_covers" target="E_Experiment" edge="1">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
-
-        <!-- RELATION: conducted by [N:1]
-             (Experiment - Organization)
-        -->
-        <mxCell id="R_conducted_by" value="conducted by [N:1]" style="shape=rhombus;whiteSpace=wrap;html=1;fontStyle=1;" vertex="1" parent="1">
-          <mxGeometry x="400" y="120" width="100" height="50" as="geometry"/>
+        <mxCell id="ER_covers_Zip" style="endArrow=none;startArrow=none;" parent="1" source="R_owns" target="E_ZipCode" edge="1">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="ER_condExp" edge="1" parent="1" source="R_conducted_by" target="E_Experiment" style="endArrow=none;startArrow=none;">
-          <mxGeometry relative="1" as="geometry"/>
+        <mxCell id="E_Org" value="Organization" style="shape=rectangle;whiteSpace=wrap;html=1;fontStyle=1;" parent="1" vertex="1">
+          <mxGeometry x="840" y="-210" width="120" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="ER_condOrg" edge="1" parent="1" source="R_conducted_by" target="E_Org" style="endArrow=none;startArrow=none;">
-          <mxGeometry relative="1" as="geometry"/>
+        <mxCell id="A_OrgName" value="Name (PK)" style="shape=ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="995" y="-195" width="80" height="30" as="geometry" />
         </mxCell>
-
-        <!-- =========================
-             E5: PERSON
-             ========================= -->
-        <mxCell id="E_Person" value="Person" style="shape=rectangle;whiteSpace=wrap;html=1;fontStyle=1;" vertex="1" parent="1">
-          <mxGeometry x="100" y="320" width="90" height="40" as="geometry"/>
+        <mxCell id="A_OrgStreet" value="Street" style="shape=ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="925" y="-260" width="70" height="30" as="geometry" />
         </mxCell>
-        <!-- Person attributes -->
-        <mxCell id="A_SSN" value="SSN (PK)" style="shape=ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="30" y="270" width="100" height="30" as="geometry"/>
+        <mxCell id="A_OrgCity" value="City" style="shape=ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="910" y="-150" width="60" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="A_LName" value="LastName" style="shape=ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="10" y="380" width="80" height="30" as="geometry"/>
+        <mxCell id="A_OrgState" value="State" style="shape=ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="985" y="-150" width="60" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="A_MName" value="MiddleName" style="shape=ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="10" y="430" width="100" height="30" as="geometry"/>
+        <mxCell id="A_OrgZip" value="ZipCode" style="shape=ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="1005" y="-245" width="70" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="A_FName" value="FirstName" style="shape=ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="110" y="380" width="80" height="30" as="geometry"/>
+        <mxCell id="EA_Org1" style="endArrow=none;startArrow=none;" parent="1" source="E_Org" target="A_OrgName" edge="1">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="A_Addr" value="Address" style="shape=ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="110" y="430" width="80" height="30" as="geometry"/>
+        <mxCell id="EA_Org2" style="endArrow=none;startArrow=none;" parent="1" source="E_Org" target="A_OrgStreet" edge="1">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="A_Phone" value="Phone" style="shape=ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="10" y="480" width="80" height="30" as="geometry"/>
+        <mxCell id="EA_Org3" style="endArrow=none;startArrow=none;" parent="1" source="E_Org" target="A_OrgCity" edge="1">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="A_Email" value="Email" style="shape=ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="110" y="480" width="60" height="30" as="geometry"/>
+        <mxCell id="EA_Org4" style="endArrow=none;startArrow=none;" parent="1" source="E_Org" target="A_OrgState" edge="1">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="A_DateJoin" value="DateJoined" style="shape=ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="180" y="330" width="90" height="30" as="geometry"/>
+        <mxCell id="EA_Org5" style="endArrow=none;startArrow=none;" parent="1" source="E_Org" target="A_OrgZip" edge="1">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <!-- Connect Person to attributes -->
-        <mxCell id="EA_Person1" edge="1" parent="1" source="E_Person" target="A_SSN" style="endArrow=none;startArrow=none;">
-          <mxGeometry relative="1" as="geometry"/>
+        <mxCell id="R_conducted_by" value="conducted by [N:1]" style="shape=rhombus;whiteSpace=wrap;html=1;fontStyle=1;" parent="1" vertex="1">
+          <mxGeometry x="850" y="-100" width="100" height="50" as="geometry" />
         </mxCell>
-        <mxCell id="EA_Person2" edge="1" parent="1" source="E_Person" target="A_LName" style="endArrow=none;startArrow=none;">
-          <mxGeometry relative="1" as="geometry"/>
+        <mxCell id="ER_condExp" style="endArrow=none;startArrow=none;" parent="1" source="R_conducted_by" target="E_Experiment" edge="1">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="EA_Person3" edge="1" parent="1" source="E_Person" target="A_MName" style="endArrow=none;startArrow=none;">
-          <mxGeometry relative="1" as="geometry"/>
+        <mxCell id="ER_condOrg" style="endArrow=none;startArrow=none;" parent="1" source="R_conducted_by" target="E_Org" edge="1">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="EA_Person4" edge="1" parent="1" source="E_Person" target="A_FName" style="endArrow=none;startArrow=none;">
-          <mxGeometry relative="1" as="geometry"/>
+        <mxCell id="E_Person" value="Person" style="shape=rectangle;whiteSpace=wrap;html=1;fontStyle=1;" parent="1" vertex="1">
+          <mxGeometry x="100" y="320" width="90" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="EA_Person5" edge="1" parent="1" source="E_Person" target="A_Addr" style="endArrow=none;startArrow=none;">
-          <mxGeometry relative="1" as="geometry"/>
+        <mxCell id="A_SSN" value="SSN (PK)" style="shape=ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="-150" y="230" width="100" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="EA_Person6" edge="1" parent="1" source="E_Person" target="A_Phone" style="endArrow=none;startArrow=none;">
-          <mxGeometry relative="1" as="geometry"/>
+        <mxCell id="A_LName" value="LastName" style="shape=ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="-150" y="420" width="80" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="EA_Person7" edge="1" parent="1" source="E_Person" target="A_Email" style="endArrow=none;startArrow=none;">
-          <mxGeometry relative="1" as="geometry"/>
+        <mxCell id="A_MName" value="MiddleName" style="shape=ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="-150" y="470" width="100" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="EA_Person8" edge="1" parent="1" source="E_Person" target="A_DateJoin" style="endArrow=none;startArrow=none;">
-          <mxGeometry relative="1" as="geometry"/>
+        <mxCell id="A_FName" value="FirstName" style="shape=ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="-140" y="360" width="80" height="30" as="geometry" />
         </mxCell>
-
-        <!-- =========================
-             E5a: CivilEngineer Subclass
-             ========================= -->
-        <mxCell id="E_CivilEng" value="CivilEngineer" style="shape=rectangle;whiteSpace=wrap;html=1;fontStyle=1;" vertex="1" parent="1">
-          <mxGeometry x="320" y="330" width="110" height="40" as="geometry"/>
+        <mxCell id="A_Addr" value="Address" style="shape=ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="-110" y="180" width="80" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="A_FieldExp" value="Field of Expertise" style="shape=ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="300" y="280" width="110" height="30" as="geometry"/>
+        <mxCell id="A_Phone" value="Phone" style="shape=ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="-80" y="510" width="80" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="EA_CEng1" edge="1" parent="1" source="E_CivilEng" target="A_FieldExp" style="endArrow=none;startArrow=none;">
-          <mxGeometry relative="1" as="geometry"/>
+        <mxCell id="A_Email" value="Email" style="shape=ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="10" y="520" width="60" height="30" as="geometry" />
         </mxCell>
-
-        <!-- E5b: FieldOperator Subclass -->
-        <mxCell id="E_FieldOp" value="FieldOperator" style="shape=rectangle;whiteSpace=wrap;html=1;fontStyle=1;" vertex="1" parent="1">
-          <mxGeometry x="320" y="420" width="110" height="40" as="geometry"/>
+        <mxCell id="A_DateJoin" value="DateJoined" style="shape=ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="-130" y="300" width="90" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="A_YearsExp" value="Years of Experience" style="shape=ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="300" y="480" width="120" height="30" as="geometry"/>
+        <mxCell id="EA_Person1" style="endArrow=none;startArrow=none;" parent="1" source="E_Person" target="A_SSN" edge="1">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="EA_FOp1" edge="1" parent="1" source="E_FieldOp" target="A_YearsExp" style="endArrow=none;startArrow=none;">
-          <mxGeometry relative="1" as="geometry"/>
+        <mxCell id="EA_Person2" style="endArrow=none;startArrow=none;" parent="1" source="E_Person" target="A_LName" edge="1">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
-
-        <!-- E5c: ComputerSpecialist Subclass -->
-        <mxCell id="E_CompSpec" value="ComputerSpecialist" style="shape=rectangle;whiteSpace=wrap;html=1;fontStyle=1;" vertex="1" parent="1">
-          <mxGeometry x="320" y="510" width="140" height="40" as="geometry"/>
+        <mxCell id="EA_Person3" style="endArrow=none;startArrow=none;" parent="1" source="E_Person" target="A_MName" edge="1">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="A_CompSkills" value="Computer Skills" style="shape=ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="310" y="560" width="120" height="30" as="geometry"/>
+        <mxCell id="EA_Person4" style="endArrow=none;startArrow=none;" parent="1" source="E_Person" target="A_FName" edge="1">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="EA_Comp1" edge="1" parent="1" source="E_CompSpec" target="A_CompSkills" style="endArrow=none;startArrow=none;">
-          <mxGeometry relative="1" as="geometry"/>
+        <mxCell id="EA_Person5" style="endArrow=none;startArrow=none;" parent="1" source="E_Person" target="A_Addr" edge="1">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
-
-        <!-- RELATION: ISA diamond for Person -> CE, FO, CS -->
-        <mxCell id="R_ISA_Person" value="ISA" style="shape=rhombus;whiteSpace=wrap;html=1;dashed=1;fontStyle=1;" vertex="1" parent="1">
-          <mxGeometry x="230" y="380" width="50" height="50" as="geometry"/>
+        <mxCell id="EA_Person6" style="endArrow=none;startArrow=none;" parent="1" source="E_Person" target="A_Phone" edge="1">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <!-- edges to ISA -->
-        <mxCell id="ER_isa_p" edge="1" parent="1" source="E_Person" target="R_ISA_Person" style="endArrow=none;startArrow=none;dashed=1;">
-          <mxGeometry relative="1" as="geometry"/>
+        <mxCell id="EA_Person7" style="endArrow=none;startArrow=none;" parent="1" source="E_Person" target="A_Email" edge="1">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="ER_isa_CE" edge="1" parent="1" source="R_ISA_Person" target="E_CivilEng" style="endArrow=none;startArrow=none;dashed=1;">
-          <mxGeometry relative="1" as="geometry"/>
+        <mxCell id="EA_Person8" style="endArrow=none;startArrow=none;" parent="1" source="E_Person" target="A_DateJoin" edge="1">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="ER_isa_FO" edge="1" parent="1" source="R_ISA_Person" target="E_FieldOp" style="endArrow=none;startArrow=none;dashed=1;">
-          <mxGeometry relative="1" as="geometry"/>
+        <mxCell id="E_CivilEng" value="CivilEngineer" style="shape=rectangle;whiteSpace=wrap;html=1;fontStyle=1;" parent="1" vertex="1">
+          <mxGeometry x="230" y="380" width="110" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="ER_isa_CS" edge="1" parent="1" source="R_ISA_Person" target="E_CompSpec" style="endArrow=none;startArrow=none;dashed=1;">
-          <mxGeometry relative="1" as="geometry"/>
+        <mxCell id="A_FieldExp" value="Field of Expertise" style="shape=ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="370" y="385" width="110" height="30" as="geometry" />
         </mxCell>
-
-        <!-- RELATION: participates [M:N]
-             (Project - Person)
-        -->
-        <mxCell id="R_participates" value="participates [M:N]" style="shape=rhombus;whiteSpace=wrap;html=1;fontStyle=1;" vertex="1" parent="1">
-          <mxGeometry x="100" y="180" width="110" height="50" as="geometry"/>
+        <mxCell id="EA_CEng1" style="endArrow=none;startArrow=none;" parent="1" source="E_CivilEng" target="A_FieldExp" edge="1">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="ER_part_Proj" edge="1" parent="1" source="R_participates" target="E_Project" style="endArrow=none;startArrow=none;">
-          <mxGeometry relative="1" as="geometry"/>
+        <mxCell id="E_FieldOp" value="FieldOperator" style="shape=rectangle;whiteSpace=wrap;html=1;fontStyle=1;" parent="1" vertex="1">
+          <mxGeometry x="230" y="440" width="110" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="ER_part_Pers" edge="1" parent="1" source="R_participates" target="E_Person" style="endArrow=none;startArrow=none;">
-          <mxGeometry relative="1" as="geometry"/>
+        <mxCell id="A_YearsExp" value="Years of Experience" style="shape=ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="380" y="445" width="120" height="30" as="geometry" />
         </mxCell>
-
-        <!-- =========================
-             E6: MISSION
-             ========================= -->
-        <mxCell id="E_Mission" value="Mission" style="shape=rectangle;whiteSpace=wrap;html=1;fontStyle=1;" vertex="1" parent="1">
-          <mxGeometry x="600" y="320" width="90" height="40" as="geometry"/>
+        <mxCell id="EA_FOp1" style="endArrow=none;startArrow=none;" parent="1" source="E_FieldOp" target="A_YearsExp" edge="1">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <!-- Mission attributes -->
-        <mxCell id="A_MID" value="MissionID (PK)" style="shape=ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="570" y="270" width="110" height="30" as="geometry"/>
+        <mxCell id="A_CompSkills" value="Computer Skills" style="shape=ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="380" y="500" width="120" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="A_MTitle" value="Title" style="shape=ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="700" y="270" width="70" height="30" as="geometry"/>
+        <mxCell id="R_ISA_Person" value="ISA" style="shape=rhombus;whiteSpace=wrap;html=1;dashed=1;fontStyle=1;" parent="1" vertex="1">
+          <mxGeometry x="130" y="450" width="50" height="50" as="geometry" />
         </mxCell>
-        <mxCell id="A_MStart" value="Start Date" style="shape=ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="550" y="370" width="80" height="30" as="geometry"/>
+        <mxCell id="ER_isa_p" style="endArrow=none;startArrow=none;dashed=1;" parent="1" source="E_Person" target="R_ISA_Person" edge="1">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="A_MEnd" value="End Date" style="shape=ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="640" y="370" width="80" height="30" as="geometry"/>
+        <mxCell id="ER_isa_CE" style="endArrow=none;startArrow=none;dashed=1;" parent="1" source="R_ISA_Person" target="E_CivilEng" edge="1">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="A_MEmpCount" value="# Employees" style="shape=ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="730" y="320" width="80" height="30" as="geometry"/>
+        <mxCell id="ER_isa_FO" style="endArrow=none;startArrow=none;dashed=1;" parent="1" source="R_ISA_Person" target="E_FieldOp" edge="1">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <!-- Connect Mission to attributes -->
-        <mxCell id="EA_M1" edge="1" parent="1" source="E_Mission" target="A_MID" style="endArrow=none;startArrow=none;">
-          <mxGeometry relative="1" as="geometry"/>
+        <mxCell id="R_participates" value="participates [M:N]" style="shape=rhombus;whiteSpace=wrap;html=1;fontStyle=1;" parent="1" vertex="1">
+          <mxGeometry x="100" y="180" width="110" height="50" as="geometry" />
         </mxCell>
-        <mxCell id="EA_M2" edge="1" parent="1" source="E_Mission" target="A_MTitle" style="endArrow=none;startArrow=none;">
-          <mxGeometry relative="1" as="geometry"/>
+        <mxCell id="ER_part_Proj" style="endArrow=none;startArrow=none;" parent="1" source="R_participates" target="E_Project" edge="1">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="EA_M3" edge="1" parent="1" source="E_Mission" target="A_MStart" style="endArrow=none;startArrow=none;">
-          <mxGeometry relative="1" as="geometry"/>
+        <mxCell id="ER_part_Pers" style="endArrow=none;startArrow=none;" parent="1" source="R_participates" target="E_Person" edge="1">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="EA_M4" edge="1" parent="1" source="E_Mission" target="A_MEnd" style="endArrow=none;startArrow=none;">
-          <mxGeometry relative="1" as="geometry"/>
+        <mxCell id="E_Mission" value="Mission" style="shape=rectangle;whiteSpace=wrap;html=1;fontStyle=1;" parent="1" vertex="1">
+          <mxGeometry x="990" y="25" width="90" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="EA_M5" edge="1" parent="1" source="E_Mission" target="A_MEmpCount" style="endArrow=none;startArrow=none;">
-          <mxGeometry relative="1" as="geometry"/>
+        <mxCell id="A_MID" value="MissionID (PK)" style="shape=ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="1005" y="-60" width="110" height="30" as="geometry" />
         </mxCell>
-
-        <!-- RELATION: includes [1:N]
-             (Experiment - Mission)
-        -->
-        <mxCell id="R_includes" value="includes [1:N]" style="shape=rhombus;whiteSpace=wrap;html=1;fontStyle=1;" vertex="1" parent="1">
-          <mxGeometry x="500" y="220" width="90" height="50" as="geometry"/>
+        <mxCell id="A_MTitle" value="Title" style="shape=ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="1171" y="35" width="70" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="ER_inc_Exp" edge="1" parent="1" source="R_includes" target="E_Experiment" style="endArrow=none;startArrow=none;">
-          <mxGeometry relative="1" as="geometry"/>
+        <mxCell id="A_MStart" value="Start Date" style="shape=ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="1120" y="-55" width="80" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="ER_inc_Miss" edge="1" parent="1" source="R_includes" target="E_Mission" style="endArrow=none;startArrow=none;">
-          <mxGeometry relative="1" as="geometry"/>
+        <mxCell id="A_MEnd" value="End Date" style="shape=ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="1150" y="-10" width="80" height="30" as="geometry" />
         </mxCell>
-
-        <!-- =========================
-             E7: VEHICLE
-             ========================= -->
-        <mxCell id="E_Vehicle" value="Vehicle" style="shape=rectangle;whiteSpace=wrap;html=1;fontStyle=1;" vertex="1" parent="1">
-          <mxGeometry x="1000" y="320" width="80" height="40" as="geometry"/>
+        <mxCell id="A_MEmpCount" value="# Employees" style="shape=ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="1130" y="90" width="80" height="30" as="geometry" />
         </mxCell>
-        <!-- Vehicle attributes -->
-        <mxCell id="A_VIN" value="VIN (PK)" style="shape=ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="960" y="270" width="80" height="30" as="geometry"/>
+        <mxCell id="EA_M1" style="endArrow=none;startArrow=none;" parent="1" source="E_Mission" target="A_MID" edge="1">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="A_VPrice" value="Price" style="shape=ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="1080" y="270" width="70" height="30" as="geometry"/>
+        <mxCell id="EA_M2" style="endArrow=none;startArrow=none;" parent="1" source="E_Mission" target="A_MTitle" edge="1">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="A_VAdmin" value="Administrator" style="shape=ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="960" y="370" width="90" height="30" as="geometry"/>
+        <mxCell id="EA_M3" style="endArrow=none;startArrow=none;" parent="1" source="E_Mission" target="A_MStart" edge="1">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <!-- Connect Vehicle to attributes -->
-        <mxCell id="EA_V1" edge="1" parent="1" source="E_Vehicle" target="A_VIN" style="endArrow=none;startArrow=none;">
-          <mxGeometry relative="1" as="geometry"/>
+        <mxCell id="EA_M4" style="endArrow=none;startArrow=none;" parent="1" source="E_Mission" target="A_MEnd" edge="1">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="EA_V2" edge="1" parent="1" source="E_Vehicle" target="A_VPrice" style="endArrow=none;startArrow=none;">
-          <mxGeometry relative="1" as="geometry"/>
+        <mxCell id="EA_M5" style="endArrow=none;startArrow=none;" parent="1" source="E_Mission" target="A_MEmpCount" edge="1">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="EA_V3" edge="1" parent="1" source="E_Vehicle" target="A_VAdmin" style="endArrow=none;startArrow=none;">
-          <mxGeometry relative="1" as="geometry"/>
+        <mxCell id="R_includes" value="includes [1:N]" style="shape=rhombus;whiteSpace=wrap;html=1;fontStyle=1;" parent="1" vertex="1">
+          <mxGeometry x="840" width="90" height="50" as="geometry" />
         </mxCell>
-
-        <!-- Subclasses of Vehicle: Excavator, Bulldozer, Crane, Centrifuge, Drill -->
-        <mxCell id="E_Excavator" value="Excavator" style="shape=rectangle;whiteSpace=wrap;html=1;fontStyle=1;" vertex="1" parent="1">
-          <mxGeometry x="950" y="450" width="80" height="40" as="geometry"/>
+        <mxCell id="ER_inc_Exp" style="endArrow=none;startArrow=none;" parent="1" source="R_includes" target="E_Experiment" edge="1">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="A_BucketSize" value="Bucket Size" style="shape=ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="930" y="500" width="90" height="30" as="geometry"/>
+        <mxCell id="ER_inc_Miss" style="endArrow=none;startArrow=none;" parent="1" source="R_includes" target="E_Mission" edge="1">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="EA_Exc1" edge="1" parent="1" source="E_Excavator" target="A_BucketSize" style="endArrow=none;startArrow=none;">
-          <mxGeometry relative="1" as="geometry"/>
+        <mxCell id="E_Vehicle" value="Vehicle" style="shape=rectangle;whiteSpace=wrap;html=1;fontStyle=1;" parent="1" vertex="1">
+          <mxGeometry x="1335" y="355" width="80" height="40" as="geometry" />
         </mxCell>
-
-        <mxCell id="E_Bulldozer" value="Bulldozer" style="shape=rectangle;whiteSpace=wrap;html=1;fontStyle=1;" vertex="1" parent="1">
-          <mxGeometry x="1050" y="450" width="80" height="40" as="geometry"/>
+        <mxCell id="A_VIN" value="VIN (PK)" style="shape=ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="1460" y="330" width="80" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="A_Horsepower" value="Horsepower" style="shape=ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="1040" y="500" width="90" height="30" as="geometry"/>
+        <mxCell id="A_VPrice" value="Price" style="shape=ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="1440" y="285" width="70" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="EA_Bull1" edge="1" parent="1" source="E_Bulldozer" target="A_Horsepower" style="endArrow=none;startArrow=none;">
-          <mxGeometry relative="1" as="geometry"/>
+        <mxCell id="A_VAdmin" value="Administrator" style="shape=ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="1460" y="385" width="90" height="30" as="geometry" />
         </mxCell>
-
-        <mxCell id="E_Crane" value="Crane" style="shape=rectangle;whiteSpace=wrap;html=1;fontStyle=1;" vertex="1" parent="1">
-          <mxGeometry x="1150" y="450" width="60" height="40" as="geometry"/>
+        <mxCell id="EA_V1" style="endArrow=none;startArrow=none;" parent="1" source="E_Vehicle" target="A_VIN" edge="1">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="A_BoomLen" value="Boom Length" style="shape=ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="1140" y="500" width="90" height="30" as="geometry"/>
+        <mxCell id="EA_V2" style="endArrow=none;startArrow=none;" parent="1" source="E_Vehicle" target="A_VPrice" edge="1">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="EA_Crane1" edge="1" parent="1" source="E_Crane" target="A_BoomLen" style="endArrow=none;startArrow=none;">
-          <mxGeometry relative="1" as="geometry"/>
+        <mxCell id="EA_V3" style="endArrow=none;startArrow=none;" parent="1" source="E_Vehicle" target="A_VAdmin" edge="1">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
-
-        <mxCell id="E_Centrifuge" value="Centrifuge" style="shape=rectangle;whiteSpace=wrap;html=1;fontStyle=1;" vertex="1" parent="1">
-          <mxGeometry x="950" y="580" width="80" height="40" as="geometry"/>
+        <mxCell id="E_Excavator" value="Excavator" style="shape=rectangle;whiteSpace=wrap;html=1;fontStyle=1;" parent="1" vertex="1">
+          <mxGeometry x="1430" y="545" width="80" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="A_MotorPower" value="Motor Power" style="shape=ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="930" y="630" width="90" height="30" as="geometry"/>
+        <mxCell id="A_BucketSize" value="Bucket Size" style="shape=ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="1410" y="595" width="90" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="EA_Cent1" edge="1" parent="1" source="E_Centrifuge" target="A_MotorPower" style="endArrow=none;startArrow=none;">
-          <mxGeometry relative="1" as="geometry"/>
+        <mxCell id="EA_Exc1" style="endArrow=none;startArrow=none;" parent="1" source="E_Excavator" target="A_BucketSize" edge="1">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
-
-        <mxCell id="E_Drill" value="Drill" style="shape=rectangle;whiteSpace=wrap;html=1;fontStyle=1;" vertex="1" parent="1">
-          <mxGeometry x="1050" y="580" width="60" height="40" as="geometry"/>
+        <mxCell id="E_Bulldozer" value="Bulldozer" style="shape=rectangle;whiteSpace=wrap;html=1;fontStyle=1;" parent="1" vertex="1">
+          <mxGeometry x="1530" y="545" width="80" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="A_Diameter" value="Diameter" style="shape=ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="1040" y="630" width="80" height="30" as="geometry"/>
+        <mxCell id="A_Horsepower" value="Horsepower" style="shape=ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="1520" y="595" width="90" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="EA_Drill1" edge="1" parent="1" source="E_Drill" target="A_Diameter" style="endArrow=none;startArrow=none;">
-          <mxGeometry relative="1" as="geometry"/>
+        <mxCell id="EA_Bull1" style="endArrow=none;startArrow=none;" parent="1" source="E_Bulldozer" target="A_Horsepower" edge="1">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
-
-        <!-- RELATION: ISA diamond for Vehicle -> sub-vehicles -->
-        <mxCell id="R_ISA_Veh" value="ISA" style="shape=rhombus;whiteSpace=wrap;html=1;dashed=1;fontStyle=1;" vertex="1" parent="1">
-          <mxGeometry x="1050" y="400" width="50" height="50" as="geometry"/>
+        <mxCell id="E_Crane" value="Crane" style="shape=rectangle;whiteSpace=wrap;html=1;fontStyle=1;" parent="1" vertex="1">
+          <mxGeometry x="1630" y="545" width="60" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="ER_ISAV" edge="1" parent="1" source="E_Vehicle" target="R_ISA_Veh" style="endArrow=none;startArrow=none;dashed=1;">
-          <mxGeometry relative="1" as="geometry"/>
+        <mxCell id="A_BoomLen" value="Boom Length" style="shape=ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="1620" y="595" width="90" height="30" as="geometry" />
         </mxCell>
-        <!-- edges from ISA diamond to each sub-vehicle -->
-        <mxCell id="ER_ISA_Ex" edge="1" parent="1" source="R_ISA_Veh" target="E_Excavator" style="endArrow=none;startArrow=none;dashed=1;">
-          <mxGeometry relative="1" as="geometry"/>
+        <mxCell id="EA_Crane1" style="endArrow=none;startArrow=none;" parent="1" source="E_Crane" target="A_BoomLen" edge="1">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="ER_ISA_Bu" edge="1" parent="1" source="R_ISA_Veh" target="E_Bulldozer" style="endArrow=none;startArrow=none;dashed=1;">
-          <mxGeometry relative="1" as="geometry"/>
+        <mxCell id="E_Centrifuge" value="Centrifuge" style="shape=rectangle;whiteSpace=wrap;html=1;fontStyle=1;" parent="1" vertex="1">
+          <mxGeometry x="1220" y="545" width="80" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="ER_ISA_Cr" edge="1" parent="1" source="R_ISA_Veh" target="E_Crane" style="endArrow=none;startArrow=none;dashed=1;">
-          <mxGeometry relative="1" as="geometry"/>
+        <mxCell id="A_MotorPower" value="Motor Power" style="shape=ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="1200" y="595" width="90" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="ER_ISA_Cen" edge="1" parent="1" source="R_ISA_Veh" target="E_Centrifuge" style="endArrow=none;startArrow=none;dashed=1;">
-          <mxGeometry relative="1" as="geometry"/>
+        <mxCell id="EA_Cent1" style="endArrow=none;startArrow=none;" parent="1" source="E_Centrifuge" target="A_MotorPower" edge="1">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="ER_ISA_Dr" edge="1" parent="1" source="R_ISA_Veh" target="E_Drill" style="endArrow=none;startArrow=none;dashed=1;">
-          <mxGeometry relative="1" as="geometry"/>
+        <mxCell id="E_Drill" value="Drill" style="shape=rectangle;whiteSpace=wrap;html=1;fontStyle=1;" parent="1" vertex="1">
+          <mxGeometry x="1320" y="545" width="60" height="40" as="geometry" />
         </mxCell>
-
-        <!-- RELATION: assigned to [M:N] (Mission - Vehicle) -->
-        <mxCell id="R_assigned" value="assigned to [M:N]" style="shape=rhombus;whiteSpace=wrap;html=1;fontStyle=1;" vertex="1" parent="1">
-          <mxGeometry x="800" y="320" width="100" height="50" as="geometry"/>
+        <mxCell id="A_Diameter" value="Diameter" style="shape=ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="1310" y="595" width="80" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="ER_ass_Miss" edge="1" parent="1" source="R_assigned" target="E_Mission" style="endArrow=none;startArrow=none;">
-          <mxGeometry relative="1" as="geometry"/>
+        <mxCell id="EA_Drill1" style="endArrow=none;startArrow=none;" parent="1" source="E_Drill" target="A_Diameter" edge="1">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="ER_ass_Veh" edge="1" parent="1" source="R_assigned" target="E_Vehicle" style="endArrow=none;startArrow=none;">
-          <mxGeometry relative="1" as="geometry"/>
+        <mxCell id="R_ISA_Veh" value="ISA" style="shape=rhombus;whiteSpace=wrap;html=1;dashed=1;fontStyle=1;" parent="1" vertex="1">
+          <mxGeometry x="1350" y="470" width="50" height="50" as="geometry" />
         </mxCell>
-
-        <!-- =========================
-             E8: EQUIPMENT
-             ========================= -->
-        <mxCell id="E_Equip" value="Equipment" style="shape=rectangle;whiteSpace=wrap;html=1;fontStyle=1;" vertex="1" parent="1">
-          <mxGeometry x="300" y="620" width="100" height="40" as="geometry"/>
+        <mxCell id="ER_ISAV" style="endArrow=none;startArrow=none;dashed=1;" parent="1" source="E_Vehicle" target="R_ISA_Veh" edge="1">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <!-- Equipment attributes -->
-        <mxCell id="A_EquipID" value="EquipmentID (PK)" style="shape=ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="280" y="570" width="110" height="30" as="geometry"/>
+        <mxCell id="ER_ISA_Ex" style="endArrow=none;startArrow=none;dashed=1;" parent="1" source="R_ISA_Veh" target="E_Excavator" edge="1">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="A_EquipName" value="Name" style="shape=ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="400" y="570" width="70" height="30" as="geometry"/>
+        <mxCell id="ER_ISA_Bu" style="endArrow=none;startArrow=none;dashed=1;" parent="1" source="R_ISA_Veh" target="E_Bulldozer" edge="1">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="A_EquipDesc" value="Description" style="shape=ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="280" y="680" width="90" height="30" as="geometry"/>
+        <mxCell id="ER_ISA_Cr" style="endArrow=none;startArrow=none;dashed=1;" parent="1" source="R_ISA_Veh" target="E_Crane" edge="1">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <!-- Connect Equipment to attributes -->
-        <mxCell id="EA_Equ1" edge="1" parent="1" source="E_Equip" target="A_EquipID" style="endArrow=none;startArrow=none;">
-          <mxGeometry relative="1" as="geometry"/>
+        <mxCell id="ER_ISA_Cen" style="endArrow=none;startArrow=none;dashed=1;" parent="1" source="R_ISA_Veh" target="E_Centrifuge" edge="1">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="EA_Equ2" edge="1" parent="1" source="E_Equip" target="A_EquipName" style="endArrow=none;startArrow=none;">
-          <mxGeometry relative="1" as="geometry"/>
+        <mxCell id="ER_ISA_Dr" style="endArrow=none;startArrow=none;dashed=1;" parent="1" source="R_ISA_Veh" target="E_Drill" edge="1">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="EA_Equ3" edge="1" parent="1" source="E_Equip" target="A_EquipDesc" style="endArrow=none;startArrow=none;">
-          <mxGeometry relative="1" as="geometry"/>
+        <mxCell id="R_assigned" value="assigned to [M:N]" style="shape=rhombus;whiteSpace=wrap;html=1;fontStyle=1;" parent="1" vertex="1">
+          <mxGeometry x="1265" y="240" width="100" height="50" as="geometry" />
         </mxCell>
-
-        <!-- RELATION: uses [M:N] (Mission - Equipment) -->
-        <mxCell id="R_uses" value="uses [M:N]" style="shape=rhombus;whiteSpace=wrap;html=1;fontStyle=1;" vertex="1" parent="1">
-          <mxGeometry x="450" y="500" width="90" height="50" as="geometry"/>
+        <mxCell id="ER_ass_Miss" style="endArrow=none;startArrow=none;" parent="1" source="R_assigned" target="E_Mission" edge="1">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="ER_uses_Miss" edge="1" parent="1" source="R_uses" target="E_Mission" style="endArrow=none;startArrow=none;">
-          <mxGeometry relative="1" as="geometry"/>
+        <mxCell id="ER_ass_Veh" style="endArrow=none;startArrow=none;" parent="1" source="R_assigned" target="E_Vehicle" edge="1">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="ER_uses_Equ" edge="1" parent="1" source="R_uses" target="E_Equip" style="endArrow=none;startArrow=none;">
-          <mxGeometry relative="1" as="geometry"/>
+        <mxCell id="E_Equip" value="Equipment" style="shape=rectangle;whiteSpace=wrap;html=1;fontStyle=1;" parent="1" vertex="1">
+          <mxGeometry x="625" y="220" width="100" height="40" as="geometry" />
         </mxCell>
-
-        <!-- =========================
-             E9: BOREHOLE
-             ========================= -->
-        <mxCell id="E_Borehole" value="Borehole" style="shape=rectangle;whiteSpace=wrap;html=1;fontStyle=1;" vertex="1" parent="1">
-          <mxGeometry x="600" y="700" width="90" height="40" as="geometry"/>
+        <mxCell id="A_EquipID" value="EquipmentID (PK)" style="shape=ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="500" y="315" width="110" height="30" as="geometry" />
         </mxCell>
-        <!-- Borehole attributes -->
-        <mxCell id="A_BHID" value="BoreholeID (PK)" style="shape=ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="570" y="650" width="110" height="30" as="geometry"/>
+        <mxCell id="A_EquipName" value="Name" style="shape=ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="715" y="315" width="70" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="A_BHDepth" value="Depth" style="shape=ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="690" y="650" width="60" height="30" as="geometry"/>
+        <mxCell id="A_EquipDesc" value="Description" style="shape=ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="615" y="315" width="90" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="A_BHLoc" value="Location" style="shape=ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="520" y="760" width="70" height="30" as="geometry"/>
+        <mxCell id="EA_Equ1" style="endArrow=none;startArrow=none;" parent="1" source="E_Equip" target="A_EquipID" edge="1">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="A_BHDrill" value="Drill Date" style="shape=ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="600" y="760" width="80" height="30" as="geometry"/>
+        <mxCell id="EA_Equ2" style="endArrow=none;startArrow=none;" parent="1" source="E_Equip" target="A_EquipName" edge="1">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="A_BHTest" value="Testing Type" style="shape=ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="690" y="760" width="80" height="30" as="geometry"/>
+        <mxCell id="EA_Equ3" style="endArrow=none;startArrow=none;" parent="1" source="E_Equip" target="A_EquipDesc" edge="1">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <!-- Connect Borehole to attributes -->
-        <mxCell id="EA_BH1" edge="1" parent="1" source="E_Borehole" target="A_BHID" style="endArrow=none;startArrow=none;">
-          <mxGeometry relative="1" as="geometry"/>
+        <mxCell id="R_uses" value="uses [M:N]" style="shape=rhombus;whiteSpace=wrap;html=1;fontStyle=1;" parent="1" vertex="1">
+          <mxGeometry x="760" y="205" width="90" height="50" as="geometry" />
         </mxCell>
-        <mxCell id="EA_BH2" edge="1" parent="1" source="E_Borehole" target="A_BHDepth" style="endArrow=none;startArrow=none;">
-          <mxGeometry relative="1" as="geometry"/>
+        <mxCell id="ER_uses_Miss" style="endArrow=none;startArrow=none;" parent="1" source="R_uses" target="E_Mission" edge="1">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="EA_BH3" edge="1" parent="1" source="E_Borehole" target="A_BHLoc" style="endArrow=none;startArrow=none;">
-          <mxGeometry relative="1" as="geometry"/>
+        <mxCell id="ER_uses_Equ" style="endArrow=none;startArrow=none;" parent="1" source="R_uses" target="E_Equip" edge="1">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="EA_BH4" edge="1" parent="1" source="E_Borehole" target="A_BHDrill" style="endArrow=none;startArrow=none;">
-          <mxGeometry relative="1" as="geometry"/>
+        <mxCell id="E_Borehole" value="Borehole" style="shape=rectangle;whiteSpace=wrap;html=1;fontStyle=1;" parent="1" vertex="1">
+          <mxGeometry x="1040" y="322.5" width="90" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="EA_BH5" edge="1" parent="1" source="E_Borehole" target="A_BHTest" style="endArrow=none;startArrow=none;">
-          <mxGeometry relative="1" as="geometry"/>
+        <mxCell id="A_BHID" value="BoreholeID (PK)" style="shape=ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="1150" y="327.5" width="110" height="30" as="geometry" />
         </mxCell>
-
-        <!-- RELATION: drills [1:N] (Mission - Borehole) -->
-        <mxCell id="R_drills" value="drills [1:N]" style="shape=rhombus;whiteSpace=wrap;html=1;fontStyle=1;" vertex="1" parent="1">
-          <mxGeometry x="560" y="540" width="80" height="50" as="geometry"/>
+        <mxCell id="A_BHDepth" value="Depth" style="shape=ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="1160" y="385" width="60" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="ER_drill_Miss" edge="1" parent="1" source="R_drills" target="E_Mission" style="endArrow=none;startArrow=none;">
-          <mxGeometry relative="1" as="geometry"/>
+        <mxCell id="A_BHLoc" value="Location" style="shape=ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="1115" y="430" width="70" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="ER_drill_BH" edge="1" parent="1" source="R_drills" target="E_Borehole" style="endArrow=none;startArrow=none;">
-          <mxGeometry relative="1" as="geometry"/>
+        <mxCell id="A_BHDrill" value="Drill Date" style="shape=ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="1140" y="267.5" width="80" height="30" as="geometry" />
         </mxCell>
-
-        <!-- =========================
-             E10 (Weak Entity): SOILLAYER
-             ========================= -->
-        <mxCell id="E_SoilLayer" value="SoilLayer" style="shape=rectangle;whiteSpace=wrap;html=1;fontStyle=1;strokeWidth=2;dashed=1;" vertex="1" parent="1">
-          <mxGeometry x="600" y="860" width="90" height="40" as="geometry"/>
+        <mxCell id="A_BHTest" value="Testing Type" style="shape=ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="1010" y="400" width="80" height="30" as="geometry" />
         </mxCell>
-        <!-- SoilLayer attributes (partial key = LayerID) -->
-        <mxCell id="A_LayerID" value="LayerID (PK in Borehole)" style="shape=ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="560" y="810" width="130" height="30" as="geometry"/>
+        <mxCell id="EA_BH1" style="endArrow=none;startArrow=none;" parent="1" source="E_Borehole" target="A_BHID" edge="1">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="A_StartDepth" value="Start Depth" style="shape=ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="710" y="810" width="90" height="30" as="geometry"/>
+        <mxCell id="EA_BH2" style="endArrow=none;startArrow=none;" parent="1" source="E_Borehole" target="A_BHDepth" edge="1">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="A_EndDepth" value="End Depth" style="shape=ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="500" y="920" width="80" height="30" as="geometry"/>
+        <mxCell id="EA_BH3" style="endArrow=none;startArrow=none;" parent="1" source="E_Borehole" target="A_BHLoc" edge="1">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="A_SoilType" value="Soil Type" style="shape=ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="600" y="920" width="70" height="30" as="geometry"/>
+        <mxCell id="EA_BH4" style="endArrow=none;startArrow=none;" parent="1" source="E_Borehole" target="A_BHDrill" edge="1">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <!-- Connect SoilLayer to attributes -->
-        <mxCell id="EA_SL1" edge="1" parent="1" source="E_SoilLayer" target="A_LayerID" style="endArrow=none;startArrow=none;">
-          <mxGeometry relative="1" as="geometry"/>
+        <mxCell id="EA_BH5" style="endArrow=none;startArrow=none;" parent="1" source="E_Borehole" target="A_BHTest" edge="1">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="EA_SL2" edge="1" parent="1" source="E_SoilLayer" target="A_StartDepth" style="endArrow=none;startArrow=none;">
-          <mxGeometry relative="1" as="geometry"/>
+        <mxCell id="R_drills" value="drills [1:N]" style="shape=rhombus;whiteSpace=wrap;html=1;fontStyle=1;" parent="1" vertex="1">
+          <mxGeometry x="1035" y="217.5" width="80" height="50" as="geometry" />
         </mxCell>
-        <mxCell id="EA_SL3" edge="1" parent="1" source="E_SoilLayer" target="A_EndDepth" style="endArrow=none;startArrow=none;">
-          <mxGeometry relative="1" as="geometry"/>
+        <mxCell id="ER_drill_Miss" style="endArrow=none;startArrow=none;" parent="1" source="R_drills" target="E_Mission" edge="1">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="EA_SL4" edge="1" parent="1" source="E_SoilLayer" target="A_SoilType" style="endArrow=none;startArrow=none;">
-          <mxGeometry relative="1" as="geometry"/>
+        <mxCell id="ER_drill_BH" style="endArrow=none;startArrow=none;" parent="1" source="R_drills" target="E_Borehole" edge="1">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
-
-        <!-- RELATION: has [1:N] (Borehole - SoilLayer) -->
-        <mxCell id="R_has" value="has [1:N]" style="shape=rhombus;whiteSpace=wrap;html=1;fontStyle=1;" vertex="1" parent="1">
-          <mxGeometry x="560" y="780" width="80" height="50" as="geometry"/>
+        <mxCell id="E_SoilLayer" value="SoilLayer" style="shape=rectangle;whiteSpace=wrap;html=1;fontStyle=1;strokeWidth=2;dashed=1;" parent="1" vertex="1">
+          <mxGeometry x="870" y="420" width="90" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="ER_has_BH" edge="1" parent="1" source="R_has" target="E_Borehole" style="endArrow=none;startArrow=none;">
-          <mxGeometry relative="1" as="geometry"/>
+        <mxCell id="A_LayerID" value="LayerID (PK in Borehole)" style="shape=ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="705" y="400" width="130" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="ER_has_SL" edge="1" parent="1" source="R_has" target="E_SoilLayer" style="endArrow=none;startArrow=none;">
-          <mxGeometry relative="1" as="geometry"/>
+        <mxCell id="A_StartDepth" value="Start Depth" style="shape=ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="760" y="460" width="90" height="30" as="geometry" />
         </mxCell>
-
-        <!-- =========================
-             E11: BANK
-             ========================= -->
-        <mxCell id="E_Bank" value="Bank" style="shape=rectangle;whiteSpace=wrap;html=1;fontStyle=1;" vertex="1" parent="1">
-          <mxGeometry x="100" y="620" width="80" height="40" as="geometry"/>
+        <mxCell id="A_EndDepth" value="End Depth" style="shape=ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="850" y="490" width="80" height="30" as="geometry" />
         </mxCell>
-        <!-- Bank attributes -->
-        <mxCell id="A_BankRoute" value="RoutingNumber (PK)" style="shape=ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="20" y="580" width="120" height="30" as="geometry"/>
+        <mxCell id="A_SoilType" value="Soil Type" style="shape=ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="960" y="495" width="70" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="A_BankName" value="Name" style="shape=ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="190" y="580" width="60" height="30" as="geometry"/>
+        <mxCell id="EA_SL1" style="endArrow=none;startArrow=none;" parent="1" source="E_SoilLayer" target="A_LayerID" edge="1">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="A_BankAddr" value="Address" style="shape=ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="10" y="670" width="70" height="30" as="geometry"/>
+        <mxCell id="EA_SL2" style="endArrow=none;startArrow=none;" parent="1" source="E_SoilLayer" target="A_StartDepth" edge="1">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="A_BankPhones" value="Phone Numbers" style="shape=ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="90" y="680" width="100" height="30" as="geometry"/>
+        <mxCell id="EA_SL3" style="endArrow=none;startArrow=none;" parent="1" source="E_SoilLayer" target="A_EndDepth" edge="1">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <!-- Connect Bank to attributes -->
-        <mxCell id="EA_Bank1" edge="1" parent="1" source="E_Bank" target="A_BankRoute" style="endArrow=none;startArrow=none;">
-          <mxGeometry relative="1" as="geometry"/>
+        <mxCell id="EA_SL4" style="endArrow=none;startArrow=none;" parent="1" source="E_SoilLayer" target="A_SoilType" edge="1">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="EA_Bank2" edge="1" parent="1" source="E_Bank" target="A_BankName" style="endArrow=none;startArrow=none;">
-          <mxGeometry relative="1" as="geometry"/>
+        <mxCell id="R_has" value="has [1:N]" style="shape=rhombus;whiteSpace=wrap;html=1;fontStyle=1;" parent="1" vertex="1">
+          <mxGeometry x="920" y="312.5" width="80" height="50" as="geometry" />
         </mxCell>
-        <mxCell id="EA_Bank3" edge="1" parent="1" source="E_Bank" target="A_BankAddr" style="endArrow=none;startArrow=none;">
-          <mxGeometry relative="1" as="geometry"/>
+        <mxCell id="ER_has_BH" style="endArrow=none;startArrow=none;" parent="1" source="R_has" target="E_Borehole" edge="1">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="EA_Bank4" edge="1" parent="1" source="E_Bank" target="A_BankPhones" style="endArrow=none;startArrow=none;">
-          <mxGeometry relative="1" as="geometry"/>
+        <mxCell id="ER_has_SL" style="endArrow=none;startArrow=none;" parent="1" source="R_has" target="E_SoilLayer" edge="1">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
-
-        <!-- =========================
-             E12: ACCOUNT
-             ========================= -->
-        <mxCell id="E_Account" value="Account" style="shape=rectangle;whiteSpace=wrap;html=1;fontStyle=1;" vertex="1" parent="1">
-          <mxGeometry x="1000" y="50" width="80" height="40" as="geometry"/>
+        <mxCell id="E_Bank" value="Bank" style="shape=rectangle;whiteSpace=wrap;html=1;fontStyle=1;" parent="1" vertex="1">
+          <mxGeometry x="130" y="-230" width="80" height="40" as="geometry" />
         </mxCell>
-        <!-- Account attributes -->
-        <mxCell id="A_AccNum" value="AccountNumber (PK)" style="shape=ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="970" y="0" width="130" height="30" as="geometry"/>
+        <mxCell id="A_BankRoute" value="RoutingNumber (PK)" style="shape=ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="50" y="-270" width="120" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="A_AccBal" value="Balance" style="shape=ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="1100" y="0" width="70" height="30" as="geometry"/>
+        <mxCell id="A_BankName" value="Name" style="shape=ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="220" y="-270" width="60" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="A_AccOwner" value="Owner Name" style="shape=ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="970" y="100" width="80" height="30" as="geometry"/>
+        <mxCell id="A_BankAddr" value="Address" style="shape=ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="40" y="-180" width="70" height="30" as="geometry" />
         </mxCell>
-        <!-- Connect Account to attributes -->
-        <mxCell id="EA_Acc1" edge="1" parent="1" source="E_Account" target="A_AccNum" style="endArrow=none;startArrow=none;">
-          <mxGeometry relative="1" as="geometry"/>
+        <mxCell id="A_BankPhones" value="Phone Numbers" style="shape=ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="120" y="-170" width="100" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="EA_Acc2" edge="1" parent="1" source="E_Account" target="A_AccBal" style="endArrow=none;startArrow=none;">
-          <mxGeometry relative="1" as="geometry"/>
+        <mxCell id="EA_Bank1" style="endArrow=none;startArrow=none;" parent="1" source="E_Bank" target="A_BankRoute" edge="1">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="EA_Acc3" edge="1" parent="1" source="E_Account" target="A_AccOwner" style="endArrow=none;startArrow=none;">
-          <mxGeometry relative="1" as="geometry"/>
+        <mxCell id="EA_Bank2" style="endArrow=none;startArrow=none;" parent="1" source="E_Bank" target="A_BankName" edge="1">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
-
-        <!-- RELATION: owns [1:N] (Person - Account) -->
-        <mxCell id="R_owns" value="owns [1:N]" style="shape=rhombus;whiteSpace=wrap;html=1;fontStyle=1;" vertex="1" parent="1">
-          <mxGeometry x="800" y="80" width="80" height="50" as="geometry"/>
+        <mxCell id="EA_Bank3" style="endArrow=none;startArrow=none;" parent="1" source="E_Bank" target="A_BankAddr" edge="1">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="ER_owns_Person" edge="1" parent="1" source="R_owns" target="E_Person" style="endArrow=none;startArrow=none;">
-          <mxGeometry relative="1" as="geometry"/>
+        <mxCell id="EA_Bank4" style="endArrow=none;startArrow=none;" parent="1" source="E_Bank" target="A_BankPhones" edge="1">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="ER_owns_Account" edge="1" parent="1" source="R_owns" target="E_Account" style="endArrow=none;startArrow=none;">
-          <mxGeometry relative="1" as="geometry"/>
+        <mxCell id="E_Account" value="Account" style="shape=rectangle;whiteSpace=wrap;html=1;fontStyle=1;" parent="1" vertex="1">
+          <mxGeometry x="370" y="250" width="80" height="40" as="geometry" />
         </mxCell>
-
-        <!-- =========================
-             E13: FUNDING
-             ========================= -->
-        <mxCell id="E_Funding" value="Funding" style="shape=rectangle;whiteSpace=wrap;html=1;fontStyle=1;" vertex="1" parent="1">
-          <mxGeometry x="300" y="60" width="80" height="40" as="geometry"/>
+        <mxCell id="A_AccNum" value="AccountNumber (PK)" style="shape=ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="350" y="300" width="130" height="30" as="geometry" />
         </mxCell>
-        <!-- Funding attributes -->
-        <mxCell id="A_FAmount" value="Amount" style="shape=ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="290" y="10" width="70" height="30" as="geometry"/>
+        <mxCell id="A_AccBal" value="Balance" style="shape=ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="450" y="210" width="70" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="A_FStart" value="Start Date" style="shape=ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="380" y="10" width="80" height="30" as="geometry"/>
+        <mxCell id="A_AccOwner" value="Owner Name" style="shape=ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="270" y="260" width="80" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="A_FEnd" value="End Date" style="shape=ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="290" y="110" width="70" height="30" as="geometry"/>
+        <mxCell id="EA_Acc1" style="endArrow=none;startArrow=none;" parent="1" source="E_Account" target="A_AccNum" edge="1">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <!-- Connect Funding to attributes -->
-        <mxCell id="EA_Fnd1" edge="1" parent="1" source="E_Funding" target="A_FAmount" style="endArrow=none;startArrow=none;">
-          <mxGeometry relative="1" as="geometry"/>
+        <mxCell id="EA_Acc2" style="endArrow=none;startArrow=none;" parent="1" source="E_Account" target="A_AccBal" edge="1">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="EA_Fnd2" edge="1" parent="1" source="E_Funding" target="A_FStart" style="endArrow=none;startArrow=none;">
-          <mxGeometry relative="1" as="geometry"/>
+        <mxCell id="EA_Acc3" style="endArrow=none;startArrow=none;" parent="1" source="E_Account" target="A_AccOwner" edge="1">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="EA_Fnd3" edge="1" parent="1" source="E_Funding" target="A_FEnd" style="endArrow=none;startArrow=none;">
-          <mxGeometry relative="1" as="geometry"/>
+        <mxCell id="ER_owns_Person" style="endArrow=none;startArrow=none;" parent="1" source="R_owns" target="E_Person" edge="1">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
-
-        <!-- RELATION: receives funding [1:N] (Project - Funding) -->
-        <mxCell id="R_receives" value="receives funding [1:N]" style="shape=rhombus;whiteSpace=wrap;html=1;fontStyle=1;" vertex="1" parent="1">
-          <mxGeometry x="200" y="40" width="80" height="50" as="geometry"/>
+        <mxCell id="ER_owns_Account" style="endArrow=none;startArrow=none;" parent="1" source="R_owns" target="E_Account" edge="1">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="ER_rec_Proj" edge="1" parent="1" source="R_receives" target="E_Project" style="endArrow=none;startArrow=none;">
-          <mxGeometry relative="1" as="geometry"/>
+        <mxCell id="E_Funding" value="Funding" style="shape=rectangle;whiteSpace=wrap;html=1;fontStyle=1;" parent="1" vertex="1">
+          <mxGeometry x="510" y="-230" width="80" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="ER_rec_Fund" edge="1" parent="1" source="R_receives" target="E_Funding" style="endArrow=none;startArrow=none;">
-          <mxGeometry relative="1" as="geometry"/>
+        <mxCell id="A_FAmount" value="Amount" style="shape=ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="590" y="-300" width="70" height="30" as="geometry" />
         </mxCell>
-
-        <!-- RELATION: provided by [N:1] (Funding - Bank) -->
-        <mxCell id="R_provided_by" value="provided by [N:1]" style="shape=rhombus;whiteSpace=wrap;html=1;fontStyle=1;" vertex="1" parent="1">
-          <mxGeometry x="210" y="140" width="110" height="50" as="geometry"/>
+        <mxCell id="A_FStart" value="Start Date" style="shape=ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="620" y="-230" width="80" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="ER_pb_Fund" edge="1" parent="1" source="R_provided_by" target="E_Funding" style="endArrow=none;startArrow=none;">
-          <mxGeometry relative="1" as="geometry"/>
+        <mxCell id="A_FEnd" value="End Date" style="shape=ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="630" y="-170" width="70" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="ER_pb_Bank" edge="1" parent="1" source="R_provided_by" target="E_Bank" style="endArrow=none;startArrow=none;">
-          <mxGeometry relative="1" as="geometry"/>
+        <mxCell id="EA_Fnd1" style="endArrow=none;startArrow=none;" parent="1" source="E_Funding" target="A_FAmount" edge="1">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
-
+        <mxCell id="EA_Fnd2" style="endArrow=none;startArrow=none;" parent="1" source="E_Funding" target="A_FStart" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="EA_Fnd3" style="endArrow=none;startArrow=none;" parent="1" source="E_Funding" target="A_FEnd" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="R_receives" value="receives funding [1:N]" style="shape=rhombus;whiteSpace=wrap;html=1;fontStyle=1;" parent="1" vertex="1">
+          <mxGeometry x="160" y="-90" width="80" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="ER_rec_Proj" style="endArrow=none;startArrow=none;" parent="1" source="R_receives" target="E_Project" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ER_rec_Fund" style="endArrow=none;startArrow=none;" parent="1" source="R_receives" target="E_Funding" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="R_provided_by" value="provided by [N:1]" style="shape=rhombus;whiteSpace=wrap;html=1;fontStyle=1;" parent="1" vertex="1">
+          <mxGeometry x="285" y="-230" width="110" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="ER_pb_Fund" style="endArrow=none;startArrow=none;" parent="1" source="R_provided_by" target="E_Funding" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ER_pb_Bank" style="endArrow=none;startArrow=none;" parent="1" source="R_provided_by" target="E_Bank" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ImPztkIKydKlBiX7sQ6R-4" value="" style="endArrow=none;startArrow=none;" edge="1" parent="1" source="R_covers" target="R_owns">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="681" y="90" as="sourcePoint" />
+            <mxPoint x="684" y="140" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="R_owns" value="owns [1:N]" style="shape=rhombus;whiteSpace=wrap;html=1;fontStyle=1;" parent="1" vertex="1">
+          <mxGeometry x="310" y="160" width="80" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="ImPztkIKydKlBiX7sQ6R-12" value="" style="endArrow=none;startArrow=none;dashed=1;" edge="1" parent="1" source="R_ISA_Person" target="E_CompSpec">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="180" y="498" as="sourcePoint" />
+            <mxPoint x="268.4000000000001" y="580" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="E_CompSpec" value="ComputerSpecialist" style="shape=rectangle;whiteSpace=wrap;html=1;fontStyle=1;" parent="1" vertex="1">
+          <mxGeometry x="220" y="490" width="140" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="ImPztkIKydKlBiX7sQ6R-16" style="endArrow=none;startArrow=none;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="E_CompSpec" target="A_CompSkills">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="350" y="470" as="sourcePoint" />
+            <mxPoint x="390" y="470" as="targetPoint" />
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
