@@ -1,0 +1,167 @@
+m255
+K4
+z2
+!s11e vcom 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/Users/willb/Desktop/Software_Utilities/modelSim
+Etb_twobitdecoder
+Z0 w1739938068
+Z1 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z2 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+!i122 5
+Z3 dC:/Users/willb/Desktop/GitHub/schoolwork/COMP4300/Lab1
+Z4 8test_decoder.vhd
+Z5 Ftest_decoder.vhd
+l0
+L3 1
+V_8J^QiZ]`cG8ZajXmTdEA3
+!s100 e1:J0GcoXMeh5FTFRbo^n3
+Z6 OV;C;2020.1;71
+32
+Z7 !s110 1739938317
+!i10b 1
+Z8 !s108 1739938317.000000
+Z9 !s90 -reportprogress|300|test_decoder.vhd|
+Z10 !s107 test_decoder.vhd|
+!i113 1
+Z11 tExplicit 1 CvgOpt 0
+Abehavioral
+R1
+R2
+DEx4 work 16 tb_twobitdecoder 0 22 _8J^QiZ]`cG8ZajXmTdEA3
+!i122 5
+l16
+Z12 L6 29
+VFL?CMee@1;7YBR7D4lEiQ0
+!s100 ULCGZK0JKZdXYGSYXo^802
+R6
+32
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+Etest
+Z13 w1739938492
+R1
+R2
+!i122 8
+R3
+R4
+R5
+l0
+L3 1
+V_5Zz:_]`AN7]I<iRbdWGO0
+!s100 6dYXogXJ>mj5_A:PD@WD43
+R6
+32
+Z14 !s110 1739938589
+!i10b 1
+Z15 !s108 1739938589.000000
+R9
+R10
+!i113 1
+R11
+Abehavioral
+R1
+R2
+DEx4 work 4 test 0 22 _5Zz:_]`AN7]I<iRbdWGO0
+!i122 8
+l16
+R12
+VU]0kRdflO6m4AcY[;nYO02
+!s100 oG?LXm0iC3WNafDJbSinT2
+R6
+32
+R14
+!i10b 1
+R15
+R9
+R10
+!i113 1
+R11
+Etest_decoder
+Z16 w1739938781
+R1
+R2
+!i122 12
+R3
+R4
+R5
+l0
+L3 1
+VoVHm=gL_:Y?n_lHdcX0JG3
+!s100 C9Gd49[bK_>[N2YiOkLOS0
+R6
+32
+Z17 !s110 1739938883
+!i10b 1
+Z18 !s108 1739938883.000000
+R9
+R10
+!i113 1
+R11
+Abehavioral
+R1
+R2
+Z19 DEx4 work 12 test_decoder 0 22 oVHm=gL_:Y?n_lHdcX0JG3
+!i122 12
+l16
+R12
+Z20 V[kZcVD3bg54R?e?V47M5L3
+Z21 !s100 I;O]jC`[Z:b@j>e:aMc^E2
+R6
+32
+R17
+!i10b 1
+R18
+R9
+R10
+!i113 1
+R11
+Etwobitdecoder
+Z22 w1739938056
+R1
+R2
+!i122 11
+R3
+Z23 8decoder.vhd
+Z24 Fdecoder.vhd
+l0
+L3 1
+VkzzmETQnE3CB9DeX^9__l3
+!s100 SKGMCL4:o[g2U>2Vm18id3
+R6
+32
+Z25 !s110 1739938879
+!i10b 1
+Z26 !s108 1739938879.000000
+Z27 !s90 -reportprogress|300|decoder.vhd|
+Z28 !s107 decoder.vhd|
+!i113 1
+R11
+Abehavioral
+R1
+R2
+DEx4 work 13 twobitdecoder 0 22 kzzmETQnE3CB9DeX^9__l3
+!i122 11
+l12
+L11 14
+V:@QmjKO>c3eR>b7k8J:T31
+!s100 NYC:GIj2h24iLhB_V>UjB2
+R6
+32
+R25
+!i10b 1
+R26
+R27
+R28
+!i113 1
+R11
