@@ -1,0 +1,149 @@
+vcom -93 work/dlx_types.vhd
+vcom -93 work/bva.vhd
+vcom -93 work/bva-b.vhd
+vcom -93 ALU.vhd
+
+
+vsim -t ns work.alu
+
+# waves
+add wave -divider "Inputs"
+add wave -radix hexadecimal /alu/operand1
+add wave -radix hexadecimal /alu/operand2
+add wave -radix unsigned /alu/operation
+add wave -divider "Outputs"
+add wave -radix hexadecimal /alu/result
+add wave -radix binary /alu/error
+
+# Test 1: Unsigned Addition (normal case)
+echo "Test 1: Unsigned Addition (normal case)"
+force -freeze /alu/operand1 32'h0000000A 0
+force -freeze /alu/operand2 32'h00000014 0
+force -freeze /alu/operation 4'h0 0
+run 20ns
+
+# Test 2: Unsigned Addition (overflow case)
+echo "Test 2: Unsigned Addition (overflow case)"
+force -freeze /alu/operand1 32'hFFFFFFFF 0
+force -freeze /alu/operand2 32'h00000001 0
+force -freeze /alu/operation 4'h0 0
+run 20ns
+
+# Test 3: Unsigned Subtraction (normal case)
+echo "Test 3: Unsigned Subtraction (normal case)"
+force -freeze /alu/operand1 32'h0000001E 0
+force -freeze /alu/operand2 32'h0000000F 0
+force -freeze /alu/operation 4'h1 0
+run 20ns
+
+# Test 4: Unsigned Subtraction (underflow case)
+echo "Test 4: Unsigned Subtraction (underflow case)"
+force -freeze /alu/operand1 32'h0000000F 0
+force -freeze /alu/operand2 32'h0000001E 0
+force -freeze /alu/operation 4'h1 0
+run 20ns
+
+# Test 5: Two's Complement Addition (normal case)
+echo "Test 5: Two's Complement Addition (normal case)"
+force -freeze /alu/operand1 32'h00000064 0  # 100
+force -freeze /alu/operand2 32'hFFFFFFCE 0  # -50
+force -freeze /alu/operation 4'h2 0
+run 20ns
+
+# Test 6: Two's Complement Addition (overflow case)
+echo "Test 6: Two's Complement Addition (overflow case)"
+force -freeze /alu/operand1 32'h7FFFFFFF 0  # INT_MAX
+force -freeze /alu/operand2 32'h00000001 0  # 1
+force -freeze /alu/operation 4'h2 0
+run 20ns
+
+# Test 7: Two's Complement Subtraction (normal case)
+echo "Test 7: Two's Complement Subtraction (normal case)"
+force -freeze /alu/operand1 32'h00000032 0  # 50
+force -freeze /alu/operand2 32'h00000019 0  # 25
+force -freeze /alu/operation 4'h3 0
+run 20ns
+
+# Test 8: Two's Complement Subtraction (overflow case)
+echo "Test 8: Two's Complement Subtraction (overflow case)"
+force -freeze /alu/operand1 32'h80000000 0  # INT_MIN
+force -freeze /alu/operand2 32'h00000001 0  # 1
+force -freeze /alu/operation 4'h3 0
+run 20ns
+
+# Test 9: Two's Complement Multiply (normal case)
+echo "Test 9: Two's Complement Multiply (normal case)"
+force -freeze /alu/operand1 32'h00000005 0  # 5
+force -freeze /alu/operand2 32'hFFFFFFFD 0  # -3
+force -freeze /alu/operation 4'h4 0
+run 20ns
+
+# Test 10: Two's Complement Divide (normal case)
+echo "Test 10: Two's Complement Divide (normal case)"
+force -freeze /alu/operand1 32'h0000000A 0  # 10
+force -freeze /alu/operand2 32'h00000002 0  # 2
+force -freeze /alu/operation 4'h5 0
+run 20ns
+
+# Test 11: Two's Complement Divide (divide by zero)
+echo "Test 11: Two's Complement Divide (divide by zero)"
+force -freeze /alu/operand1 32'h0000000A 0  # 10
+force -freeze /alu/operand2 32'h00000000 0  # 0
+force -freeze /alu/operation 4'h5 0
+run 20ns
+
+# Test 12: Bitwise AND
+echo "Test 12: Bitwise AND"
+force -freeze /alu/operand1 32'h0000000C 0  # 12 (1100 in binary)
+force -freeze /alu/operand2 32'h0000000A 0  # 10 (1010 in binary)
+force -freeze /alu/operation 4'h7 0
+run 20ns
+
+# Test 13: Bitwise OR
+echo "Test 13: Bitwise OR"
+force -freeze /alu/operand1 32'h0000000C 0  # 12 (1100 in binary)
+force -freeze /alu/operand2 32'h0000000A 0  # 10 (1010 in binary)
+force -freeze /alu/operation 4'h9 0
+run 20ns
+
+# Test 14: Logical NOT
+echo "Test 14: Logical NOT"
+force -freeze /alu/operand1 32'h0000000C 0  # 12
+force -freeze /alu/operand2 32'h00000000 0  # Doesn't matter
+force -freeze /alu/operation 4'hA 0
+run 20ns
+
+# Test 15: Bitwise NOT
+echo "Test 15: Bitwise NOT"
+force -freeze /alu/operand1 32'h0000000C 0  # 12
+force -freeze /alu/operand2 32'h00000000 0  # Doesn't matter
+force -freeze /alu/operation 4'hB 0
+run 20ns
+
+# Test 16: Pass operand1
+echo "Test 16: Pass operand1"
+force -freeze /alu/operand1 32'h12345678 0
+force -freeze /alu/operand2 32'h00000000 0  # Doesn't matter
+force -freeze /alu/operation 4'hC 0
+run 20ns
+
+# Test 17: Pass operand2
+echo "Test 17: Pass operand2"
+force -freeze /alu/operand1 32'h00000000 0  # Doesn't matter
+force -freeze /alu/operand2 32'h12345678 0
+force -freeze /alu/operation 4'hD 0
+run 20ns
+
+# Test 18: Output all zeros
+echo "Test 18: Output all zeros"
+force -freeze /alu/operand1 32'h12345678 0  # Doesn't matter
+force -freeze /alu/operand2 32'h87654321 0  # Doesn't matter
+force -freeze /alu/operation 4'hE 0
+run 20ns
+
+# Test 19: Output all ones
+echo "Test 19: Output all ones"
+force -freeze /alu/operand1 32'h12345678 0  # Doesn't matter
+force -freeze /alu/operand2 32'h87654321 0  # Doesn't matter
+force -freeze /alu/operation 4'hF 0
+run 20ns

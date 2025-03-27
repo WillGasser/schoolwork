@@ -1,0 +1,226 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use work.dlx_types.all;
+use work.bv_arithmetic.all;
+
+entity alu_tb is
+end entity alu_tb;
+
+architecture testbench of alu_tb is
+    component alu is
+        port(
+            operand1, operand2: in dlx_word;
+            operation: in alu_operation_code;
+            result: out dlx_word;
+            error: out error_code
+        );
+    end component;
+    
+    signal op1, op2, res: dlx_word;
+    signal op_code: alu_operation_code;
+    signal err: error_code;
+    
+    -- Internal helper functions
+    function bv_from_int(int: integer; size: integer) return bit_vector is
+    begin
+        return integer_to_bv(int, size);
+    end function;
+    
+    function bv_0(size: integer) return bit_vector is
+        variable result: bit_vector(size-1 downto 0) := (others => '0');
+    begin
+        return result;
+    end function;
+    
+    function bv_1(size: integer) return bit_vector is
+        variable result: bit_vector(size-1 downto 0) := (others => '1');
+    begin
+        return result;
+    end function;
+    
+    -- Custom hexadecimal value initialization
+    function hex_to_bv(hex_str: string; size: integer) return bit_vector is
+        variable result: bit_vector(size-1 downto 0) := (others => '0');
+        variable digit: integer;
+        variable nibble: bit_vector(3 downto 0);
+    begin
+        for i in hex_str'range loop
+            case hex_str(i) is
+                when '0' => digit := 0;
+                when '1' => digit := 1;
+                when '2' => digit := 2;
+                when '3' => digit := 3;
+                when '4' => digit := 4;
+                when '5' => digit := 5;
+                when '6' => digit := 6;
+                when '7' => digit := 7;
+                when '8' => digit := 8;
+                when '9' => digit := 9;
+                when 'A' | 'a' => digit := 10;
+                when 'B' | 'b' => digit := 11;
+                when 'C' | 'c' => digit := 12;
+                when 'D' | 'd' => digit := 13;
+                when 'E' | 'e' => digit := 14;
+                when 'F' | 'f' => digit := 15;
+                when others => digit := 0;
+            end case;
+            
+            nibble := bv_from_int(digit, 4);
+            
+            -- Position in the bit vector
+            if ((hex_str'length - i) * 4 <= size) then
+                result(((hex_str'length - i) * 4) - 1 downto (hex_str'length - i - 1) * 4) := nibble;
+            end if;
+        end loop;
+        
+        return result;
+    end function;
+    
+begin
+    UUT: alu port map(
+        operand1 => op1,
+        operand2 => op2,
+        operation => op_code,
+        result => res,
+        error => err
+    );
+    
+    test_proc: process
+    begin
+        -- Test unsigned add (0000): normal case
+        report "Test: Unsigned Addition - Normal Case";
+        op1 <= bv_from_int(10, 32);
+        op2 <= bv_from_int(20, 32);
+        op_code <= "0000";
+        wait for 20 ns;
+        
+        -- Test unsigned add (0000): overflow case
+        report "Test: Unsigned Addition - Overflow Case";
+        op1 <= bv_1(32);    -- Maximum value (all 1's)
+        op2 <= bv_from_int(1, 32);
+        op_code <= "0000";
+        wait for 20 ns;
+        
+        -- Test unsigned subtract (0001): normal case
+        report "Test: Unsigned Subtraction - Normal Case";
+        op1 <= bv_from_int(30, 32);
+        op2 <= bv_from_int(15, 32);
+        op_code <= "0001";
+        wait for 20 ns;
+        
+        -- Test unsigned subtract (0001): underflow case
+        report "Test: Unsigned Subtraction - Underflow Case";
+        op1 <= bv_from_int(15, 32);
+        op2 <= bv_from_int(30, 32);
+        op_code <= "0001";
+        wait for 20 ns;
+        
+        -- Test two's complement add (0010): normal case
+        report "Test: Two's Complement Addition - Normal Case";
+        op1 <= bv_from_int(100, 32);
+        op2 <= bv_from_int(-50, 32);
+        op_code <= "0010";
+        wait for 20 ns;
+        
+        -- Test two's complement add (0010): positive overflow
+        report "Test: Two's Complement Addition - Positive Overflow";
+        op1 <= bv_from_int(2147483647, 32);  -- INT_MAX
+        op2 <= bv_from_int(1, 32);
+        op_code <= "0010";
+        wait for 20 ns;
+        
+        -- Test two's complement subtract (0011): normal case
+        report "Test: Two's Complement Subtraction - Normal Case";
+        op1 <= bv_from_int(50, 32);
+        op2 <= bv_from_int(25, 32);
+        op_code <= "0011";
+        wait for 20 ns;
+        
+        -- Test two's complement subtract (0011): overflow case
+        report "Test: Two's Complement Subtraction - Overflow Case";
+        op1 <= bv_from_int(-2147483648, 32);  -- INT_MIN
+        op2 <= bv_from_int(1, 32);
+        op_code <= "0011";
+        wait for 20 ns;
+        
+        -- Test two's complement multiply (0100): normal case
+        report "Test: Two's Complement Multiply - Normal Case";
+        op1 <= bv_from_int(5, 32);
+        op2 <= bv_from_int(-3, 32);
+        op_code <= "0100";
+        wait for 20 ns;
+        
+        -- Test two's complement divide (0101): normal case
+        report "Test: Two's Complement Divide - Normal Case";
+        op1 <= bv_from_int(10, 32);
+        op2 <= bv_from_int(2, 32);
+        op_code <= "0101";
+        wait for 20 ns;
+        
+        -- Test two's complement divide (0101): divide by zero
+        report "Test: Two's Complement Divide - Divide by Zero";
+        op1 <= bv_from_int(10, 32);
+        op2 <= bv_0(32);
+        op_code <= "0101";
+        wait for 20 ns;
+        
+        -- Test bitwise AND (0111)
+        report "Test: Bitwise AND";
+        op1 <= bv_from_int(12, 32);  -- 0x0000000C (binary: 1100)
+        op2 <= bv_from_int(10, 32);  -- 0x0000000A (binary: 1010)
+        op_code <= "0111";
+        wait for 20 ns;
+        
+        -- Test bitwise OR (1001)
+        report "Test: Bitwise OR";
+        op1 <= bv_from_int(12, 32);  -- 0x0000000C (binary: 1100)
+        op2 <= bv_from_int(10, 32);  -- 0x0000000A (binary: 1010)
+        op_code <= "1001";
+        wait for 20 ns;
+        
+        -- Test logical NOT (1010)
+        report "Test: Logical NOT";
+        op1 <= bv_from_int(12, 32);  -- 0x0000000C
+        op2 <= bv_0(32);             -- Doesn't matter
+        op_code <= "1010";
+        wait for 20 ns;
+        
+        -- Test bitwise NOT (1011)
+        report "Test: Bitwise NOT";
+        op1 <= bv_from_int(12, 32);  -- 0x0000000C
+        op2 <= bv_0(32);             -- Doesn't matter
+        op_code <= "1011";
+        wait for 20 ns;
+        
+        -- Test pass operand1 (1100)
+        report "Test: Pass Operand1";
+        op1 <= bv_from_int(305419896, 32);  -- 0x12345678
+        op2 <= bv_0(32);                    -- Doesn't matter
+        op_code <= "1100";
+        wait for 20 ns;
+        
+        -- Test pass operand2 (1101)
+        report "Test: Pass Operand2";
+        op1 <= bv_0(32);                     -- Doesn't matter
+        op2 <= hex_to_bv("87654321", 32);    -- Use hex representation instead
+        op_code <= "1101";
+        wait for 20 ns;
+        
+        -- Test output all zeros (1110)
+        report "Test: Output All Zeros";
+        op1 <= bv_from_int(12, 32);    -- Doesn't matter
+        op2 <= bv_from_int(34, 32);    -- Doesn't matter
+        op_code <= "1110";
+        wait for 20 ns;
+        
+        -- Test output all ones (1111)
+        report "Test: Output All Ones";
+        op1 <= bv_from_int(12, 32);    -- Doesn't matter
+        op2 <= bv_from_int(34, 32);    -- Doesn't matter
+        op_code <= "1111";
+        wait for 20 ns;
+        
+        report "ALU testbench completed";
+        wait;
+    end process test_proc;
+end architecture testbench;
