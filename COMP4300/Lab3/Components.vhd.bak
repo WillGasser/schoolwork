@@ -1,0 +1,132 @@
+-- DLX Components
+--   1. dlx_register: 32-bit register with 10ns delay
+--   2. reg_file: Register file with 32 registers
+--   3. mux: Two-way multiplexer
+--   4. threeway_mux: Three-way multiplexer
+--   5. pcplusone: PC incrementer
+
+library ieee;
+use ieee.std_logic_1164.all;
+use work.dlx_types.all;
+use work.bv_arithmetic.all;
+
+-- 32-bit single-value register
+entity dlx_register is
+  port(
+    in_val: in dlx_word; 
+    clock: in bit; 
+    out_val: out dlx_word
+  );
+end entity dlx_register;
+
+architecture behavior of dlx_register is
+begin
+  reg_process: process(in_val, clock)
+  begin
+    if (clock = '1') then
+      out_val <= in_val after 10 ns;
+    end if;
+  end process reg_process;
+end architecture behavior;
+
+-- Register File Implementation
+entity reg_file is
+  port(
+    data_in: in dlx_word; 
+    readnotwrite, clock: in bit; 
+    data_out: out dlx_word; 
+    reg_number: in register_index
+  );
+end entity reg_file;
+
+architecture behavior of reg_file is
+begin
+  reg_file_process: process(data_in, readnotwrite, clock, reg_number)
+    type reg_type is array (0 to 31) of dlx_word;
+    variable registers: reg_type;
+  begin
+    if (clock = '1') then
+      if (readnotwrite = '1') then
+        -- Read operation
+        data_out <= registers(bv_to_integer(reg_number)) after 15 ns;
+      else
+        -- Write operation
+        registers(bv_to_integer(reg_number)) := data_in;
+      end if;
+    end if;
+  end process reg_file_process;
+end architecture behavior;
+
+-- Two-way multiplexer
+entity mux is
+  generic(prop_delay : Time := 5 ns);
+  port (
+    input_1, input_0 : in dlx_word; 
+    which: in bit; 
+    output: out dlx_word
+  );
+end entity mux;
+
+architecture behavior of mux is
+begin
+  mux_process: process(input_1, input_0, which)
+  begin
+    if (which = '0') then
+      output <= input_0 after prop_delay;
+    else
+      output <= input_1 after prop_delay;
+    end if;
+  end process mux_process;
+end architecture behavior;
+
+-- Three-way multiplexer
+entity threeway_mux is
+  generic(prop_delay : Time := 5 ns);
+  port (
+    input_2, input_1, input_0 : in dlx_word; 
+    which: in threeway_muxcode; 
+    output: out dlx_word
+  );
+end entity threeway_mux;
+
+architecture behavior of threeway_mux is
+begin
+  mux_process: process(input_2, input_1, input_0, which)
+  begin
+    case which is
+      when "00" =>
+        output <= input_0 after prop_delay;
+      when "01" =>
+        output <= input_1 after prop_delay;
+      when "10" =>
+        output <= input_2 after prop_delay;
+      when others =>
+        -- Default case, should not occur with proper inputs
+        output <= input_0 after prop_delay;
+    end case;
+  end process mux_process;
+end architecture behavior;
+
+-- PC Incrementer
+entity pcplusone is
+  generic(prop_delay: Time := 5 ns);
+  port (
+    input: in dlx_word; 
+    clock: in bit; 
+    output: out dlx_word
+  );
+end entity pcplusone;
+
+architecture behavior of pcplusone is
+begin
+  increment_process: process(input, clock)
+    variable temp_result: dlx_word;
+    variable carry: bit;
+  begin
+    if (clock'event and clock = '1') then
+      -- Increment the input using bv_addu from bv_arithmetic package
+      bv_addu(input, X"00000001", temp_result, carry);
+      output <= temp_result after prop_delay;
+    end if;
+  end process increment_process;
+end architecture behavior;

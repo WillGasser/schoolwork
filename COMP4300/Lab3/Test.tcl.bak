@@ -1,0 +1,234 @@
+vcom -93 work/dlx_types.vhd
+vcom -93 work/bva.vhd
+vcom -93 work/bva-b.vhd
+vcom -93 Components.vhd
+
+# ======= TEST DLX REGISTER =======
+echo "Testing DLX Register"
+vsim -t ns work.dlx_register
+# Add waves
+add wave -divider "Inputs"
+add wave -radix hexadecimal /dlx_register/in_val
+add wave -radix binary /dlx_register/clock
+add wave -divider "Outputs"
+add wave -radix hexadecimal /dlx_register/out_val
+add wave -radix hexadecimal /dlx_register/stored_val
+
+# Test cases
+echo "Test: Register initialization"
+force -freeze /dlx_register/clock 0 0
+force -freeze /dlx_register/in_val X"00000000" 0
+run 20 ns
+
+# Test 1: Load a value when clock is high
+echo "Test: Load value when clock is high"
+force -freeze /dlx_register/in_val X"AAAAAAAA" 0
+force -freeze /dlx_register/clock 1 0
+run 20 ns
+
+# Test 2: Change input while clock is high (should update after delay)
+echo "Test: Update with new value while clock is high"
+force -freeze /dlx_register/in_val X"BBBBBBBB" 0
+run 20 ns
+
+# Test 3: Clock goes low, output should be frozen
+echo "Test: Check output frozen when clock is low"
+force -freeze /dlx_register/clock 0 0
+force -freeze /dlx_register/in_val X"CCCCCCCC" 0
+run 20 ns
+
+# Test 4: Clock goes high again with new value
+echo "Test: Update with new value on next clock high"
+force -freeze /dlx_register/in_val X"12345678" 0
+force -freeze /dlx_register/clock 1 0
+run 20 ns
+
+# ======= TEST REGISTER FILE =======
+echo "\nTesting Register File"
+vsim -t ns work.reg_file
+
+# Add waves
+add wave -divider "Inputs"
+add wave -radix hexadecimal /reg_file/data_in
+add wave -radix binary /reg_file/readnotwrite
+add wave -radix binary /reg_file/clock
+add wave -radix decimal /reg_file/reg_number
+add wave -divider "Outputs"
+add wave -radix hexadecimal /reg_file/data_out
+add wave -divider "Internal Signals"
+add wave -radix hexadecimal /reg_file/registers(0)
+add wave -radix hexadecimal /reg_file/registers(1)
+add wave -radix hexadecimal /reg_file/registers(2)
+add wave -radix hexadecimal /reg_file/registers(3)
+
+# Test cases
+echo "Test: Register file initialization"
+force -freeze /reg_file/clock 0 0
+force -freeze /reg_file/readnotwrite 0 0
+force -freeze /reg_file/data_in X"00000000" 0
+force -freeze /reg_file/reg_number "00000" 0
+run 20 ns
+
+# Test 1: Write to register 0
+echo "Test: Write to register 0"
+force -freeze /reg_file/clock 1 0
+force -freeze /reg_file/readnotwrite 0 0
+force -freeze /reg_file/data_in X"11111111" 0
+force -freeze /reg_file/reg_number "00000" 0
+run 20 ns
+
+# Test 2: Write to register 1
+echo "Test: Write to register 1"
+force -freeze /reg_file/clock 1 0
+force -freeze /reg_file/readnotwrite 0 0
+force -freeze /reg_file/data_in X"22222222" 0
+force -freeze /reg_file/reg_number "00001" 0
+run 20 ns
+
+# Test 3: Write to register 2
+echo "Test: Write to register 2"
+force -freeze /reg_file/clock 1 0
+force -freeze /reg_file/readnotwrite 0 0
+force -freeze /reg_file/data_in X"33333333" 0
+force -freeze /reg_file/reg_number "00010" 0
+run 20 ns
+
+# Test 4: Read from register 0
+echo "Test: Read from register 0"
+force -freeze /reg_file/clock 1 0
+force -freeze /reg_file/readnotwrite 1 0
+force -freeze /reg_file/reg_number "00000" 0
+run 20 ns
+
+# Test 5: Read from register 1
+echo "Test: Read from register 1"
+force -freeze /reg_file/clock 1 0
+force -freeze /reg_file/readnotwrite 1 0
+force -freeze /reg_file/reg_number "00001" 0
+run 20 ns
+
+# Test 6: Read from register 2
+echo "Test: Read from register 2"
+force -freeze /reg_file/clock 1 0
+force -freeze /reg_file/readnotwrite 1 0
+force -freeze /reg_file/reg_number "00010" 0
+run 20 ns
+
+# ======= TEST TWO-WAY MULTIPLEXER =======
+echo "\nTesting Two-Way Multiplexer"
+vsim -t ns work.mux
+
+# Add waves
+add wave -divider "Inputs"
+add wave -radix hexadecimal /mux/input_0
+add wave -radix hexadecimal /mux/input_1
+add wave -radix binary /mux/which
+add wave -divider "Outputs"
+add wave -radix hexadecimal /mux/output
+
+# Test cases
+echo "Test: Initialize multiplexer"
+force -freeze /mux/input_0 X"AAAAAAAA" 0
+force -freeze /mux/input_1 X"BBBBBBBB" 0
+force -freeze /mux/which 0 0
+run 10 ns
+
+# Test 1: Select input_0
+echo "Test: Select input_0"
+force -freeze /mux/which 0 0
+run 10 ns
+
+# Test 2: Select input_1
+echo "Test: Select input_1"
+force -freeze /mux/which 1 0
+run 10 ns
+
+# Test 3: Change input value
+echo "Test: Change input value while selected"
+force -freeze /mux/input_1 X"CCCCCCCC" 0
+run 10 ns
+
+# ======= TEST THREE-WAY MULTIPLEXER =======
+echo "\nTesting Three-Way Multiplexer"
+vsim -t ns work.threeway_mux
+
+# Add waves
+add wave -divider "Inputs"
+add wave -radix hexadecimal /threeway_mux/input_0
+add wave -radix hexadecimal /threeway_mux/input_1
+add wave -radix hexadecimal /threeway_mux/input_2
+add wave -radix binary /threeway_mux/which
+add wave -divider "Outputs"
+add wave -radix hexadecimal /threeway_mux/output
+
+# Test cases
+echo "Test: Initialize three-way multiplexer"
+force -freeze /threeway_mux/input_0 X"11111111" 0
+force -freeze /threeway_mux/input_1 X"22222222" 0
+force -freeze /threeway_mux/input_2 X"33333333" 0
+force -freeze /threeway_mux/which "00" 0
+run 10 ns
+
+# Test 1: Select input_0
+echo "Test: Select input_0"
+force -freeze /threeway_mux/which "00" 0
+run 10 ns
+
+# Test 2: Select input_1
+echo "Test: Select input_1"
+force -freeze /threeway_mux/which "01" 0
+run 10 ns
+
+# Test 3: Select input_2
+echo "Test: Select input_2"
+force -freeze /threeway_mux/which "10" 0
+run 10 ns
+
+# Test 4: Invalid select code (should default to input_0)
+echo "Test: Invalid select code"
+force -freeze /threeway_mux/which "11" 0
+run 10 ns
+
+# ======= TEST PC INCREMENTER =======
+echo "\nTesting PC Incrementer"
+vsim -t ns work.pcplusone
+
+# Add waves
+add wave -divider "Inputs"
+add wave -radix hexadecimal /pcplusone/input
+add wave -radix binary /pcplusone/clock
+add wave -divider "Outputs"
+add wave -radix hexadecimal /pcplusone/output
+add wave -radix hexadecimal /pcplusone/current_pc
+
+# Test cases
+echo "Test: Initialize PC Incrementer"
+force -freeze /pcplusone/input X"00000000" 0
+force -freeze /pcplusone/clock 0 0
+run 10 ns
+
+# Test 1: Increment from 0
+echo "Test: Increment from 0"
+force -freeze /pcplusone/clock 1 0
+run 10 ns
+
+# Test 2: No change when clock goes low
+echo "Test: No change when clock goes low"
+force -freeze /pcplusone/clock 0 0
+force -freeze /pcplusone/input X"00000001" 0
+run 10 ns
+
+# Test 3: Increment from 1
+echo "Test: Increment from 1"
+force -freeze /pcplusone/input X"00000001" 0
+force -freeze /pcplusone/clock 1 0
+run 10 ns
+
+# Test 4: Test with a large value (to verify overflow behavior)
+echo "Test: Increment large value"
+force -freeze /pcplusone/input X"FFFFFFFF" 0
+force -freeze /pcplusone/clock 1 0
+run 10 ns
+
+# Print completion message
+echo "\nAll tests completed"

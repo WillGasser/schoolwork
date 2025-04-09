@@ -1,0 +1,297 @@
+m255
+K4
+z2
+!s11e vcom 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/willb/Desktop/GitHub/schoolwork/COMP4300/Lab3
+Pbv_arithmetic
+!i122 24
+w1742946927
+R0
+8work/bva.vhd
+Fwork/bva.vhd
+l0
+L15 1
+VK_Z5_=_D3e0]A25PTUEEA1
+!s100 DK;Y`J0lJAh`j:XUgQ7B<1
+Z1 OV;C;2020.1;71
+31
+b1
+Z2 !s110 1743728836
+!i10b 1
+Z3 !s108 1743728836.000000
+!s90 -reportprogress|300|-93|work/bva.vhd|
+!s107 work/bva.vhd|
+!i113 1
+o-93
+Z4 tExplicit 1 CvgOpt 0
+Bbody
+Z5 DPx4 work 13 bv_arithmetic 0 22 K_Z5_=_D3e0]A25PTUEEA1
+!i122 25
+w1742946921
+8work/bva-b.vhd
+Fwork/bva-b.vhd
+l0
+L1 1
+VXQ]IaO=;cd0Z285N><B]82
+!s100 ;^d^hPQojBY3:39_Lf`ZP1
+R1
+31
+R2
+!i10b 1
+R3
+!s90 -reportprogress|300|-93|work/bva-b.vhd|
+!s107 work/bva-b.vhd|
+!i113 1
+o-93
+R4
+Edlx_register
+Z6 w1743727911
+R5
+Z7 DPx4 work 9 dlx_types 0 22 Rh<D=2RLh`7maX3MMZ1EN0
+Z8 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z9 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+!i122 25
+R0
+Z10 8dlx_register.vhd
+Z11 Fdlx_register.vhd
+l0
+L7 1
+VPmaJ[8MkRDk6neEHYe_>l0
+!s100 UnIZFC7mC`m8LIG;8Hl:z3
+R1
+31
+R2
+!i10b 1
+R3
+Z12 !s90 -reportprogress|300|-93|dlx_register.vhd|
+Z13 !s107 dlx_register.vhd|
+!i113 1
+o-93
+R4
+Abehavior
+R5
+R7
+R8
+R9
+DEx4 work 12 dlx_register 0 22 PmaJ[8MkRDk6neEHYe_>l0
+!i122 25
+l17
+L15 12
+Vn7e3>8MkL54g6KE0W1=zH3
+!s100 NnGe7UEAP=?QNVS<go?XM1
+R1
+31
+R2
+!i10b 1
+R3
+R12
+R13
+!i113 1
+o-93
+R4
+Pdlx_types
+!i122 23
+w1742946935
+R0
+8work/dlx_types.vhd
+Fwork/dlx_types.vhd
+l0
+L2 1
+VRh<D=2RLh`7maX3MMZ1EN0
+!s100 E2c;:eYf;hh[jFU?F_ci41
+R1
+31
+!s110 1743728835
+!i10b 1
+!s108 1743728835.000000
+!s90 -reportprogress|300|-93|work/dlx_types.vhd|
+!s107 work/dlx_types.vhd|
+!i113 1
+o-93
+R4
+Emux
+Z14 w1743727952
+R5
+R7
+R8
+R9
+!i122 27
+R0
+Z15 8mux.vhd
+Z16 Fmux.vhd
+l0
+L7 1
+Vh3CTz?`aNPO=W35JPEAFB0
+!s100 jfTcCzUgY6i:oLzhioRJE1
+R1
+31
+R2
+!i10b 1
+R3
+Z17 !s90 -reportprogress|300|-93|mux.vhd|
+Z18 !s107 mux.vhd|
+!i113 1
+o-93
+R4
+Abehavior
+R5
+R7
+R8
+R9
+DEx4 work 3 mux 0 22 h3CTz?`aNPO=W35JPEAFB0
+!i122 27
+l20
+L19 11
+ViNTUZA4flM;AE?fY?CJVO2
+!s100 eS;ClGD7^Y8l3S8;Jh8>m3
+R1
+31
+R2
+!i10b 1
+R3
+R17
+R18
+!i113 1
+o-93
+R4
+Epcplusone
+Z19 w1743728119
+R5
+R7
+R8
+R9
+!i122 29
+R0
+Z20 8increment.vhd
+Z21 Fincrement.vhd
+l0
+L7 1
+V<e_c:CAdA`FPh^emKZ<A]0
+!s100 ZmE<gh5[6z3W>S:ig?Q_L0
+R1
+31
+R2
+!i10b 1
+R3
+Z22 !s90 -reportprogress|300|-93|increment.vhd|
+Z23 !s107 increment.vhd|
+!i113 1
+o-93
+R4
+Abehavior
+R5
+R7
+R8
+R9
+Z24 DEx4 work 9 pcplusone 0 22 <e_c:CAdA`FPh^emKZ<A]0
+!i122 29
+l20
+Z25 L18 15
+Z26 VS`CnbfFJL2^6nY`QOQlYd2
+Z27 !s100 4Vi83TdMRJ2mgZmj<7_iF0
+R1
+31
+R2
+!i10b 1
+R3
+R22
+R23
+!i113 1
+o-93
+R4
+Ereg_file
+Z28 w1743727933
+R5
+R7
+R8
+R9
+!i122 26
+R0
+Z29 8reg_file.vhd
+Z30 Freg_file.vhd
+l0
+L7 1
+VbWezP2YjRgi<3AU3`Ak@W2
+!s100 RHiY:T55^f2]0aPnO;6YI3
+R1
+31
+R2
+!i10b 1
+R3
+Z31 !s90 -reportprogress|300|-93|reg_file.vhd|
+Z32 !s107 reg_file.vhd|
+!i113 1
+o-93
+R4
+Abehavior
+R5
+R7
+R8
+R9
+DEx4 work 8 reg_file 0 22 bWezP2YjRgi<3AU3`Ak@W2
+!i122 26
+l20
+L17 18
+VTRm61[k=TfAL[LT]dRD8l1
+!s100 hk>Xc?l=kTEN6kX]0K?Ok0
+R1
+31
+R2
+!i10b 1
+R3
+R31
+R32
+!i113 1
+o-93
+R4
+Ethreeway_mux
+Z33 w1743727971
+R5
+R7
+R8
+R9
+!i122 28
+R0
+Z34 8threeway_mux.vhd
+Z35 Fthreeway_mux.vhd
+l0
+L7 1
+V_1_i;Oz4?=:k1<EKP1PO33
+!s100 A<A[fWbVHlWRGOF]gKVNf0
+R1
+31
+R2
+!i10b 1
+R3
+Z36 !s90 -reportprogress|300|-93|threeway_mux.vhd|
+Z37 !s107 threeway_mux.vhd|
+!i113 1
+o-93
+R4
+Abehavior
+R5
+R7
+R8
+R9
+DEx4 work 12 threeway_mux 0 22 _1_i;Oz4?=:k1<EKP1PO33
+!i122 28
+l21
+L20 16
+Vkof>TG2Zno=9VJcJg2U?B1
+!s100 zb=9n7dZiETV7@44;K?Zm0
+R1
+31
+R2
+!i10b 1
+R3
+R36
+R37
+!i113 1
+o-93
+R4
