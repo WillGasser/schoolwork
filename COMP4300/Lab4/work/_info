@@ -9,8 +9,93 @@ z2
 !i10f 100
 cModel Technology
 Z0 dC:/Users/willb/Desktop/GitHub/schoolwork/COMP4300/Lab4
+Ealu
+Z1 w1744759378
+Z2 DPx4 work 13 bv_arithmetic 0 22 K_Z5_=_D3e0]A25PTUEEA1
+Z3 DPx4 work 9 dlx_types 0 22 Rh<D=2RLh`7maX3MMZ1EN0
+!i122 37
+R0
+Z4 8datapath_aubie_v2.vhd
+Z5 Fdatapath_aubie_v2.vhd
+l0
+L17 1
+VgnI6;6jl8ZQSKBmX3Rk?P3
+!s100 idD>6_O5Fgnim1KS68HV43
+Z6 OV;C;2020.1;71
+31
+Z7 !s110 1744759384
+!i10b 1
+Z8 !s108 1744759384.000000
+Z9 !s90 -reportprogress|300|-93|datapath_aubie_v2.vhd|
+!s107 datapath_aubie_v2.vhd|
+!i113 1
+o-93
+Z10 tExplicit 1 CvgOpt 0
+Eaubie
+w1744758470
+R3
+R2
+!i122 17
+R0
+8interconnect_aubie.vhd
+Finterconnect_aubie.vhd
+l0
+L6 1
+VWZX`Jlzj[AgKd3hFCl0Iz2
+!s100 ^BkcC0=[[Z=7dOM<k:9AG1
+R6
+31
+!s110 1744758474
+!i10b 1
+!s108 1744758474.000000
+!s90 -reportprogress|300|-93|interconnect_aubie.vhd|
+!s107 interconnect_aubie.vhd|
+!i113 1
+o-93
+R10
+Eaubie_controller
+Z11 w1744758388
+R3
+R2
+!i122 36
+R0
+Z12 8control_aubie_v1.vhd
+Z13 Fcontrol_aubie_v1.vhd
+l0
+L4 1
+V7LI_2ba_WJzXb3`H=UXUN1
+!s100 dC=eB>JSo;mHGAZPZ@;1;3
+R6
+31
+R7
+!i10b 1
+Z14 !s108 1744759383.000000
+Z15 !s90 -reportprogress|300|-93|control_aubie_v1.vhd|
+Z16 !s107 control_aubie_v1.vhd|
+!i113 1
+o-93
+R10
+Alogic
+R3
+R2
+DEx4 work 16 aubie_controller 0 22 7LI_2ba_WJzXb3`H=UXUN1
+!i122 36
+l32
+L31 343
+V9;ak0GXRn0m3elYd^c]Az0
+!s100 JW5Z2NSeoYNK0HX@RFQN52
+R6
+31
+R7
+!i10b 1
+R14
+R15
+R16
+!i113 1
+o-93
+R10
 Pbv_arithmetic
-!i122 5
+!i122 35
 w1742946927
 R0
 8work/bva.vhd
@@ -19,78 +104,81 @@ l0
 L15 1
 VK_Z5_=_D3e0]A25PTUEEA1
 !s100 DK;Y`J0lJAh`j:XUgQ7B<1
-Z1 OV;C;2020.1;71
+R6
 31
 b1
-Z2 !s110 1744757845
+Z17 !s110 1744759383
 !i10b 1
-Z3 !s108 1744757845.000000
+R14
 !s90 -reportprogress|300|-93|work/bva.vhd|
 !s107 work/bva.vhd|
 !i113 1
 o-93
-Z4 tExplicit 1 CvgOpt 0
+R10
 Bbody
-DPx4 work 13 bv_arithmetic 0 22 K_Z5_=_D3e0]A25PTUEEA1
-!i122 6
+R2
+!i122 36
 w1742946921
-8work/bva-b.vhd
-Fwork/bva-b.vhd
+8work/bva_b.vhd
+Fwork/bva_b.vhd
 l0
 L1 1
 VXQ]IaO=;cd0Z285N><B]82
 !s100 ;^d^hPQojBY3:39_Lf`ZP1
-R1
-31
-R2
-!i10b 1
-R3
-!s90 -reportprogress|300|-93|work/bva-b.vhd|
-!s107 work/bva-b.vhd|
-!i113 1
-o-93
-R4
-Edlx_register
-Z5 w1744757787
-Z6 DPx4 work 9 dlx_types 0 22 Rh<D=2RLh`7maX3MMZ1EN0
-!i122 6
-R0
-Z7 8work/dlx_register.vhd
-Z8 Fwork/dlx_register.vhd
-l0
-L3 1
-V?bI6O4^0;ZBKE]lU4BDoY2
-!s100 U<>BgVO?_A1SP_eN10>?43
-R1
-31
-R2
-!i10b 1
-R3
-Z9 !s90 -reportprogress|300|-93|work/dlx_register.vhd|
-!s107 work/dlx_register.vhd|
-!i113 1
-o-93
-R4
-Abehavior
 R6
+31
+R17
+!i10b 1
+R14
+!s90 -reportprogress|300|-93|work/bva_b.vhd|
+!s107 work/bva_b.vhd|
+!i113 1
+o-93
+R10
+Edlx_register
+R1
+R3
+!i122 37
+R0
+R4
+R5
+l0
+L46 1
+VofBQo:UaRFN2kT=NNQG7C3
+!s100 UbCLaZdja<F`VC^1I9:H_3
+R6
+31
+R7
+!i10b 1
+R8
+R9
+Z18 !s107 datapath_aubie_v2.vhd|
+!i113 1
+o-93
+R10
+Abehavior
+R3
 DEx4 work 12 dlx_register 0 22 ?bI6O4^0;ZBKE]lU4BDoY2
 !i122 6
 l9
 L8 9
 VLULY^A?3QNB^afabY0?1L1
 !s100 znDm]QbbJn<39o>l>3hK00
-R1
+R6
 31
-R2
+!s110 1744757845
 !i10b 1
-R3
-R9
-Z10 !s107 work/dlx_register.vhd|
+!s108 1744757845.000000
+!s90 -reportprogress|300|-93|work/dlx_register.vhd|
+!s107 work/dlx_register.vhd|
 !i113 1
 o-93
-R4
+R10
+Fwork/dlx_register.vhd
+w1744757787
+8work/dlx_register.vhd
 Pdlx_types
-!i122 4
+!i122 34
 w1742946935
 R0
 8work/dlx_types.vhd
@@ -99,13 +187,99 @@ l0
 L2 1
 VRh<D=2RLh`7maX3MMZ1EN0
 !s100 E2c;:eYf;hh[jFU?F_ci41
-R1
+R6
 31
-!s110 1744757844
+R17
 !i10b 1
-!s108 1744757844.000000
+R14
 !s90 -reportprogress|300|-93|work/dlx_types.vhd|
 !s107 work/dlx_types.vhd|
 !i113 1
 o-93
+R10
+Emux
+R1
+R3
+!i122 37
+R0
 R4
+R5
+l0
+L67 1
+VE7XJ81Uem1B=HHCM7IiI_3
+!s100 a`IfAbQF]M6dUDgk`m>7E3
+R6
+31
+R7
+!i10b 1
+R8
+R9
+R18
+!i113 1
+o-93
+R10
+Epcplusone
+R1
+R2
+R3
+!i122 37
+R0
+R4
+R5
+l0
+L57 1
+Vg8TPF:=dULg88EI0IHaM71
+!s100 HF`=iX4D8;JRAce0S@:nS0
+R6
+31
+R7
+!i10b 1
+R8
+R9
+R18
+!i113 1
+o-93
+R10
+Ereg_file
+R1
+R2
+R3
+!i122 37
+R0
+R4
+R5
+l0
+L7 1
+VNdfL7kYD^[2Mje?Hn^J0C0
+!s100 k^@azI9DPT<NCV=kG:AgG2
+R6
+31
+R7
+!i10b 1
+R8
+R9
+R18
+!i113 1
+o-93
+R10
+Ethreeway_mux
+R1
+R3
+!i122 37
+R0
+R4
+R5
+l0
+L77 1
+V2HCFmbLd16cW60NT:RW7W0
+!s100 6FJ^80Ro8MN[X?m4CKMld2
+R6
+31
+R7
+!i10b 1
+R8
+R9
+R18
+!i113 1
+o-93
+R10
