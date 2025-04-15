@@ -82,10 +82,6 @@ end entity threeway_mux;
 -- end entity threeway  mux
 
 -- entity regfile
-entity reg_file is
-port(data_in : in dlx_word; readnotwrite, clock: in bit; data_out: out
-dlx_word; reg_number : in register_index);
-end entity reg_file;
 
 -- end entity regfile 
 

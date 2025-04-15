@@ -10,10 +10,10 @@ z2
 cModel Technology
 Z0 dC:/Users/willb/Desktop/GitHub/schoolwork/COMP4300/Lab4
 Ealu
-Z1 w1744759378
+Z1 w1744759550
 Z2 DPx4 work 13 bv_arithmetic 0 22 K_Z5_=_D3e0]A25PTUEEA1
 Z3 DPx4 work 9 dlx_types 0 22 Rh<D=2RLh`7maX3MMZ1EN0
-!i122 37
+!i122 59
 R0
 Z4 8datapath_aubie_v2.vhd
 Z5 Fdatapath_aubie_v2.vhd
@@ -23,44 +23,71 @@ VgnI6;6jl8ZQSKBmX3Rk?P3
 !s100 idD>6_O5Fgnim1KS68HV43
 Z6 OV;C;2020.1;71
 31
-Z7 !s110 1744759384
+Z7 !s110 1744760470
 !i10b 1
-Z8 !s108 1744759384.000000
+Z8 !s108 1744760470.000000
 Z9 !s90 -reportprogress|300|-93|datapath_aubie_v2.vhd|
-!s107 datapath_aubie_v2.vhd|
+Z10 !s107 datapath_aubie_v2.vhd|
 !i113 1
 o-93
-Z10 tExplicit 1 CvgOpt 0
+Z11 tExplicit 1 CvgOpt 0
 Eaubie
-w1744758470
+Z12 w1744760038
 R3
 R2
-!i122 17
+!i122 60
 R0
-8interconnect_aubie.vhd
-Finterconnect_aubie.vhd
+Z13 8interconnect_aubie.vhd
+Z14 Finterconnect_aubie.vhd
 l0
 L6 1
 VWZX`Jlzj[AgKd3hFCl0Iz2
 !s100 ^BkcC0=[[Z=7dOM<k:9AG1
 R6
 31
-!s110 1744758474
+Z15 !s110 1744760471
 !i10b 1
-!s108 1744758474.000000
-!s90 -reportprogress|300|-93|interconnect_aubie.vhd|
-!s107 interconnect_aubie.vhd|
+Z16 !s108 1744760471.000000
+Z17 !s90 -reportprogress|300|-93|interconnect_aubie.vhd|
+Z18 !s107 interconnect_aubie.vhd|
 !i113 1
 o-93
-R10
-Eaubie_controller
-Z11 w1744758388
+R11
+Astruct
+Z19 DEx4 work 9 pcplusone 0 22 g8TPF:=dULg88EI0IHaM71
+Z20 DEx4 work 12 threeway_mux 0 22 2HCFmbLd16cW60NT:RW7W0
+Z21 DEx4 work 3 mux 0 22 E7XJ81Uem1B=HHCM7IiI_3
+Z22 DEx4 work 3 alu 0 22 gnI6;6jl8ZQSKBmX3Rk?P3
+Z23 DEx4 work 8 reg_file 0 22 NdfL7kYD^[2Mje?Hn^J0C0
+Z24 DEx4 work 12 dlx_register 0 22 ofBQo:UaRFN2kT=NNQG7C3
+Z25 DEx4 work 6 memory 0 22 =[zNCz]fL14FAm<gRWCSG0
+Z26 DEx4 work 16 aubie_controller 0 22 7LI_2ba_WJzXb3`H=UXUN1
 R3
 R2
-!i122 36
+Z27 DEx4 work 5 aubie 0 22 WZX`Jlzj[AgKd3hFCl0Iz2
+!i122 60
+l48
+Z28 L10 167
+Z29 VJb^P63[Ng[6DFN^fJE<Sh0
+Z30 !s100 dhSA[8N<76hgIR_FgCceT2
+R6
+31
+R15
+!i10b 1
+R16
+R17
+R18
+!i113 1
+o-93
+R11
+Eaubie_controller
+Z31 w1744758388
+R3
+R2
+!i122 58
 R0
-Z12 8control_aubie_v1.vhd
-Z13 Fcontrol_aubie_v1.vhd
+Z32 8control_aubie_v1.vhd
+Z33 Fcontrol_aubie_v1.vhd
 l0
 L4 1
 V7LI_2ba_WJzXb3`H=UXUN1
@@ -69,17 +96,17 @@ R6
 31
 R7
 !i10b 1
-Z14 !s108 1744759383.000000
-Z15 !s90 -reportprogress|300|-93|control_aubie_v1.vhd|
-Z16 !s107 control_aubie_v1.vhd|
+R8
+Z34 !s90 -reportprogress|300|-93|control_aubie_v1.vhd|
+Z35 !s107 control_aubie_v1.vhd|
 !i113 1
 o-93
-R10
+R11
 Alogic
 R3
 R2
-DEx4 work 16 aubie_controller 0 22 7LI_2ba_WJzXb3`H=UXUN1
-!i122 36
+R26
+!i122 58
 l32
 L31 343
 V9;ak0GXRn0m3elYd^c]Az0
@@ -88,14 +115,14 @@ R6
 31
 R7
 !i10b 1
-R14
-R15
-R16
+R8
+R34
+R35
 !i113 1
 o-93
-R10
+R11
 Pbv_arithmetic
-!i122 35
+!i122 57
 w1742946927
 R0
 8work/bva.vhd
@@ -107,17 +134,17 @@ VK_Z5_=_D3e0]A25PTUEEA1
 R6
 31
 b1
-Z17 !s110 1744759383
+R7
 !i10b 1
-R14
+R8
 !s90 -reportprogress|300|-93|work/bva.vhd|
 !s107 work/bva.vhd|
 !i113 1
 o-93
-R10
+R11
 Bbody
 R2
-!i122 36
+!i122 58
 w1742946921
 8work/bva_b.vhd
 Fwork/bva_b.vhd
@@ -127,18 +154,18 @@ VXQ]IaO=;cd0Z285N><B]82
 !s100 ;^d^hPQojBY3:39_Lf`ZP1
 R6
 31
-R17
+R7
 !i10b 1
-R14
+R8
 !s90 -reportprogress|300|-93|work/bva_b.vhd|
 !s107 work/bva_b.vhd|
 !i113 1
 o-93
-R10
+R11
 Edlx_register
 R1
 R3
-!i122 37
+!i122 59
 R0
 R4
 R5
@@ -152,10 +179,10 @@ R7
 !i10b 1
 R8
 R9
-Z18 !s107 datapath_aubie_v2.vhd|
+R10
 !i113 1
 o-93
-R10
+R11
 Abehavior
 R3
 DEx4 work 12 dlx_register 0 22 ?bI6O4^0;ZBKE]lU4BDoY2
@@ -173,12 +200,12 @@ R6
 !s107 work/dlx_register.vhd|
 !i113 1
 o-93
-R10
+R11
 Fwork/dlx_register.vhd
 w1744757787
 8work/dlx_register.vhd
 Pdlx_types
-!i122 34
+!i122 56
 w1742946935
 R0
 8work/dlx_types.vhd
@@ -189,18 +216,59 @@ VRh<D=2RLh`7maX3MMZ1EN0
 !s100 E2c;:eYf;hh[jFU?F_ci41
 R6
 31
-R17
+R7
 !i10b 1
-R14
+R8
 !s90 -reportprogress|300|-93|work/dlx_types.vhd|
 !s107 work/dlx_types.vhd|
 !i113 1
 o-93
+R11
+Ememory
+R1
+R2
+R3
+!i122 59
+R0
+R4
+R5
+l0
+L92 1
+V=[zNCz]fL14FAm<gRWCSG0
+!s100 b=OgJd7ISj4BB7VRYSMGL1
+R6
+31
+R7
+!i10b 1
+R8
+R9
 R10
+!i113 1
+o-93
+R11
+Abehavior
+R2
+R3
+R25
+!i122 59
+l104
+L102 38
+VNCe4CWGoKVglkYGeoQ3O53
+!s100 o84aoXP][=^^iD?7C21Oe0
+R6
+31
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+o-93
+R11
 Emux
 R1
 R3
-!i122 37
+!i122 59
 R0
 R4
 R5
@@ -214,15 +282,15 @@ R7
 !i10b 1
 R8
 R9
-R18
+R10
 !i113 1
 o-93
-R10
+R11
 Epcplusone
 R1
 R2
 R3
-!i122 37
+!i122 59
 R0
 R4
 R5
@@ -236,15 +304,15 @@ R7
 !i10b 1
 R8
 R9
-R18
+R10
 !i113 1
 o-93
-R10
+R11
 Ereg_file
 R1
 R2
 R3
-!i122 37
+!i122 59
 R0
 R4
 R5
@@ -258,14 +326,14 @@ R7
 !i10b 1
 R8
 R9
-R18
+R10
 !i113 1
 o-93
-R10
+R11
 Ethreeway_mux
 R1
 R3
-!i122 37
+!i122 59
 R0
 R4
 R5
@@ -279,7 +347,7 @@ R7
 !i10b 1
 R8
 R9
-R18
+R10
 !i113 1
 o-93
-R10
+R11
