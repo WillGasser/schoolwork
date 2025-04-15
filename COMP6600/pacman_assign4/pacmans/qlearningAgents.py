@@ -48,8 +48,6 @@ class QLearningAgent(ReinforcementAgent):
         "You can initialize Q-values here..."
         ReinforcementAgent.__init__(self, **args)
         self.qValues = util.Counter()
-        self.lastState = None
-        self.lastAction = None
 
     def getQValue(self, state, action):
         """
@@ -57,7 +55,7 @@ class QLearningAgent(ReinforcementAgent):
           Should return 0.0 if we have never seen a state
           or the Q node value otherwise
         """
-        return self.qValues[(state, action)]
+        return self.qValues.get((state, action), 0.0)
 
     def computeValueFromQValues(self, state):
         """
@@ -70,6 +68,7 @@ class QLearningAgent(ReinforcementAgent):
         if not possibleActions:
             return 0.0
         return max([self.getQValue(state, action) for action in possibleActions])
+      
 
     def computeActionFromQValues(self, state):
         """
@@ -78,24 +77,13 @@ class QLearningAgent(ReinforcementAgent):
           you should return None.
         """
         legalActions = self.getLegalActions(state)
+      
         if not legalActions:
             return None
         
-        bestAction = None
-        bestValue = float('-inf')
-        
-        for action in legalActions:
-            qValue = self.getQValue(state, action)
-            if qValue > bestValue:
-                bestValue = qValue
-                bestAction = action
-        
-        # If all actions have negative Q-values, bestValue will still be -inf
-        # In this case, we return a random action instead
-        if bestValue == float('-inf'):
-            return random.choice(legalActions)
-        
-        return bestAction
+        maxValue = self.computeValueFromQValues(state)
+        bestActions = [action for action in legalActions if self.getQValue(state, action) == maxValue]
+        return random.choice(bestActions)
 
     def getAction(self, state):
         """
@@ -110,14 +98,18 @@ class QLearningAgent(ReinforcementAgent):
         legalActions = self.getLegalActions(state)
         if not legalActions:
             return None
-        
+
         action = None
         if util.flipCoin(self.epsilon):
             action = random.choice(legalActions)
         else:
             action = self.computeActionFromQValues(state)
+
+        self.doAction(state, action)
         
         return action
+      
+      
 
     def update(self, state, action, nextState, reward: float):
         """
@@ -127,8 +119,9 @@ class QLearningAgent(ReinforcementAgent):
           NOTE: You should never call this function,
           it will be called on your behalf
         """
+        currentQValue = self.getQValue(state, action)
         sample = reward + self.discount * self.computeValueFromQValues(nextState)
-        self.qValues[(state, action)] = (1 - self.alpha) * self.getQValue(state, action) + self.alpha * sample
+        self.qValues[(state, action)] = (1 - self.alpha) * currentQValue + self.alpha * sample
 
     def getPolicy(self, state):
         return self.computeActionFromQValues(state)
@@ -163,12 +156,9 @@ class PacmanQAgent(QLearningAgent):
         informs parent of action for Pacman.  Do not change or remove this
         method.
         """
-        legalActions = self.getLegalActions(state)
-        if not legalActions:
-            return None
-        if util.flipCoin(self.epsilon):
-            return random.choice(legalActions)
-        return self.computeActionFromQValues(state)
+        action = QLearningAgent.getAction(self,state)
+        self.doAction(state,action)
+        return action
 
 class ApproximateQAgent(PacmanQAgent):
     """
@@ -211,4 +201,5 @@ class ApproximateQAgent(PacmanQAgent):
         if self.episodesSoFar == self.numTraining:
             # you might want to print your weights here for debugging
             "*** YOUR CODE HERE ***"
+            print("Final weights:", self.weights)
             pass
