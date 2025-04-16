@@ -1,7 +1,7 @@
 use work.bv_arithmetic.all; 
 use work.dlx_types.all; 
 
--- interconnect of aubie cpu
+-- CPU interconnect for aubie processor
 
 entity aubie is
     port(aubie_clock: in bit);
@@ -26,22 +26,15 @@ architecture struct of aubie is
 
 	signal alu_func: alu_operation_code; 
 
---	signal regfile_mux, memaddr_mux: threeway_muxcode;
 	signal regfile_mux, memaddr_mux, pc_mux: threeway_muxcode;
 
 	signal regfile_index: register_index; 
 	
---	signal addr_mux, pc_mux, 
---		mem_clk, mem_readnotwrite, 
---		ir_clk, imm_clk,
---		addr_clk, pc_clk, regfile_clk, regfile_readnotwrite,
---	        op1_clk, op2_clk, result_clk:  bit; 
-
-	signal addr_mux,  
+	signal addr_mux,
 		mem_clk, mem_readnotwrite, 
 		ir_clk, imm_clk,
 		addr_clk, pc_clk, regfile_clk, regfile_readnotwrite,
-	        op1_clk, op2_clk, result_clk:  bit;
+	        op1_clk, op2_clk, result_clk:  bit; 
 
 	signal alu_error: error_code; 
 
@@ -138,7 +131,7 @@ begin -- structure of aubie
 
 	aubie_addr_mux: entity work.mux(behavior) 
 		port map ( 
-			input_1 =>  mem_out,
+			input_1 => mem_out,
 			input_0 => regfile_out,
 			which => addr_mux,
 			output => addr_in); 
@@ -146,7 +139,7 @@ begin -- structure of aubie
 	aubie_pc_mux: entity work.threeway_mux(behavior) 
 		port map ( 
 			input_2 => mem_out,
-			input_1 =>  addr_out,
+			input_1 => addr_out,
 			input_0 => pcplusone_out,
 			which => pc_mux,
 			output => pc_in); 
@@ -154,7 +147,7 @@ begin -- structure of aubie
 	aubie_memaddr_mux: entity work.threeway_mux(behavior) 
 		port map ( 
 			input_2 => regfile_out,
-			input_1 =>  addr_out,
+			input_1 => addr_out,
 			input_0 => pc_out,
 			which => memaddr_mux,
 			output => memaddr_in); 
@@ -162,7 +155,7 @@ begin -- structure of aubie
 	aubie_regfilein_mux: entity work.threeway_mux(behavior) 
 		port map ( 
 			input_2 => imm_out,
-			input_1 =>  mem_out,
+			input_1 => mem_out,
 			input_0 => result_out,
 			which => regfile_mux,
 			output => regfile_in); 
@@ -170,7 +163,7 @@ begin -- structure of aubie
 	aubie_pcpluspone: entity work.pcplusone(behavior)
 		port map (
 			input => pc_out,
-			clock => pc_clk, -- this is just here to make it execute
+			clock => pc_clk, -- triggers execution
 			output => pcplusone_out); 
 
 end struct;

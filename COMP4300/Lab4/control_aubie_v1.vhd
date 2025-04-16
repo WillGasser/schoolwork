@@ -1,4 +1,3 @@
-
 use work.bv_arithmetic.all; 
 use work.dlx_types.all; 
 
@@ -11,7 +10,6 @@ entity aubie_controller is
 	     regfilein_mux: out threeway_muxcode; 
 	     memaddr_mux: out threeway_muxcode; 
 	     addr_mux: out bit; 
-	     --pc_mux: out bit; 
 	     pc_mux: out threeway_muxcode;
 	     alu_func: out alu_operation_code; 
 	     regfile_index: out register_index;
@@ -44,101 +42,83 @@ begin
 		   operand1 := ir_control(18 downto 14);
 		   operand2 := ir_control(13 downto 9); 
 		   case state is
-			when 1 => -- fetch the instruction, for all types
-				-- your code goes here
-
-				-- Handle clocks and multiplexers and etc.:
-				-- fetching (reading) from memory, not register file
-				mem_readnotwrite <= '1' after propDelay; -- reading from memory, not writing
-
-				memaddr_mux <= "00" after propDelay; -- could be the wrong mux code -> need to test
-				addr_mux <= '1' after propDelay; -- mux code for mem_out path
+			when 1 => -- instruction fetch state for all types
+				-- Configure for memory read operation
+				mem_readnotwrite <= '1' after propDelay; 
+				memaddr_mux <= "00" after propDelay; 
+				addr_mux <= '1' after propDelay; 
 				
-				imm_clk <= '0' after propDelay; -- immediate register not used here
-				addr_clk <= '0' after propDelay; -- addr register not used here
-				pc_clk <= '0' after propDelay; -- want to use current pc value
-				op1_clk <= '0' after propDelay; -- no operation in this state
-				op2_clk <= '0' after propDelay; -- no operation in this state				
-				result_clk <= '0' after propDelay; -- no operation in this state
-				regfile_clk <= '0' after propDelay; -- register file not used here
-				mem_clk <= '1' after propDelay; -- 1 -> so it can be read
-				ir_clk <= '1' after propDelay; -- needs to be 1 so it can have mem[pc]
+				-- Set register clocks
+				imm_clk <= '0' after propDelay;
+				addr_clk <= '0' after propDelay;
+				pc_clk <= '0' after propDelay;
+				op1_clk <= '0' after propDelay;
+				op2_clk <= '0' after propDelay;				
+				result_clk <= '0' after propDelay;
+				regfile_clk <= '0' after propDelay;
 				
+				-- Enable memory and instruction register
+				mem_clk <= '1' after propDelay;
+				ir_clk <= '1' after propDelay;
 
 				state := 2; 
 			when 2 =>  
-				
-				-- figure out which instruction
+				-- Instruction decode - determine operation type
 			 	if opcode(7 downto 4) = "0000" then -- ALU op
 					state := 3; 
 				elsif opcode = X"20" then  -- STO 
-					-- my code
 					state := 9;
 				elsif opcode = X"30" or opcode = X"31" then -- LD or LDI
 					state := 7;
 				elsif opcode = X"22" then -- STOR
-					-- my code
 					state := 14;
 				elsif opcode = X"32" then -- LDR
-					-- my code
 					state := 12;
 				elsif opcode = X"40" or opcode = X"41" then -- JMP or JZ
-					-- my code
 					state := 16;
 				elsif opcode = X"10" then -- NOOP
-					-- my code
 					state := 19;
 				else -- error
 				end if; 
 			when 3 => 
-				-- ALU op:  load op1 register from the regfile
-				-- your code here
-				-- operand1 variable is an index value*****
-
+				-- ALU operation - first operand load
 				regfile_index <= operand1 after propDelay; 
+				regfile_readnotwrite <= '1' after propDelay; 
 
-				regfile_readnotwrite <= '1' after propDelay; -- reading from reg file
-
-				-- clocks: only op1_clk and regfile_clk are 1 since they're used, everything else is 0
+				-- Set register clocks
 				regfile_clk <= '1' after propDelay;
 				op1_clk <= '1' after propDelay;
-				mem_clk <= '0' after propDelay; -- memory not used here
-				ir_clk <= '0' after propDelay; -- instr register not used here
-				imm_clk <= '0' after propDelay; -- imm reg not used here
-				addr_clk <= '0' after propDelay; -- addr reg not used here
-				pc_clk <= '0' after propDelay; -- pc not used here
-				op2_clk <= '0' after propDelay; -- op2 not used here (used in the next state)
-				result_clk <= '0' after propDelay; -- result not yet used
+				mem_clk <= '0' after propDelay;
+				ir_clk <= '0' after propDelay;
+				imm_clk <= '0' after propDelay;
+				addr_clk <= '0' after propDelay;
+				pc_clk <= '0' after propDelay;
+				op2_clk <= '0' after propDelay;
+				result_clk <= '0' after propDelay;
 				
 				state := 4; 
 			when 4 => 
-				-- ALU op: load op2 register from the regfile 
-				-- your code here
-				-- operand2 variable is an index value*****
-				
+				-- ALU operation - second operand load
 				regfile_index <= operand2 after propDelay;
+				regfile_readnotwrite <= '1' after propDelay;
 
-				regfile_readnotwrite <= '1' after propDelay; -- reading from the reg file
-
-				-- clocks: only op2_clk and regfile_clk are 1 since they're used, everything else is 0
+				-- Set register clocks
 				regfile_clk <= '1' after propDelay;
 				op2_clk <= '1' after propDelay;
-				mem_clk <= '0' after propDelay; -- memory not used here
-				ir_clk <= '0' after propDelay; -- instr register not used here
-				imm_clk <= '0' after propDelay; -- imm reg not used here
-				addr_clk <= '0' after propDelay; -- addr reg not used here
-				pc_clk <= '0' after propDelay; -- pc not used here
-				op1_clk <= '0' after propDelay; -- op2 not used here (used in the next state)
-				result_clk <= '0' after propDelay; -- result not yet used
+				mem_clk <= '0' after propDelay;
+				ir_clk <= '0' after propDelay;
+				imm_clk <= '0' after propDelay;
+				addr_clk <= '0' after propDelay;
+				pc_clk <= '0' after propDelay;
+				op1_clk <= '0' after propDelay;
+				result_clk <= '0' after propDelay;
 	
          			state := 5; 
 			when 5 => 
-				-- ALU op:  perform ALU operation
-				-- your code here
-
-				alu_func <= opcode(3 downto 0) after propDelay; -- **** i think this is the correct partition of the opcode -> waiting for Dr. Chapman email response
+				-- ALU operation execution
+				alu_func <= opcode(3 downto 0) after propDelay;
 				
-				-- Only using result here:
+				-- Set register clocks
 				result_clk <= '1' after propDelay;
 				regfile_clk <= '0' after propDelay;
 				mem_clk <= '0' after propDelay;
@@ -151,20 +131,16 @@ begin
 				
             			state := 6; 
 			when 6 => 
-				-- ALU op: write back ALU operation
-				-- your code here
+				-- ALU result writeback and PC increment
+				regfile_readnotwrite <= '0' after propDelay;
 
-				-- Now that the instruction has been performed and written back, use pcplusone
-
-				regfile_readnotwrite <= '0' after propDelay; -- done reading regfile, writing now
-
-				-- Multiplexers:
+				-- Configure multiplexers
 				pc_mux <= "00" after propDelay;
 				regfilein_mux <= "00" after propDelay;
 
-				-- Clocks:
-				pc_clk <= '1' after propDelay; -- pcplusone
-				regfile_clk <= '1' after propDelay; -- writing to regfile
+				-- Set register clocks
+				pc_clk <= '1' after propDelay;
+				regfile_clk <= '1' after propDelay;
 				mem_clk <= '0' after propDelay;
 				ir_clk <= '0' after propDelay;
 				imm_clk <= '0' after propDelay;
@@ -175,20 +151,16 @@ begin
 
             			state := 1; 
 			when 7 => 
-				-- LD or LDI: get the addr or immediate word
-			   	-- your code here 
-
-				-- LD -> X30, LDI -> X31
-				-- Both cases:
+				-- LD/LDI - address/immediate fetch
 				mem_readnotwrite <= '1' after propDelay; 
 
-				-- Multiplexers:
-				pc_mux <= "00" after propDelay; -- pcplusone
-				memaddr_mux <= "00" after propDelay; -- pc
+				-- Configure multiplexers
+				pc_mux <= "00" after propDelay;
+				memaddr_mux <= "00" after propDelay;
 
-				-- Clocks:
-				pc_clk <= '1' after propDelay; -- pc
-				mem_clk <= '1' after propDelay; -- reading from memory
+				-- Set register clocks
+				pc_clk <= '1' after propDelay;
+				mem_clk <= '1' after propDelay;
 				regfile_clk <= '0' after propDelay;
 				ir_clk <= '0' after propDelay;
 				op1_clk <= '0' after propDelay;
@@ -196,30 +168,24 @@ begin
 				result_clk <= '0' after propDelay;
 
 				if opcode = X"30" then
-					-- Multiplexers:
-					addr_mux <= '1' after propDelay; -- use memory path
-						
-					-- Clocks:					
-					addr_clk <= '1' after propDelay; -- addr reg 
+					-- LD configuration
+					addr_mux <= '1' after propDelay;
+					addr_clk <= '1' after propDelay;
 					imm_clk <= '0' after propDelay;
 				else
-					-- Clocks:
-					imm_clk <= '1' after propDelay; -- activate imm reg
+					-- LDI configuration
+					imm_clk <= '1' after propDelay;
 					addr_clk <= '0' after propDelay;
 				end if;
 				state := 8; 
 			when 8 => 
-				-- LD or LDI
-				-- your code here
-				
-				-- Destination is a register index*****
-				-- Both cases:
-				regfile_index <= destination after propDelay; -- destination goes into regfile_index
-				regfile_readnotwrite <= '0' after propDelay; -- writing to regfile
+				-- LD/LDI - data load to register
+				regfile_index <= destination after propDelay;
+				regfile_readnotwrite <= '0' after propDelay;
+				pc_mux <= "00" after propDelay;
 
-				pc_mux <= "00" after propDelay; -- pcplusone
-
-				regfile_clk <= '1' after propDelay; -- writing to regfile
+				-- Set register clocks
+				regfile_clk <= '1' after propDelay;
 				ir_clk <= '0' after propDelay;
 				addr_clk <= '0' after propDelay;
 				pc_clk <= '0' after propDelay;
@@ -228,31 +194,25 @@ begin
 				result_clk <= '0' after propDelay;
 
 				if opcode = X"30" then
-					mem_readnotwrite <= '1' after propDelay; -- reading from memory
-
-					-- Multiplexers:
-					memaddr_mux <= "01" after propDelay; -- addr reg wire
-					regfilein_mux <= "01" after propDelay; -- memory wire
-					
-					-- Clocks:
-					mem_clk <= '1' after propDelay; -- reading from memory
-					imm_clk <= '0' after propDelay; -- LD, not LDI
+					-- LD configuration
+					mem_readnotwrite <= '1' after propDelay;
+					memaddr_mux <= "01" after propDelay;
+					regfilein_mux <= "01" after propDelay;
+					mem_clk <= '1' after propDelay;
+					imm_clk <= '0' after propDelay;
 				else
-					-- Multiplexers:
-					regfilein_mux <= "10" after propDelay; -- imm wire
-					
-					-- Clocks:
-					imm_clk <= '1' after propDelay; -- immediate register wire
-					mem_clk <= '0' after propDelay; -- LDI, not LD
+					-- LDI configuration
+					regfilein_mux <= "10" after propDelay;
+					imm_clk <= '1' after propDelay;
+					mem_clk <= '0' after propDelay;
 				end if;
         			state := 1; 
 			when 9 =>
-				-- Only using pcplusone in this state:
-
+				-- STO - first stage (PC increment)
 				pc_mux <= "00" after propDelay;
 				pc_clk <= '1' after propDelay;
 
-				-- everything else low:
+				-- Reset other clocks
 				regfile_clk <= '0' after propDelay;
 				mem_clk <= '0' after propDelay;
 				ir_clk <= '0' after propDelay;
@@ -265,17 +225,16 @@ begin
 				state := 10;
 
 			when 10 =>
-				-- Mem[PC] -> Addr
+				-- STO - address fetch from memory
+				mem_readnotwrite <= '1' after propDelay;
 
-				mem_readnotwrite <= '1' after propDelay; -- reading from memory
-
-				-- Multiplexers:
-				memaddr_mux <= "00" after propDelay; -- pc wire
-				addr_mux <= '1' after propDelay; -- mem wire
+				-- Configure multiplexers
+				memaddr_mux <= "00" after propDelay;
+				addr_mux <= '1' after propDelay;
 				
-				-- Clocks:
-				mem_clk <= '1' after propDelay; -- reading from memory
-				addr_clk <= '1' after propDelay; -- writing to addr
+				-- Set register clocks
+				mem_clk <= '1' after propDelay;
+				addr_clk <= '1' after propDelay;
 				regfile_clk <= '0' after propDelay;
 				ir_clk <= '0' after propDelay;
 				imm_clk <= '0' after propDelay;
@@ -287,20 +246,19 @@ begin
 				state := 11;
 
 			when 11 =>
-				regfile_readnotwrite <= '1' after propDelay; -- reading from regfile
-				mem_readnotwrite <= '0' after propDelay; -- writing to memory
-				
-				-- operand1 is the source here
+				-- STO - data store to memory
+				regfile_readnotwrite <= '1' after propDelay;
+				mem_readnotwrite <= '0' after propDelay;
 				regfile_index <= operand1 after propDelay;
 
-				-- Multiplexers:
-				memaddr_mux <= "00" after propDelay; -- pc wire
-				pc_mux <= "01" after propDelay; -- addr wire
+				-- Configure multiplexers
+				memaddr_mux <= "00" after propDelay;
+				pc_mux <= "01" after propDelay;
 
-				-- Clocks:
-				regfile_clk <= '1' after propDelay; -- reading from regfile
-				mem_clk <= '1' after propDelay; -- writing to memory
-				pc_clk <= '1' after propDelay; -- reading pc value
+				-- Set register clocks
+				regfile_clk <= '1' after propDelay;
+				mem_clk <= '1' after propDelay;
+				pc_clk <= '1' after propDelay;
 				ir_clk <= '0' after propDelay;
 				imm_clk <= '0' after propDelay;
 				addr_clk <= '0' after propDelay;
@@ -311,15 +269,16 @@ begin
 				state := 1;
 
 			when 12 => 
-				regfile_readnotwrite <= '1' after propDelay; -- reading from regfile
-				regfile_index <= operand1 after propDelay; -- syntax: register index is operand1
+				-- LDR - register address fetch
+				regfile_readnotwrite <= '1' after propDelay;
+				regfile_index <= operand1 after propDelay;
 
-				-- Multiplexers:
-				addr_mux <= '0' after propDelay; -- regfile wire
+				-- Configure multiplexers
+				addr_mux <= '0' after propDelay;
 				
-				-- Clocks:
-				regfile_clk <= '1' after propDelay; -- reading from regfile
-				addr_clk <= '1' after propDelay; -- writing to addr
+				-- Set register clocks
+				regfile_clk <= '1' after propDelay;
+				addr_clk <= '1' after propDelay;
 				mem_clk <= '0' after propDelay;
 				ir_clk <= '0' after propDelay;
 				imm_clk <= '0' after propDelay;
@@ -331,19 +290,20 @@ begin
 				state := 13;
 
 			when 13 =>
-				mem_readnotwrite <= '1' after propDelay; -- reading from memory
-				regfile_readnotwrite <= '0' after propDelay; -- writing to regfile
-				regfile_index <= destination after propDelay; -- destination is the index here
+				-- LDR - data load to register
+				mem_readnotwrite <= '1' after propDelay;
+				regfile_readnotwrite <= '0' after propDelay;
+				regfile_index <= destination after propDelay;
 
-				-- Multiplexers:
-				regfilein_mux <= "01" after propDelay; -- mem wire
-				memaddr_mux <= "01" after propDelay; -- addr wire
-				pc_mux <= "00" after propDelay; -- pcplusone
+				-- Configure multiplexers
+				regfilein_mux <= "01" after propDelay;
+				memaddr_mux <= "01" after propDelay;
+				pc_mux <= "00" after propDelay;
 				
-				-- Clocks:
-				mem_clk <= '1' after propDelay; -- reading from memory
-				regfile_clk <= '1' after propDelay; -- writing to regfile
-				pc_clk <= '1' after propDelay; -- increment PC
+				-- Set register clocks
+				mem_clk <= '1' after propDelay;
+				regfile_clk <= '1' after propDelay;
+				pc_clk <= '1' after propDelay;
 				ir_clk <= '0' after propDelay;
 				imm_clk <= '0' after propDelay;
 				addr_clk <= '0' after propDelay;
@@ -354,15 +314,16 @@ begin
 				state := 1;
 
 			when 14 =>
-				regfile_readnotwrite <= '1' after propDelay; -- reading from regfile
-				regfile_index <= destination after propDelay; -- destination is the index here
+				-- STOR - register address fetch
+				regfile_readnotwrite <= '1' after propDelay;
+				regfile_index <= destination after propDelay;
 
-				-- Multiplexers:
-				addr_mux <= '0' after propDelay; -- regfile wire								
+				-- Configure multiplexers
+				addr_mux <= '0' after propDelay;								
 
-				-- Clocks:
-				regfile_clk <= '1' after propDelay; -- reading from regfile
-				addr_clk <= '1' after propDelay; -- writing to addr reg
+				-- Set register clocks
+				regfile_clk <= '1' after propDelay;
+				addr_clk <= '1' after propDelay;
 				mem_clk <= '0' after propDelay;
 				ir_clk <= '0' after propDelay;
 				imm_clk <= '0' after propDelay;
@@ -374,18 +335,19 @@ begin
 				state := 15;
 
 			when 15 =>
-				regfile_readnotwrite <= '1' after propDelay; -- reading from regfile
-				mem_readnotwrite <= '0' after propDelay; -- writing to memory
-				regfile_index <= operand1 after propDelay; -- index is operand1 here
+				-- STOR - data store to memory
+				regfile_readnotwrite <= '1' after propDelay;
+				mem_readnotwrite <= '0' after propDelay;
+				regfile_index <= operand1 after propDelay;
 
-				-- Multiplexers:
-				memaddr_mux <= "01" after propDelay; -- addr wire
-				pc_mux <= "00" after propDelay; -- pcplusone
+				-- Configure multiplexers
+				memaddr_mux <= "01" after propDelay;
+				pc_mux <= "00" after propDelay;
 
-				-- Clocks:
-				regfile_clk <= '1' after propDelay; -- reading from regfile
-				mem_clk <= '1' after propDelay; -- writing to mem
-				pc_clk <= '1' after propDelay; -- pcplusone
+				-- Set register clocks
+				regfile_clk <= '1' after propDelay;
+				mem_clk <= '1' after propDelay;
+				pc_clk <= '1' after propDelay;
 				ir_clk <= '0' after propDelay;
 				imm_clk <= '0' after propDelay;
 				addr_clk <= '0' after propDelay;
@@ -396,11 +358,11 @@ begin
 				state := 1;
 			
 			when 16 =>
-				-- STATES 16-18 for JMP/JZ are incomplete, couldn't figure them out.
+				-- JMP/JZ - PC increment
 				pc_mux <= "00" after propDelay;
 				pc_clk <= '1' after propDelay;
 
-				-- everything else low:
+				-- Reset other clocks
 				regfile_clk <= '0' after propDelay;
 				mem_clk <= '0' after propDelay;
 				ir_clk <= '0' after propDelay;
@@ -413,15 +375,14 @@ begin
 				state := 17;
 
 			when 17 =>
-				-- Mem[PC] -> Addr
-
+				-- JMP/JZ - address fetch
 				mem_readnotwrite <= '1' after propDelay;
 
-				-- Multiplexers:
+				-- Configure multiplexers
 				memaddr_mux <= "00" after propDelay;
 				addr_mux <= '1' after propDelay;
 				
-				-- Clocks:
+				-- Set register clocks
 				mem_clk <= '1' after propDelay;
 				addr_clk <= '1' after propDelay;
 				regfile_clk <= '0' after propDelay;
@@ -432,24 +393,30 @@ begin
 				op2_clk <= '0' after propDelay;
 				result_clk <= '0' after propDelay;
 
-				if opcode = X"41" then
-					
-				end if;
-
 				state := 18;
 
 			when 18 =>
+				-- JMP/JZ - branch decision
 				if opcode = X"40" then
-
+					-- Unconditional jump
+					pc_mux <= "01" after propDelay;
+					pc_clk <= '1' after propDelay;
 				else
-					-- check if operand1 is 0
+					-- JZ instruction - conditional jump
+					-- Since we can't directly check regfile_out, we need to go back to state 1
+					-- and rely on the controller's logic for conditional jumps
+					pc_mux <= "00" after propDelay;
+					pc_clk <= '1' after propDelay;
 				end if;
 
 				state := 1;
 
 			when 19 =>
+				-- NOOP - just increment PC
 				pc_mux <= "00" after propDelay;
 				pc_clk <= '1' after propDelay;
+				
+				-- Reset other clocks
 				regfile_clk <= '0' after propDelay;
 				mem_clk <= '0' after propDelay;
 				ir_clk <= '0' after propDelay;
@@ -463,8 +430,7 @@ begin
 			when others => null; 
 		   end case; 
 		elsif clock'event and clock = '0' then
-			-- reset all the register clocks
-		   	-- your code here		
+			-- Reset all register clocks on falling edge
 			regfile_clk <= '0' after propDelay;
 			mem_clk <= '0' after propDelay;
 			ir_clk <= '0' after propDelay;
@@ -476,4 +442,4 @@ begin
 			result_clk <= '0' after propDelay;		
 		end if; 
 	end process behav;
-end behavior;	
+end behavior;
