@@ -26,22 +26,15 @@ architecture struct of aubie is
 
 	signal alu_func: alu_operation_code; 
 
---	signal regfile_mux, memaddr_mux: threeway_muxcode;
-	signal regfile_mux, memaddr_mux, pc_mux: threeway_muxcode;
+	signal regfile_mux, memaddr_mux: threeway_muxcode;
 
 	signal regfile_index: register_index; 
 	
---	signal addr_mux, pc_mux, 
---		mem_clk, mem_readnotwrite, 
---		ir_clk, imm_clk,
---		addr_clk, pc_clk, regfile_clk, regfile_readnotwrite,
---	        op1_clk, op2_clk, result_clk:  bit; 
-
-	signal addr_mux,  
+	signal addr_mux, pc_mux, 
 		mem_clk, mem_readnotwrite, 
 		ir_clk, imm_clk,
 		addr_clk, pc_clk, regfile_clk, regfile_readnotwrite,
-	        op1_clk, op2_clk, result_clk:  bit;
+	        op1_clk, op2_clk, result_clk:  bit; 
 
 	signal alu_error: error_code; 
 
@@ -143,9 +136,8 @@ begin -- structure of aubie
 			which => addr_mux,
 			output => addr_in); 
 
-	aubie_pc_mux: entity work.threeway_mux(behavior) 
+	aubie_pc_mux: entity work.mux(behavior) 
 		port map ( 
-			input_2 => mem_out,
 			input_1 =>  addr_out,
 			input_0 => pcplusone_out,
 			which => pc_mux,
