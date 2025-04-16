@@ -1,8 +1,15 @@
-vsim aubie
+# Start the simulation
+vsim work.aubie
+
+# Restart to make sure we're starting from a clean state
+restart -f
+
+# Add waves to watch
 add wave -position insertpoint sim:/aubie/*
-add wave -position insertpoint sim:/aubie/aubie_regfile/reg_file/registers
-add wave -position insertpoint sim:/aubie/aubie_memory/mem_behav/data_memory
 
-force sim:/aubie/aubie_clock 0 0, 1 100 -repeat 200
+force -deposit sim:/aubie/aubie_clock '0' 0 ns, '1' 100 ns -repeat 200 ns
 
+
+
+# Run the simulation
 run 6500 ns

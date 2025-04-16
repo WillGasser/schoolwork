@@ -10,36 +10,36 @@ z2
 cModel Technology
 Z0 dC:/Users/willb/Desktop/GitHub/schoolwork/COMP4300/Lab4
 Ealu
-Z1 w1744763692
+Z1 w1744765589
 Z2 DPx4 work 13 bv_arithmetic 0 22 K_Z5_=_D3e0]A25PTUEEA1
 Z3 DPx4 work 9 dlx_types 0 22 Rh<D=2RLh`7maX3MMZ1EN0
-!i122 149
+!i122 199
 R0
-Z4 8datapath_aubie_v1.vhd
-Z5 Fdatapath_aubie_v1.vhd
+Z4 8datapath_aubie_v2.vhd
+Z5 Fdatapath_aubie_v2.vhd
 l0
-L6 1
-Vk_@o_EkFFmlP`eP=lb8Oc2
-!s100 R?fzOgCL=[;z;BH^VKjlW2
+L39 1
+VnIoe^_DdJz>Dj`25e3=;93
+!s100 R;Mdfo6T3lm]B5VKX22QA3
 Z6 OV;C;2020.1;71
 31
-Z7 !s110 1744764117
+Z7 !s110 1744766037
 !i10b 1
-Z8 !s108 1744764117.000000
-Z9 !s90 -reportprogress|300|-93|datapath_aubie_v1.vhd|
-Z10 !s107 datapath_aubie_v1.vhd|
+Z8 !s108 1744766036.000000
+Z9 !s90 -reportprogress|300|-93|datapath_aubie_v2.vhd|
+Z10 !s107 datapath_aubie_v2.vhd|
 !i113 1
 o-93
 Z11 tExplicit 1 CvgOpt 0
-Alogic
+Abehavior
 R2
 R3
-Z12 DEx4 work 3 alu 0 22 k_@o_EkFFmlP`eP=lb8Oc2
-!i122 149
-l18
-L17 86
-V_V;a95W5^9k7jPgikK5hR3
-!s100 4i8I?gn]>F9N2];:PKh>L1
+Z12 DEx4 work 3 alu 0 22 nIoe^_DdJz>Dj`25e3=;93
+!i122 199
+l46
+L45 143
+VZ262:jl_e4W:]CU8C0^LX0
+!s100 :^S?CIaahT01EikC5aU>V0
 R6
 31
 R7
@@ -50,140 +50,138 @@ R10
 !i113 1
 o-93
 R11
-Abehavior
+Alogic
 R2
 R3
-DEx4 work 3 alu 0 22 gl@3z0N0A6TLgg_QTYDz]1
-!i122 129
-l76
-L75 160
-V<4fHYCDXz==:=[ijHg:^J2
-!s100 Uf29=OceL4KgnHXCEfKkY0
+DEx4 work 3 alu 0 22 k_@o_EkFFmlP`eP=lb8Oc2
+!i122 184
+l18
+L17 86
+V_V;a95W5^9k7jPgikK5hR3
+!s100 4i8I?gn]>F9N2];:PKh>L1
 R6
 31
-Z13 !s110 1744763551
+Z13 !s110 1744764995
 !i10b 1
-Z14 !s108 1744763551.000000
-Z15 !s90 -reportprogress|300|-93|datapath_aubie_v2.vhd|
-Z16 !s107 datapath_aubie_v2.vhd|
+Z14 !s108 1744764995.000000
+R9
+R10
 !i113 1
 o-93
 R11
-Z17 w1744763534
-Z18 Fdatapath_aubie_v2.vhd
-Z19 8datapath_aubie_v2.vhd
+Z15 w1744764992
 Eaubie
-Z20 w1744763708
+Z16 w1744765599
 R3
 R2
-!i122 150
+!i122 200
 R0
-Z21 8interconnect_aubie.vhd
-Z22 Finterconnect_aubie.vhd
+Z17 8interconnect_aubie.vhd
+Z18 Finterconnect_aubie.vhd
 l0
 L6 1
 VWZX`Jlzj[AgKd3hFCl0Iz2
 !s100 ^BkcC0=[[Z=7dOM<k:9AG1
 R6
 31
-Z23 !s110 1744764118
+R7
 !i10b 1
-R8
-Z24 !s90 -reportprogress|300|-93|interconnect_aubie.vhd|
-Z25 !s107 interconnect_aubie.vhd|
+Z19 !s108 1744766037.000000
+Z20 !s90 -reportprogress|300|-93|interconnect_aubie.vhd|
+Z21 !s107 interconnect_aubie.vhd|
 !i113 1
 o-93
 R11
 Astruct
-Z26 DEx4 work 9 pcplusone 0 22 0Po58VYKziBOco`MRjWB@2
-Z27 DEx4 work 12 threeway_mux 0 22 CKYSVi8E1ZQB^]mAU42?>1
-Z28 DEx4 work 3 mux 0 22 jZ:Tnmm=I7GK@fT>2UAOn2
+Z22 DEx4 work 9 pcplusone 0 22 809OJgMJJ5FhPRke3Hio?1
+Z23 DEx4 work 12 threeway_mux 0 22 FGeFJbGbAEmA9];lkj4dW2
+Z24 DEx4 work 3 mux 0 22 nSfBWnGaW56K=b0JQHIhO3
 R12
-Z29 DEx4 work 8 reg_file 0 22 WeT0Sa`JbmUGOO7G`X0@O1
-Z30 DEx4 work 12 dlx_register 0 22 >:M3eT^76;lG>Edi`KX5F2
-Z31 DEx4 work 6 memory 0 22 LQ[S3<d=0?WN<=Se9lB?=0
-Z32 DEx4 work 16 aubie_controller 0 22 7LI_2ba_WJzXb3`H=UXUN1
+Z25 DEx4 work 8 reg_file 0 22 I=V0SMnP?OP>ZM]h85QG]0
+Z26 DEx4 work 12 dlx_register 0 22 PMb0o`JPE`FaCdXTRiV@z3
+Z27 DEx4 work 6 memory 0 22 >FO2F]=Mcj?iI8Q8IRm?F1
+Z28 DEx4 work 16 aubie_controller 0 22 D0TAQSa?Gflk8XgH36L@S3
 R3
 R2
-Z33 DEx4 work 5 aubie 0 22 WZX`Jlzj[AgKd3hFCl0Iz2
-!i122 150
-l41
-Z34 L10 176
-Z35 V;nUQQ^a2NLlOTdHXDOS:k0
-Z36 !s100 YJ89e@]gk><HT<DTV7:EF2
+Z29 DEx4 work 5 aubie 0 22 WZX`Jlzj[AgKd3hFCl0Iz2
+!i122 200
+l48
+Z30 L10 167
+Z31 VJb^P63[Ng[6DFN^fJE<Sh0
+Z32 !s100 dhSA[8N<76hgIR_FgCceT2
 R6
 31
-R23
+R7
 !i10b 1
-R8
-R24
-R25
+R19
+R20
+R21
 !i113 1
 o-93
 R11
 Eaubie_controller
-Z37 w1744763700
+Z33 w1744765577
 R3
 R2
-!i122 148
+!i122 198
 R0
-Z38 8control_aubie_v1.vhd
-Z39 Fcontrol_aubie_v1.vhd
+Z34 8control_aubie_v1.vhd
+Z35 Fcontrol_aubie_v1.vhd
 l0
-L4 1
-V7LI_2ba_WJzXb3`H=UXUN1
-!s100 dC=eB>JSo;mHGAZPZ@;1;3
+L5 1
+VD0TAQSa?Gflk8XgH36L@S3
+!s100 WOgG_WY2LG6oJEH]DkE042
 R6
 31
-R7
+Z36 !s110 1744766036
 !i10b 1
 R8
-Z40 !s90 -reportprogress|300|-93|control_aubie_v1.vhd|
-Z41 !s107 control_aubie_v1.vhd|
-!i113 1
-o-93
-R11
-Alogic
-R3
-R2
-R32
-!i122 148
-l32
-L31 343
-V9;ak0GXRn0m3elYd^c]Az0
-!s100 JW5Z2NSeoYNK0HX@RFQN52
-R6
-31
-R7
-!i10b 1
-R8
-R40
-R41
+Z37 !s90 -reportprogress|300|-93|control_aubie_v1.vhd|
+Z38 !s107 control_aubie_v1.vhd|
 !i113 1
 o-93
 R11
 Abehavior
 R3
 R2
-DEx4 work 16 aubie_controller 0 22 MdVnCd]M=[9nZRA98b[hW0
-!i122 128
+R28
+!i122 198
 l33
-L32 232
-Vo398]GGW6Wk4KzfMTXXi01
-!s100 jKSYC=ffDjML]Kelik8eD3
+L32 448
+V6HQgjFeiHzPCQ[eZ_ecF12
+!s100 V4@lm_D<0Ua5JD3`o:;8W2
+R6
+31
+R36
+!i10b 1
+R8
+R37
+R38
+!i113 1
+o-93
+R11
+Alogic
+R3
+R2
+DEx4 work 16 aubie_controller 0 22 7LI_2ba_WJzXb3`H=UXUN1
+!i122 183
+l32
+L31 343
+V9;ak0GXRn0m3elYd^c]Az0
+!s100 JW5Z2NSeoYNK0HX@RFQN52
 R6
 31
 R13
 !i10b 1
-!s108 1744763550.000000
-R40
-R41
+R14
+R37
+R38
 !i113 1
 o-93
 R11
-w1744762274
+w1744763700
 Pbv_arithmetic
-!i122 147
+!i122 197
 w1742946927
 R0
 8work/bva.vhd
@@ -195,7 +193,7 @@ VK_Z5_=_D3e0]A25PTUEEA1
 R6
 31
 b1
-R7
+R36
 !i10b 1
 R8
 !s90 -reportprogress|300|-93|work/bva.vhd|
@@ -205,7 +203,7 @@ o-93
 R11
 Bbody
 R2
-!i122 148
+!i122 198
 w1742946921
 8work/bva_b.vhd
 Fwork/bva_b.vhd
@@ -215,7 +213,7 @@ VXQ]IaO=;cd0Z285N><B]82
 !s100 ;^d^hPQojBY3:39_Lf`ZP1
 R6
 31
-R7
+R36
 !i10b 1
 R8
 !s90 -reportprogress|300|-93|work/bva_b.vhd|
@@ -226,32 +224,14 @@ R11
 Edlx_register
 R1
 R3
-!i122 149
+!i122 199
 R0
 R4
 R5
 l0
-L107 1
-V>:M3eT^76;lG>Edi`KX5F2
-!s100 3?=LVX_?5@DfNjH5bh_C60
-R6
-31
-R7
-!i10b 1
-R8
-R9
-R10
-!i113 1
-o-93
-R11
-Alogic
-R3
-R30
-!i122 149
-l117
-L116 9
-V5hQ1@Rdm9zR?<Lmo3`a8Y1
-!s100 Sfz7BPNd<DDcEjSFg9cDf1
+L213 1
+VPMb0o`JPE`FaCdXTRiV@z3
+!s100 <?bcn<gd41PamM4MZ4k^92
 R6
 31
 R7
@@ -264,27 +244,43 @@ o-93
 R11
 Abehavior
 R3
-DEx4 work 12 dlx_register 0 22 `DZKOEhV>imhO31ZM1iSU3
-!i122 129
-l246
-L245 9
-VFPTJK7g5Th@S];;]91PS=1
-!s100 TBLX]NBHTOPZOI^b1RY>k1
+R26
+!i122 199
+l219
+L218 9
+VNgQ7[G6g[cV8XgZW_7M]J3
+!s100 leLW`@?S_0>W1`7N4SS;c2
+R6
+31
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+o-93
+R11
+Alogic
+R3
+DEx4 work 12 dlx_register 0 22 >:M3eT^76;lG>Edi`KX5F2
+!i122 184
+l117
+L116 9
+V5hQ1@Rdm9zR?<Lmo3`a8Y1
+!s100 Sfz7BPNd<DDcEjSFg9cDf1
 R6
 31
 R13
 !i10b 1
 R14
-R15
-R16
+R9
+R10
 !i113 1
 o-93
 R11
-R17
-R18
-R19
+R15
 Pdlx_types
-!i122 146
+!i122 196
 w1742946935
 R0
 8work/dlx_types.vhd
@@ -295,7 +291,7 @@ VRh<D=2RLh`7maX3MMZ1EN0
 !s100 E2c;:eYf;hh[jFU?F_ci41
 R6
 31
-R7
+R36
 !i10b 1
 R8
 !s90 -reportprogress|300|-93|work/dlx_types.vhd|
@@ -307,14 +303,33 @@ Ememory
 R1
 R2
 R3
-!i122 149
+!i122 199
 R0
 R4
 R5
 l0
-L241 1
-VLQ[S3<d=0?WN<=Se9lB?=0
-!s100 1fIOz6A:cb@UY2HBdW9B^1
+L319 1
+V>FO2F]=Mcj?iI8Q8IRm?F1
+!s100 AL94Rn?W_5AbQ=AbV``R[0
+R6
+31
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+o-93
+R11
+Abehavior
+R2
+R3
+R27
+!i122 199
+l331
+L329 39
+VL<Df3L5fN0=70_QEUdYFD3
+!s100 `Ck>[foBLCXdC4Y^4eO]`0
 R6
 31
 R7
@@ -328,14 +343,36 @@ R11
 Alogic
 R2
 R3
-R31
-!i122 149
+DEx4 work 6 memory 0 22 LQ[S3<d=0?WN<=Se9lB?=0
+!i122 184
 l252
 L251 53
 VZUZ?zd6LLMd]8P]mBKSQF1
 !s100 =F`ikiR;l=c[MiA5RZJX]2
 R6
 31
+R13
+!i10b 1
+R14
+R9
+R10
+!i113 1
+o-93
+R11
+R15
+Emux
+R1
+R3
+!i122 199
+R0
+R4
+R5
+l0
+L261 1
+VnSfBWnGaW56K=b0JQHIhO3
+!s100 5VmJC3ZHdXQaH@h8Dh@GE1
+R6
+31
 R7
 !i10b 1
 R8
@@ -345,38 +382,13 @@ R10
 o-93
 R11
 Abehavior
-R2
 R3
-DEx4 work 6 memory 0 22 63;BcN5>AC7=1]PTna0IN3
-!i122 129
-l335
-L334 34
-V:JKnh?zQ2Oe[5O<X8^o641
-!s100 2d_0U]Q;Ga:j3b@hz]^U`2
-R6
-31
-R13
-!i10b 1
-R14
-R15
-R16
-!i113 1
-o-93
-R11
-R17
-R18
-R19
-Emux
-R1
-R3
-!i122 149
-R0
-R4
-R5
-l0
-L186 1
-VjZ:Tnmm=I7GK@fT>2UAOn2
-!s100 L>M3OZoiP5jWcMfI64MB]2
+R24
+!i122 199
+l267
+L266 11
+Vi2W<_X43UCd<^`E8oi];H3
+!s100 L7IV5;3z0^WVg;Bl0ZUn00
 R6
 31
 R7
@@ -389,14 +401,37 @@ o-93
 R11
 Alogic
 R3
-R28
-!i122 149
+DEx4 work 3 mux 0 22 jZ:Tnmm=I7GK@fT>2UAOn2
+!i122 184
 l197
 L196 11
 VIL6B]fzaMmj4IW>Kn8GZk1
 !s100 TRj:AYl`IP=18fP6leN352
 R6
 31
+R13
+!i10b 1
+R14
+R9
+R10
+!i113 1
+o-93
+R11
+R15
+Epcplusone
+R1
+R2
+R3
+!i122 199
+R0
+R4
+R5
+l0
+L234 1
+V809OJgMJJ5FhPRke3Hio?1
+!s100 KWN;Bg@Y79Ua_Ja0dS0Xh0
+R6
+31
 R7
 !i10b 1
 R8
@@ -406,38 +441,14 @@ R10
 o-93
 R11
 Abehavior
-R3
-DEx4 work 3 mux 0 22 ?5je;KY==J]NgUK5iX3lB3
-!i122 129
-l286
-L285 11
-VAS19Nlo4?`CHICSiKm2Uh1
-!s100 1:o=K<NzD8U<k;A`Pi7Y<1
-R6
-31
-R13
-!i10b 1
-R14
-R15
-R16
-!i113 1
-o-93
-R11
-R17
-R18
-R19
-Epcplusone
-R1
 R2
 R3
-!i122 149
-R0
-R4
-R5
-l0
-L161 1
-V0Po58VYKziBOco`MRjWB@2
-!s100 f8j5XPmoOz58;fjLf40Q=1
+R22
+!i122 199
+l240
+L239 12
+V[KnaWTVRNRBklG91i?HZ>1
+!s100 n[C:mJNCK@cEVHIJ3NZ:L1
 R6
 31
 R7
@@ -451,14 +462,37 @@ R11
 Alogic
 R2
 R3
-R26
-!i122 149
+DEx4 work 9 pcplusone 0 22 0Po58VYKziBOco`MRjWB@2
+!i122 184
 l171
 L170 12
 VTKCB@bMYgWKiC=ZW:]o5c2
 !s100 f@J8Lo<[MLCOlIh=P_JaT3
 R6
 31
+R13
+!i10b 1
+R14
+R9
+R10
+!i113 1
+o-93
+R11
+R15
+Ereg_file
+R1
+R2
+R3
+!i122 199
+R0
+R4
+R5
+l0
+L10 1
+VI=V0SMnP?OP>ZM]h85QG]0
+!s100 Jl0`O8SY08I?fk3T``6Tn3
+R6
+31
 R7
 !i10b 1
 R8
@@ -470,37 +504,12 @@ R11
 Abehavior
 R2
 R3
-DEx4 work 9 pcplusone 0 22 ^TodAlfJm;X2PGYoOR>]I3
-!i122 129
-l265
-L264 12
-Vk]7^XaQ>Q;VDE<N4mR97b3
-!s100 :MMP`oChm<KA2De63Q`dH0
-R6
-31
-R13
-!i10b 1
-R14
-R15
-R16
-!i113 1
-o-93
-R11
-R17
-R18
-R19
-Ereg_file
-R1
-R2
-R3
-!i122 149
-R0
-R4
-R5
-l0
-L130 1
-VWeT0Sa`JbmUGOO7G`X0@O1
-!s100 QBK@nP70R`VWKY=4e7RfN3
+R25
+!i122 199
+l18
+L17 16
+V7WJV;faTCci;fmZb2l3:z1
+!s100 2o>GN0^N4iG0>ha;`Ijjf2
 R6
 31
 R7
@@ -514,14 +523,36 @@ R11
 Alogic
 R2
 R3
-R29
-!i122 149
+DEx4 work 8 reg_file 0 22 WeT0Sa`JbmUGOO7G`X0@O1
+!i122 184
 l143
 L141 15
 VVVJnzKUDPVG6zo8`IEQYg2
 !s100 [IgfO;MaTD<L=fR0?ncO61
 R6
 31
+R13
+!i10b 1
+R14
+R9
+R10
+!i113 1
+o-93
+R11
+R15
+Ethreeway_mux
+R1
+R3
+!i122 199
+R0
+R4
+R5
+l0
+L294 1
+VFGeFJbGbAEmA9];lkj4dW2
+!s100 6CR_;3^CAlhSCkOVWzBbQ3
+R6
+31
 R7
 !i10b 1
 R8
@@ -531,38 +562,13 @@ R10
 o-93
 R11
 Abehavior
-R2
 R3
-DEx4 work 8 reg_file 0 22 Pf@Ej8iE:`e7hldE[n7LL0
-!i122 129
-l16
-L14 28
-VQ`E]3cBELM<ec[V5[WVOm1
-!s100 Qi]>eX0BI_9;;BmbRICh80
-R6
-31
-R13
-!i10b 1
-R14
-R15
-R16
-!i113 1
-o-93
-R11
-R17
-R18
-R19
-Ethreeway_mux
-R1
-R3
-!i122 149
-R0
-R4
-R5
-l0
-L212 1
-VCKYSVi8E1ZQB^]mAU42?>1
-!s100 ?kX8mWN3J9XlfUlI>@3ED1
+R23
+!i122 199
+l300
+L299 13
+Vec^:TIJT[UBe_D2H0<kmz0
+!s100 P7DYG:7<^gb71j:E65CD>1
 R6
 31
 R7
@@ -575,40 +581,20 @@ o-93
 R11
 Alogic
 R3
-R27
-!i122 149
+DEx4 work 12 threeway_mux 0 22 CKYSVi8E1ZQB^]mAU42?>1
+!i122 184
 l224
 L223 13
 VQH9Gc:JGb31A85OTRQCMa0
 !s100 Z^[@1_f;TL5FOSH[o0ZAU0
 R6
 31
-R7
+R13
 !i10b 1
-R8
+R14
 R9
 R10
 !i113 1
 o-93
 R11
-Abehavior
-R3
-DEx4 work 12 threeway_mux 0 22 gCdh_1B5LOCb6FL?Onhbm0
-!i122 129
-l307
-L306 13
-V<H1bZ^GDUegUSi@KYY7]m0
-!s100 `3[Emfz`VzFSI=L=58X4R1
-R6
-31
-R13
-!i10b 1
-R14
 R15
-R16
-!i113 1
-o-93
-R11
-R17
-R18
-R19
