@@ -106,7 +106,6 @@ class ValueIterationAgent(ValueEstimationAgent):
           there are no legal actions, which is the case at the
           terminal state, you should return None.
         """
-        "*** YOUR CODE HERE ***"
         if self.mdp.isTerminal(state):
             return None
         actions = self.mdp.getPossibleActions(state)
