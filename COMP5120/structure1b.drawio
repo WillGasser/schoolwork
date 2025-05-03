@@ -1,0 +1,83 @@
+<mxfile host="app.diagrams.net"
+        agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:135.0) Gecko/20100101 Firefox/135.0"
+        version="26.0.14">
+  <diagram name="Structure 1b – Before Delete 30" id="Struct1b_Before">
+    <mxGraphModel dx="2812" dy="2337" grid="1" gridSize="10" guides="1"
+                  tooltips="1" connect="1" arrows="1" fold="1"
+                  page="1" pageScale="1" pageWidth="827" pageHeight="1169"
+                  math="0" shadow="0">
+      <root>
+        <mxCell id="0"/><mxCell id="1" parent="0"/>
+
+        <!-- root -->
+        <mxCell id="RB" value="25"
+                style="shape=rectangle;rounded=1;whiteSpace=wrap;html=1;fontSize=12;"
+                vertex="1" parent="1">
+          <mxGeometry x="270" y="40" width="60" height="40" as="geometry"/>
+        </mxCell>
+
+        <!-- leaves -->
+        <mxCell id="LB1" value="10&nbsp;15&nbsp;20"
+                style="shape=rectangle;rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;"
+                vertex="1" parent="1">
+          <mxGeometry x="160" y="120" width="120" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="LB2" value="25&nbsp;30"
+                style="shape=rectangle;rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;"
+                vertex="1" parent="1">
+          <mxGeometry x="360" y="120" width="100" height="40" as="geometry"/>
+        </mxCell>
+
+        <!-- edges -->
+        <mxCell id="EB1" style="endArrow=none;startArrow=none;" edge="1"
+                parent="1" source="RB" target="LB1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="EB2" style="endArrow=none;startArrow=none;" edge="1"
+                parent="1" source="RB" target="LB2">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+
+  <diagram name="Structure 1b – After Delete 30 (redistribute)" id="Struct1b_After">
+    <mxGraphModel dx="2812" dy="2337" grid="1" gridSize="10" guides="1"
+                  tooltips="1" connect="1" arrows="1" fold="1"
+                  page="1" pageScale="1" pageWidth="827" pageHeight="1169"
+                  math="0" shadow="0">
+      <root>
+        <mxCell id="0"/><mxCell id="1" parent="0"/>
+
+        <!-- new root key -->
+        <mxCell id="RA" value="20"
+                style="shape=rectangle;rounded=1;whiteSpace=wrap;html=1;fontSize=12;"
+                vertex="1" parent="1">
+          <mxGeometry x="270" y="40" width="60" height="40" as="geometry"/>
+        </mxCell>
+
+        <!-- leaves after steal -->
+        <mxCell id="LA1" value="10&nbsp;15"
+                style="shape=rectangle;rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;"
+                vertex="1" parent="1">
+          <mxGeometry x="200" y="120" width="100" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="LA2" value="20&nbsp;25"
+                style="shape=rectangle;rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;"
+                vertex="1" parent="1">
+          <mxGeometry x="340" y="120" width="100" height="40" as="geometry"/>
+        </mxCell>
+
+        <!-- edges -->
+        <mxCell id="EA1" style="endArrow=none;startArrow=none;" edge="1"
+                parent="1" source="RA" target="LA1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="EA2" style="endArrow=none;startArrow=none;" edge="1"
+                parent="1" source="RA" target="LA2">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

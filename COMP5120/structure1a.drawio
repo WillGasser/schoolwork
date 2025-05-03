@@ -1,10 +1,55 @@
-<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:138.0) Gecko/20100101 Firefox/138.0" version="26.2.14">
-  <diagram name="Page-1" id="Gquc_hSezud0tMOfLhDX">
-    <mxGraphModel>
+<mxfile host="app.diagrams.net"
+        agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:135.0) Gecko/20100101 Firefox/135.0"
+        version="26.0.14">
+  <diagram name="Structure 1a – Before Insert" id="Struct1a_Before">
+    <mxGraphModel dx="2812" dy="2337" grid="1" gridSize="10" guides="1"
+                  tooltips="1" connect="1" arrows="1" fold="1"
+                  page="1" pageScale="1" pageWidth="827" pageHeight="1169"
+                  math="0" shadow="0">
       <root>
-        <mxCell id="0" />
-        <mxCell id="1" parent="0" />
-      </root>
-    </mxGraphModel>
-  </diagram>
-</mxfile>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+
+        <!-- root (height 2) -->
+        <mxCell id="R1" value="13 | 21 | 26"
+                style="shape=rectangle;rounded=1;whiteSpace=wrap;html=1;fontSize=12;"
+                vertex="1" parent="1">
+          <mxGeometry x="240" y="40" width="120" height="40" as="geometry"/>
+        </mxCell>
+
+        <!-- leaves -->
+        <mxCell id="L1" value="5&nbsp; 7&nbsp; 9&nbsp; 11"
+                style="shape=rectangle;rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;"
+                vertex="1" parent="1">
+          <mxGeometry x="20" y="120" width="120" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="L2" value="13&nbsp;15&nbsp;17&nbsp;19"
+                style="shape=rectangle;rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;"
+                vertex="1" parent="1">
+          <mxGeometry x="160" y="120" width="120" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="L3" value="21&nbsp;22&nbsp;23&nbsp;24"
+                style="shape=rectangle;rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;"
+                vertex="1" parent="1">
+          <mxGeometry x="300" y="120" width="120" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="L4" value="26&nbsp;27&nbsp;28&nbsp;29"
+                style="shape=rectangle;rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;"
+                vertex="1" parent="1">
+          <mxGeometry x="440" y="120" width="120" height="40" as="geometry"/>
+        </mxCell>
+
+        <!-- edges -->
+        <mxCell id="E1" style="endArrow=none;startArrow=none;" edge="1"
+                parent="1" source="R1" target="L1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="E2" style="endArrow=none;startArrow=none;" edge="1"
+                parent="1" source="R1" target="L2">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="E3" style="endArrow=none;startArrow=none;" edge="1"
+                parent="1" source="R1" target="L3">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="E4" style="endArrow=none;startArrow=none;" edge

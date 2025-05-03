@@ -1,0 +1,92 @@
+<mxfile host="app.diagrams.net"
+        agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:135.0) Gecko/20100101 Firefox/135.0"
+        version="26.0.14">
+  <diagram name="Structure 1c – Before Delete 35" id="Struct1c_Before">
+    <mxGraphModel dx="2812" dy="2337" grid="1" gridSize="10" guides="1"
+                  tooltips="1" connect="1" arrows="1" fold="1"
+                  page="1" pageScale="1" pageWidth="827" pageHeight="1169"
+                  math="0" shadow="0">
+      <root>
+        <mxCell id="0"/><mxCell id="1" parent="0"/>
+
+        <!-- root -->
+        <mxCell id="RC" value="30 | 40"
+                style="shape=rectangle;rounded=1;whiteSpace=wrap;html=1;fontSize=12;"
+                vertex="1" parent="1">
+          <mxGeometry x="280" y="40" width="120" height="40" as="geometry"/>
+        </mxCell>
+
+        <!-- leaves -->
+        <mxCell id="LC1" value="10&nbsp;20"
+                style="shape=rectangle;rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;"
+                vertex="1" parent="1">
+          <mxGeometry x="120" y="120" width="100" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="LC2" value="30&nbsp;35"
+                style="shape=rectangle;rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;"
+                vertex="1" parent="1">
+          <mxGeometry x="280" y="120" width="100" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="LC3" value="40&nbsp;50"
+                style="shape=rectangle;rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;"
+                vertex="1" parent="1">
+          <mxGeometry x="440" y="120" width="100" height="40" as="geometry"/>
+        </mxCell>
+
+        <!-- edges -->
+        <mxCell id="EC1" style="endArrow=none;startArrow=none;" edge="1"
+                parent="1" source="RC" target="LC1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="EC2" style="endArrow=none;startArrow=none;" edge="1"
+                parent="1" source="RC" target="LC2">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="EC3" style="endArrow=none;startArrow=none;" edge="1"
+                parent="1" source="RC" target="LC3">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+
+  <diagram name="Structure 1c – After Delete 35 (merge)" id="Struct1c_After">
+    <mxGraphModel dx="2812" dy="2337" grid="1" gridSize="10" guides="1"
+                  tooltips="1" connect="1" arrows="1" fold="1"
+                  page="1" pageScale="1" pageWidth="827" pageHeight="1169"
+                  math="0" shadow="0">
+      <root>
+        <mxCell id="0"/><mxCell id="1" parent="0"/>
+
+        <!-- new root -->
+        <mxCell id="RD" value="40"
+                style="shape=rectangle;rounded=1;whiteSpace=wrap;html=1;fontSize=12;"
+                vertex="1" parent="1">
+          <mxGeometry x="300" y="40" width="60" height="40" as="geometry"/>
+        </mxCell>
+
+        <!-- merged leaves -->
+        <mxCell id="LD1" value="10&nbsp;20&nbsp;30"
+                style="shape=rectangle;rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;"
+                vertex="1" parent="1">
+          <mxGeometry x="200" y="120" width="140" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="LD2" value="40&nbsp;50"
+                style="shape=rectangle;rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;"
+                vertex="1" parent="1">
+          <mxGeometry x="380" y="120" width="100" height="40" as="geometry"/>
+        </mxCell>
+
+        <!-- edges -->
+        <mxCell id="ED1" style="endArrow=none;startArrow=none;" edge="1"
+                parent="1" source="RD" target="LD1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="ED2" style="endArrow=none;startArrow=none;" edge="1"
+                parent="1" source="RD" target="LD2">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
