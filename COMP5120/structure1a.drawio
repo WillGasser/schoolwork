@@ -52,4 +52,100 @@
                 parent="1" source="R1" target="L3">
           <mxGeometry relative="1" as="geometry"/>
         </mxCell>
-        <mxCell id="E4" style="endArrow=none;startArrow=none;" edge
+        <mxCell id="E4" style="endArrow=none;startArrow=none;" edge="1"
+                parent="1" source="R1" target="L4">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+
+  <diagram name="Structure 1a – After Insert 25" id="Struct1a_After">
+    <mxGraphModel dx="2812" dy="2337" grid="1" gridSize="10" guides="1"
+                  tooltips="1" connect="1" arrows="1" fold="1"
+                  page="1" pageScale="1" pageWidth="827" pageHeight="1169"
+                  math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+
+        <!-- new root -->
+        <mxCell id="R2" value="23"
+                style="shape=rectangle;rounded=1;whiteSpace=wrap;html=1;fontSize=12;"
+                vertex="1" parent="1">
+          <mxGeometry x="280" y="40" width="60"  height="40" as="geometry"/>
+        </mxCell>
+
+        <!-- level‑2 internals -->
+        <mxCell id="I1" value="13"
+                style="shape=rectangle;rounded=1;whiteSpace=wrap;html=1;"
+                vertex="1" parent="1">
+          <mxGeometry x="130" y="120" width="60" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="I2" value="23 | 26"
+                style="shape=rectangle;rounded=1;whiteSpace=wrap;html=1;"
+                vertex="1" parent="1">
+          <mxGeometry x="380" y="120" width="100" height="40" as="geometry"/>
+        </mxCell>
+
+        <!-- leaves -->
+        <mxCell id="L1a" value="5&nbsp; 7&nbsp; 9&nbsp; 11"
+                style="shape=rectangle;rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;"
+                vertex="1" parent="1">
+          <mxGeometry x="20"  y="220" width="120" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="L2a" value="13&nbsp;15&nbsp;17&nbsp;19"
+                style="shape=rectangle;rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;"
+                vertex="1" parent="1">
+          <mxGeometry x="160" y="220" width="120" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="L3a" value="21&nbsp;22"
+                style="shape=rectangle;rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;"
+                vertex="1" parent="1">
+          <mxGeometry x="300" y="220" width="80"  height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="L4a" value="23&nbsp;24&nbsp;25"
+                style="shape=rectangle;rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;"
+                vertex="1" parent="1">
+          <mxGeometry x="400" y="220" width="100" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="L5a" value="26&nbsp;27&nbsp;28&nbsp;29"
+                style="shape=rectangle;rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;"
+                vertex="1" parent="1">
+          <mxGeometry x="520" y="220" width="120" height="40" as="geometry"/>
+        </mxCell>
+
+        <!-- edges -->
+        <mxCell id="E5" style="endArrow=none;startArrow=none;" edge="1"
+                parent="1" source="R2" target="I1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="E6" style="endArrow=none;startArrow=none;" edge="1"
+                parent="1" source="R2" target="I2">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="E7" style="endArrow=none;startArrow=none;" edge="1"
+                parent="1" source="I1" target="L1a">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="E8" style="endArrow=none;startArrow=none;" edge="1"
+                parent="1" source="I1" target="L2a">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="E9" style="endArrow=none;startArrow=none;" edge="1"
+                parent="1" source="I2" target="L3a">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="E10" style="endArrow=none;startArrow=none;" edge="1"
+                parent="1" source="I2" target="L4a">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="E11" style="endArrow=none;startArrow=none;" edge="1"
+                parent="1" source="I2" target="L5a">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
