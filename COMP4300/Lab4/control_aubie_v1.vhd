@@ -133,6 +133,7 @@ begin
 			when 6 => 
 				-- ALU result writeback and PC increment
 				regfile_readnotwrite <= '0' after propDelay;
+				regfile_index        <= destination after propDelay;
 
 				-- Configure multiplexers
 				pc_mux <= "00" after propDelay;

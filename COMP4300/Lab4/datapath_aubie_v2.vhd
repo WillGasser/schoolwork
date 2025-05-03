@@ -6,26 +6,38 @@ use work.dlx_types.all;
 use work.bv_arithmetic.all;  
 
 entity reg_file is
-     generic(prop_delay: time := 10 ns);
-     port (data_in: in dlx_word; readnotwrite,clock : in bit; 
-	   data_out: out dlx_word; reg_number: in register_index );
-end entity reg_file; 
+    generic (prop_delay : time := 10 ns);
+    port (
+        data_in       : in  dlx_word;
+        readnotwrite  : in  bit;           -- '1' = read, '0' = write
+        clock         : in  bit;           -- gated clock from controller
+        data_out      : out dlx_word;
+        reg_number    : in  register_index
+    );
+end entity reg_file;
 
 architecture behavior of reg_file is
+    type reg_array is array (0 to 31) of dlx_word;
+    signal registers : reg_array :=
+        (0 => X"00000000",
+         1 => X"01010101",            -- Lab-5 preset
+         2 => X"10101010",            -- Lab-5 preset
+         others => X"00000000");
 begin
-	regFileProcess: process(data_in, readnotwrite, clock, reg_number) is
-		type reg_type is array (0 to 31) of dlx_word;
-
-		variable registers: reg_type;
-		begin
-			if clock = '1' then
-				if readnotwrite = '1' then
-					data_out <= registers(bv_to_integer(reg_number)) after prop_delay;
-				else
-					registers(bv_to_integer(reg_number)) := data_in;
-				end if;
-			end if;
-	end process regFileProcess;
+    process (data_in, readnotwrite, clock, reg_number)
+    begin
+        if clock = '1' then                   -- level-sensitive
+            if readnotwrite = '1' then        -- READ
+                data_out <= registers(
+                              bv_to_integer(reg_number)
+                            ) after prop_delay;
+            else                              -- WRITE
+                registers(
+                  bv_to_integer(reg_number)
+                ) <= data_in after prop_delay;
+            end if;
+        end if;
+    end process;
 end architecture behavior;
 
 

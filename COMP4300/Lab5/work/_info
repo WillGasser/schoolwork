@@ -1,0 +1,443 @@
+m255
+K4
+z2
+!s11e vcom 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/Users/willb/Desktop/GitHub/schoolwork/COMP4300/Lab4
+Ealu
+Z0 w1746069604
+Z1 DPx4 work 13 bv_arithmetic 0 22 K_Z5_=_D3e0]A25PTUEEA1
+Z2 DPx4 work 9 dlx_types 0 22 Rh<D=2RLh`7maX3MMZ1EN0
+!i122 59
+Z3 dC:/Users/willb/Desktop/GitHub/schoolwork/COMP4300/Lab5
+Z4 8datapath_aubie_v2.vhd
+Z5 Fdatapath_aubie_v2.vhd
+l0
+L48 1
+Vz4nURDm3TbQg`;7bbM5Wi2
+!s100 E=<Jb>1J0RP]UX@WX:FBo1
+Z6 OV;C;2020.1;71
+33
+Z7 !s110 1746069909
+!i10b 1
+Z8 !s108 1746069909.000000
+Z9 !s90 -reportprogress|300|-2008|datapath_aubie_v2.vhd|
+Z10 !s107 datapath_aubie_v2.vhd|
+!i113 1
+Z11 o-2008
+Z12 tExplicit 1 CvgOpt 0
+Abehavior
+R1
+R2
+Z13 DEx4 work 3 alu 0 22 z4nURDm3TbQg`;7bbM5Wi2
+!i122 59
+l55
+L54 115
+VecI7hXBa87Lgc8n=dzCU61
+!s100 4W>ZIOA4A1UTBZi2RXc4O3
+R6
+33
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Eaubie
+Z14 w1744766686
+R2
+R1
+!i122 60
+R3
+Z15 8interconnect_aubie.vhd
+Z16 Finterconnect_aubie.vhd
+l0
+L6 1
+VX7GJXjRD93aLeb7<?KJnn3
+!s100 ^BkcC0=[[Z=7dOM<k:9AG1
+R6
+33
+R7
+!i10b 1
+R8
+Z17 !s90 -reportprogress|300|-2008|interconnect_aubie.vhd|
+Z18 !s107 interconnect_aubie.vhd|
+!i113 1
+R11
+R12
+Astruct
+Z19 DEx4 work 9 pcplusone 0 22 M<Uo[7oc=;KQf;:LFK[_D3
+Z20 DEx4 work 12 threeway_mux 0 22 UQe_=@W>3Lz=aJPkgPiLY3
+Z21 DEx4 work 3 mux 0 22 8[Kh?lKh:62FZPXB0lIZH1
+R13
+Z22 DEx4 work 8 reg_file 0 22 2lFAKfKaQQ[O]e1iB[PC<0
+Z23 DEx4 work 12 dlx_register 0 22 N1j]:`7NbQDCIR1U7Nj_01
+Z24 DEx4 work 6 memory 0 22 @c=YeN0aOGdGaX1Vd9NF`3
+Z25 DEx4 work 16 aubie_controller 0 22 =]J`nYz]CcWL`>`S@5EE=3
+R2
+R1
+DEx4 work 5 aubie 0 22 X7GJXjRD93aLeb7<?KJnn3
+!i122 60
+l41
+Z26 L10 160
+V]]e8BTX1>eGf:Oo9?c0FL2
+Z27 !s100 gf1M<2joSGgAnXcXfhi1c3
+R6
+33
+R7
+!i10b 1
+R8
+R17
+R18
+!i113 1
+R11
+R12
+Eaubie_controller
+Z28 w1746069730
+R2
+R1
+!i122 58
+R3
+Z29 8control_aubie_v1.vhd
+Z30 Fcontrol_aubie_v1.vhd
+l0
+L4 1
+V=]J`nYz]CcWL`>`S@5EE=3
+!s100 ]oMHAm`5keYML;:FDNV5C3
+R6
+33
+R7
+!i10b 1
+R8
+Z31 !s90 -reportprogress|300|-2008|control_aubie_v1.vhd|
+Z32 !s107 control_aubie_v1.vhd|
+!i113 1
+R11
+R12
+Abehavior
+R2
+R1
+R25
+!i122 58
+l31
+L30 407
+VU>13ZEV6C2S?l=@L51UUl1
+!s100 zgVmBZ@M206CVl9@V4XjM0
+R6
+33
+R7
+!i10b 1
+R8
+R31
+R32
+!i113 1
+R11
+R12
+Pbv_arithmetic
+!i122 54
+w1742946927
+R3
+8work/bva.vhd
+Fwork/bva.vhd
+l0
+L15 1
+VK_Z5_=_D3e0]A25PTUEEA1
+!s100 DK;Y`J0lJAh`j:XUgQ7B<1
+R6
+31
+b1
+Z33 !s110 1746069906
+!i10b 1
+Z34 !s108 1746069906.000000
+!s90 -reportprogress|300|-93|work/bva.vhd|
+!s107 work/bva.vhd|
+!i113 1
+o-93
+R12
+Bbody
+R1
+!i122 55
+w1742946921
+8work/bva_b.vhd
+Fwork/bva_b.vhd
+l0
+L1 1
+VXQ]IaO=;cd0Z285N><B]82
+!s100 ;^d^hPQojBY3:39_Lf`ZP1
+R6
+31
+Z35 !s110 1746069907
+!i10b 1
+R34
+!s90 -reportprogress|300|-93|work/bva_b.vhd|
+!s107 work/bva_b.vhd|
+!i113 1
+o-93
+R12
+Edlx_register
+R0
+R2
+!i122 59
+R3
+R4
+R5
+l0
+L194 1
+VN1j]:`7NbQDCIR1U7Nj_01
+!s100 8bl^f3<fg?_zjM6@NXFEI1
+R6
+33
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Abehavior
+R2
+R23
+!i122 59
+l200
+L199 9
+VS33RgMAP7o9iiI4@h9kWd3
+!s100 o2^fHdmobMK9XWGm>GKfQ1
+R6
+33
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Pdlx_types
+!i122 53
+w1742946935
+R3
+8work/dlx_types.vhd
+Fwork/dlx_types.vhd
+l0
+L2 1
+VRh<D=2RLh`7maX3MMZ1EN0
+!s100 E2c;:eYf;hh[jFU?F_ci41
+R6
+31
+R33
+!i10b 1
+R34
+!s90 -reportprogress|300|-93|work/dlx_types.vhd|
+!s107 work/dlx_types.vhd|
+!i113 1
+o-93
+R12
+Ememory
+R0
+R1
+R2
+!i122 59
+R3
+R4
+R5
+l0
+L277 1
+V@c=YeN0aOGdGaX1Vd9NF`3
+!s100 0jOc[_V=d=XgeK<igIQ572
+R6
+33
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Abehavior
+R1
+R2
+R24
+!i122 59
+l287
+L286 29
+V86eFSd361NnJ<L6o54kPe3
+!s100 E3HUV3fYzPfl9H16WCEc10
+R6
+33
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Emux
+R0
+R2
+!i122 59
+R3
+R4
+R5
+l0
+L234 1
+V8[Kh?lKh:62FZPXB0lIZH1
+!s100 U`KFbjKc>jP2_W_TKd=I;2
+R6
+33
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Abehavior
+R2
+R21
+!i122 59
+l240
+L239 11
+V@UVbAjjn<dUEQ>5284mbU2
+!s100 Ba4kL0U5ATan9I`QmUX7J0
+R6
+33
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Epcplusone
+R0
+R1
+R2
+!i122 59
+R3
+R4
+R5
+l0
+L213 1
+VM<Uo[7oc=;KQf;:LFK[_D3
+!s100 X:=HHzJdAzIgVERYP<P9=1
+R6
+33
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Abehavior
+R1
+R2
+R19
+!i122 59
+l219
+L218 12
+V>2?]FI5:6M>c:N`O:[Wd^1
+!s100 of7B0@=GlcJQ@?7cYam=@2
+R6
+33
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Ereg_file
+R0
+R1
+R2
+!i122 59
+R3
+R4
+R5
+l0
+L8 1
+V2lFAKfKaQQ[O]e1iB[PC<0
+!s100 Pi4[QC5LNBSNOMZ`kYC]M0
+R6
+33
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Abehavior
+R1
+R2
+R22
+!i122 59
+l26
+L19 23
+VCzg]fIEn>62nziOPEE=[L0
+!s100 EWI79h2bTd1hzUbH@>0DW1
+R6
+33
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Ethreeway_mux
+R0
+R2
+!i122 59
+R3
+R4
+R5
+l0
+L254 1
+VUQe_=@W>3Lz=aJPkgPiLY3
+!s100 T``@=PZFXWj5f6O9JoMc91
+R6
+33
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Abehavior
+R2
+R20
+!i122 59
+l260
+L259 13
+V:T51j>XgLL=kBZ<EmKVj>3
+!s100 eQW4ddml59[Fh[bX=<bI;0
+R6
+33
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
